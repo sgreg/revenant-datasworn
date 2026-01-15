@@ -1,858 +1,800 @@
-_id: starforged
+_id: revenant
 datasworn_version: "0.1.0"
 type: ruleset
-# last full text dump: march 9, with 030522
 npcs:
-  sample_npcs:
-    name: Sample NPCs
+  the_undead:
     type: npc_collection
+    name: The Undead
     _source:
       <<: &Source
-        title: 'Ironsworn: Starforged Rulebook'
-        license: https://creativecommons.org/licenses/by/4.0
-        url: https://ironswornrpg.com
-        date: 2022-05-06
+        title: 'Revenant'
+        license: https://creativecommons.org/licenses/by-sa/4.0
+        url: https://www.drivethrurpg.com/en/product/457762/revenant
+        date: 2025-06-23
         authors:
-          - name: Shawn Tomkin
+          - name: Killian Gillespie
+      page: 222
     contents:
-      chiton:
+      zombie:
         type: npc
-        name: Chiton
-        nature: Monster
-        summary: Insectoid horde
+        name: Zombie
+        nature: Undead
         _source:
           <<: *Source
-          page: 259
-        rank: 2
-        features:
-          - Arachnid monsters with blade-like limbs
-          - Plated exoskeleton
-          - Dripping mucus
-          - Ripping, tearing maw
-        drives:
-          - Build and expand the nest
-          - Feed and protect the queen
-          - Snuff out intelligent life
-        tactics:
-          - Attack with lightning reflexes
-          - Impale with bladed limbs
-          - Drag victims back to the nest
-        variants:
-          chiton_drone_pack:
-            name: Chiton drone pack
-            nature: Monster
-            rank: 3
-            description: |-
-              Chiton drones rarely operate independently. Instead, they hunt and attack in packs under the telepathic control of their queen.
-          chiton_queen:
-            name: Chiton queen
-            nature: Monster
-            rank: 4
-            description: |-
-              The chiton queen is a massive creature with segmented pincers, an armored carapace, and a bulging, egg-carrying abdomen. From the depths of the nest, it commands its drones telepathically. This psychic communication is so powerful it can even breach human consciousness—troubling dreams and waking hallucinations might be the harbinger of a chiton invasion.
-        description: |-
-          The chiton are not native to any single planet, and are adaptable to most environments. Some suggest they are an ancient precursor bioweapon seeded across the galaxy. The larva of the telepathic queen can lay dormant for thousands of years, emerging only when its sleep is disturbed by the mental energies of intelligent life. An awoken queen quickly metamorphoses into its adult form and lays its first clutch of eggs. Soon after, newly-hatched drones set out to expand the nest and feed their ravenous progenitor.
-        quest_starter: |-
-          At a remote facility, researchers are studying a newly-discovered chiton queen larva. The immature queen is held in frozen stasis, but something might have gone wrong. The return of a transport ship ferrying supplies to the researchers is weeks overdue. What is your connection to the facility or to the faction overseeing it?
-      colossus:
-        type: npc
-        name: Colossus
-        nature: Machine
-        summary: Ancient mechanical giants
-        _source:
-          <<: *Source
-          page: 260
-        rank: 5
-        features:
-          - Ancient, mechanical giants
-          - Bipedal form
-          - Etched with cryptic runes
-        drives:
-          - Slumber
-          - When awakened, carry out inscrutable purpose
-        tactics:
-          - Ignore puny foes
-          - Unleash destructive energy attacks
-          - Transform to reveal new capabilities
-        variants:
-          devotant_of_the_colossi:
-            name: Devotant of the colossi
-            nature: Human
-            rank: 2
-            description: |-
-              Those who now worship the colossi believe they are the mechanized embodiment of long-forgotten gods, and dedicate their lives to serving them. Many of these cultists are sworn guardians for dormant colossi. Others scour precursor lore, gather relics, and search vaults for the means of awakening them. If they succeed, our doom may be at hand.
-        description: |-
-          The colossi are titanic humanoid machines created by a long-dead civilization. We do not know their original purpose. Perhaps they were weapons built for conquest in a ancient war, or mighty devices designed to explore new worlds.
-
-          Most colossi are found inactive—frozen in icy wastes, overgrown within verdant jungles, entombed in the depths of fathomless seas. Their armored shell is resistant to time and harsh environments, and they are nearly as imposing and majestic as the day they were forged.
-
-          Rarely, a colossus awakens to carry out its inscrutable purpose. They stride across the landscape of alien worlds, shaking the ground with each massive footfall. These active colossi ignore our attempts at communication and bat away our ineffectual attacks—the technology that powers them is beyond our understanding.
-        quest_starter: |-
-          A faction discovered a heavily damaged but dormant colossus, gaining access for the first time to the internal systems of one of these great machines. The researches believe it can be controlled by a human through a neural connection, and are studying the means of awakening it with this new programming. What purpose do they have for it? Are you sworn to aid them or stop them?
-      crystallid:
-        type: npc
-        name: Crystallid
-        nature: Creature
-        summary: Crystalline entities
-        _source:
-          <<: *Source
-          page: 261
-        rank: 2
-        features:
-          - Translucent, gem-like creatures
-          - Shifting form
-          - Spiky appendages
-        drives:
-          - Gather and consume minerals
-          - Protect the nest
-        tactics:
-          - Camouflage within its environment
-          - Reshape to bolster defense and attacks
-          - Lash out with keen-edged limbs
-        variants:
-          convergent_crystallid:
-            name: Convergent crystallid
-            nature: Creature
-            rank: 4
-            description: |-
-              Crystallids are not social creatures. They greedily compete for resources to stock their hoard, and fight savagely among themselves. But when facing a powerful threat, they merge into a communal being. This monstrous form bristles with crystalline spikes and assaults its foes with a multitude of segmented limbs.
-        description: |-
-          Crystallids are beautiful but dangerous crystalline lifeforms that take a variety of sizes and shapes. Some are small and insect-like, skittering across the surface of rugged worlds or within cavernous depths. Others are much larger than a human, with a vaguely bestial form. A few can even sprout multifaceted wings to take to the air. Their lustrous coloration changes to mimic their environment, and they often appear as simply a part of the landscape until an unwitting explorer happens across them.
-
-          Crystallids are mineral hoarders. Their hidden burrows hold a cache of precious stones and valuable ores. For this reason, explorers and prospectors often attempt to track crystallids back to their nest. “The bigger the crystallid, the better the haul,” is a common saying among those audacious fortune hunters. But that potential motherlode is not taken without risk—crystallids are fierce protectors of their hoard.
-        quest_starter: |-
-          A prospector returns from a planetside expedition with tales of an immense crystallid hoard of uncountable riches. But this treasure is guarded by the largest, most aggressive crystallid they've ever encountered, and they barely escaped with their life. They seek your help in securing the nest in exchange for a share of the profits. What drives you to accept this perilous bargain?
-      drift_pirate:
-        type: npc
-        name: Drift pirate
-        nature: Human
-        summary: Spacegoing marauders
-        _source:
-          <<: *Source
-          page: 262
-        rank: 2
-        features:
-          - Cunning ship-hunters with repurposed weapons, armor, and vehicles
-          - Body piercings as tokens of victories
-          - Scars and mutations
-          - Cobbled-together starships
-        drives:
-          - Survive by whatever means necessary
-          - Climb the ranks and prove self in combat
-          - Build a mighty fleet
-        tactics:
-          - Prowl passages and anchorages for easy prey
-          - Deploy gravity harpoons to grapple targets
-          - Board to seize cargo and commandeer vessels
-        variants:
-          pirate_boarding_party:
-            name: Pirate boarding party
-            nature: Human
-            rank: 3
-            description: |-
-              After reeling in a disabled ship, drift pirates breach the hull and swarm the corridors. They target critical systems and compartments to seize the ship and its cargo for their flotilla.
-          pirate_cutlass:
-            name: Pirate cutlass
-            rank: 2
-            nature: Vehicle
-            description: |-
-              Drift pirates often strip down commandeered vessels, taking what they need to refit or augment their own ships. What's left is discarded or sold on the black market. A typical pirate cutlass is a haphazard collection of parts, splashed with the colors and sigils of their commanders, built for speed and brutish power. The imposing sight of one of these fierce vessels is enough to send a chill through the heart of even the boldest spacer.
-        description: |-
-          Drifts provide the means of interstellar travel across the Forge–but also offer myriad dangers for spacers. Chief among those threats are drift pirates: reavers and thieves who prowl eidolon passages and anchorages to seize ships and cargo for their own.
-
-          These pirates often live short, brutal lives, or survive long enough to see their near-constant exposure to drift energies and unshielded eidolon drives manifest as strange mutations. Despite that, most would not trade their chosen path for one of comfort or safety.
-        quest_starter: |-
-          A drift pirate captain seizes an experimental new e-drive, and uses it to stalk ships with deadly efficiency. Who created this new drive, and what are they willing to pay to get it back?
-      ember_wisp:
-        type: npc
-        name: Ember wisp
-        nature: Creature
-        summary: Energy-based lifeforms
-        _source:
-          <<: *Source
-          page: 264
+          page: 225
         rank: 1
         features:
-          - Ethereal, spaceborne creatures
-          - Fiery, pulsing glow
+          - Milky white eyes
+          - Tight pallid skin
+          - Brown viscous blood
+          - Broken yellow teeth
         drives:
-          - Ride the drifts
-          - Move together in dizzying patterns of light
-          - Seek out sources of energy
+          - Seek out the living
+          - Feed on oxygenated flesh
         tactics:
-          - Surround and envelop
-          - Absorb energy
+          - Grasp and grapple
+          - Bite at all costs
+          - Call out to other zombies
+          - Follow without ever stopping
         variants:
-          wisp_congregation:
-            name: Wisp congregation
-            nature: Creature
+          handful_of_zombies:
+            name: Handful of Zombies
+            nature: Undead
             rank: 2
             description: |-
-              In the depths of space where light and warmth are commodities, ember wisps congregate around sources of energy—such as the engine wake of a starship. Their dazzling display of light and motion is an alluring sight for an isolated spacer. But they also pose a potential threat; they can envelop the hull of a vessel, leeching the starship of precious energy.
-        description: |-
-          For some spacers, sighting these strange, spectral creatures on a spaceborne journey is a portent of a change in fortune. A few even profess to divine meaning from their elaborate, luminous dance, as people of old would interpret omens by studying the flight of birds. Others refer to the wisps as corpse lights, believing they are the spirits of ancient beings cursed to linger forever within the cold void between stars.
-
-          Less superstitious spacers swear on various methods of “shooing” wisps away—everything from cycling the engines to cutting power entirely for a minute or so and allowing the creatures to move on.
-        quest_starter: |-
-          Along a remote passage, a swarm of ember wisps left a cargo ship stranded and without power. What crucial and time-sensitive cargo does this ship carry? Who races against you to secure it?
-      firestorm_trooper:
-        type: npc
-        name: Firestorm trooper
-        nature: Human
-        summary: Fanatical raiders
-        _source:
-          <<: *Source
-          page: 265
-        rank: 3
-        features:
-          - Raiders with scarred flesh and polished armor
-          - Powered exosuits and distinctive helms
-          - Roaring jetpacks and fluttering banners
-        drives:
-          - Conquer the Forge
-          - Reap the resources owed them
-          - Venerate their leaders, creed, or gods
-        tactics:
-          - Strike sudden and swift
-          - Attack flanks and weak points from above
-          - Cull the weak, recruit the strong
-        variants:
-          firestorm_raiding_team:
-            name: Firestorm raiding team
-            nature: Human
-            rank: 4
+              A small amount of 3-5 Zombies are roaming together.
+          pack_of_zombies:
+            name: Pack of Zombies
+            nature: Undead
+            rank: 3
             description: |-
-              Feared throughout the Forge for their brutal tactics and destructive weaponry, coordinated teams of firestorm troopers descend upon settlements and stations in powered exosuits, flying the banners of their orders amid the smoke and flames of the devastation.
-          firestorm_dropship:
-            name: Firestorm dropship
-            rank: 2
-            nature: Vehicle
-            description: |-
-              The bulky, ironclad dropships favored by firestorm clans are designed for a single purpose: deliver an overwhelming force of armored troopers into the fight.
-        description: |-
-          The Forge is largely wild, uncharted territory, but armored firestorm troopers seek to plunder the whole of it in the name of their clans, their creed, or their inscrutable gods.
-
-          Striking with the speed and strength of a hurricane, they raid worlds and stations for resources and conscripts, leaving settlements in ruins. So deadly and effective are their tactics, that it’s often said if these zealots could only stop warring amongst themselves, their banners would fly across the breadth of the Forge.
-        quest_starter: |-
-          Despite conflicting creeds, several firestorm clans unite beneath the banner of Torren the Purifier to invade the Terminus. Their next target is a world at the nexus of trade lanes. What is this planet, and why is it important to you?
-      flarewing_shark:
-        type: npc
-        name: Flarewing shark
-        nature: Creature
-        summary: Deep sea predators
-        _source:
-          <<: *Source
-          page: 266
-        rank: 4
-        features:
-          - Massive, water-dwelling creatures
-          - Sinuous form
-          - Bioluminescent lures and markers
-          - Corpse-like eyes
-          - Rows of multi-pronged teeth
-        drives:
-          - Lurk in darkness
-          - Feed
-        tactics:
-          - Sense motion
-          - Lure prey with bioluminescent display
-          - Strike with fierce speed and strength
-        variants:
-          mega_flarewing:
-            name: Mega flarewing
-            nature: Creature
+              A larger amount of 6-10 Zombies are roaming together in a pack.
+          horde_of_zombies:
+            name: Horde of Zombies
+            nature: Undead
             rank: 5
             description: |-
-              At its perch atop the food chain, a flarewing is safe from other predators and has a typical lifespan of several hundred years. They continue to grow well beyond maturity, reaching incredible size. The most ancient of these beasts are as large as a space cruiser, fiercely territorial, and keenly intelligent. The ghostly shimmer of their bioluminescent lures is a harbinger of imminent death.
+              A full horde of hundreds of Zombies.
         description: |-
-          The flarewing shark is a highly evolved, monstrously deadly creature. It is typical of the apex predators that lurk in the unfathomable depths of life-bearing ocean worlds.
+          The features, drives, and tactics from the Zombie NPC can be applied to anything suffering from reanimation caused by the Revenant pathogen. You should apply it to any mutations that you choose to include as well as their own unique features, drives, and tactics.
 
-          Two wing-like appendages fan out from the back of the flarewing's head. Each is studded with sensory nerves to detect the subtlest of movement, and tipped with bioluminescent lures. When the flarewing closes in on its prey, those wings arch forward to attract and enfold the unfortunate victim. Then, the wide jaws and multi-pronged teeth make short work of the meal.
-        quest_starter: |-
-          In the twilight zone of a tidally-locked watery planet, an underwater mining settlement is the target of an ancient flarewing. In the murk of those dark waters, the beast attacks dive teams, carrier subs, dredging equipment—even undersea platforms. Operations are now stalled, cutting off a key source of unprocessed fuel in the sector. Meanwhile, the settlement's leader, grief-stricken by the loss of someone dear to them, vows to destroy the flarewing. What is your relation to this person? Do you support them in their obsession, or is there a way for the settlers to coexist with this creature?
-      ghost:
+          You may also apply these features like a template to any of the NPC's listed under the 'Animal Kingdom' section if you want the Revenant pathogen to be capable of reanimating creatures other than humans.
+      runner:
         type: npc
-        name: Ghost
+        name: Runner
+        nature: Undead
         _source:
           <<: *Source
-          page: 268
-        nature: Horror
-        summary: Tormented spirits
+          page: 229
+        rank: 2
+        features:
+          - Visibly enraged
+          - Agitated
+        drives:
+          - Chase the living
+        tactics:
+          - Break through a door
+          - Run faster and jump higher
+        variants:
+          handful_of_runners:
+            name: Handful of Runners
+            nature: Undead
+            rank: 3
+            description: |-
+              A small amount of 3-5 Runners are roaming together.
+          pack_of_runners:
+            name: Pack of Runners
+            nature: Undead
+            rank: 4
+            description: |-
+              A larger amount of 6-10 Runners are roaming together in a pack.
+        description: |-
+          The runner isn't technically a zombie, yet. They're a human that's been infected with the Revenant pathogen and are presently affected by the first stage. You can't reason with them. You can't hope against all odds that the person they once were will shine through. Hell, you can barely even outrun them. A runner will expend its total energy without reserve. It won't wait patiently for someone to cross their path. They run. And run. And run.
+
+          Runners are why the Revenant pathogen spread so quickly. These vectors would run full tilt until they encountered their prey. Then, once they catch up to them, they'll try to tear them limb from limb. The pathogen enters the victims' blood and soon they'll also go through Stage 1 and join the hunt.
+      hulk:
+        type: npc
+        name: Hulk
+        nature: Undead
+        _source:
+          <<: *Source
+          page: 231
         rank: 3
         features:
-          - Restless spirits
-          - Manifest through unsettling disturbances
-          - Appear as they did in life
-          - Ravages of a violent death
+          - Towering stature
+          - Tough flesh
         drives:
-          - Haunt the living
-          - Find rest
+          - Clear a path
+          - Subdue all foes
         tactics:
-          - Lure and isolate with subtle visions or sounds
-          - Reveal horrifying visions
-          - Unleash chaos
-        variants:
-          ghost_ship:
-            name: Ghost ship
-            rank: 3
-            nature: Vehicle
-            description: |-
-              These forsaken ships cruise through the depths of the Forge, carried by relentless inertia. They are dark and cold, and might initially seem a lucky find to a scavenger or pirate. But those who dare to trespass within these haunted vessels are not alone, and the tormented inhabitants will soon make themselves known.
+          - Destroy something physical
+          - Tear off a limb
         description: |-
-          Ghosts are undead spirits held in the boundary of life and death by forces beyond our knowing. These restless phantasms may be tied to a location, an object, or even a person.
-
-          Their form and nature varies. Some ghosts seek absolution. Others want revenge. Many are so sundered by a traumatic or unjust death that only a tormented, destructive shell of their former selves remain.
-
-          Ghosts might manifest in a physical form or assault with physical force, but they cannot be defeated through violence. To vanquish a ghost, you must instead find the key to unshackle them from our reality.
-        quest_starter: |-
-          A ghost haunts your starship. What is the nature of this spirit, and what quest must you undertake to put it to rest?
-      gnawling:
+          The Hulk is a zombie that has been supersized. The Revenant pathogen is known to regenerate tissue. Not perfectly, but it keeps the dead walking. Muscle regrowth is acheived through hypertrophy. This happens when muscles sustain damage or injury and the body repairs them by fusing them. This creates larger and stronger muscles. In a Hulk, the pathogen has focused on rebuilding muscle tissue too well.
+      screamer:
         type: npc
-        name: Gnawling
-        nature: Creature
+        name: Screamer
+        nature: Undead
         _source:
           <<: *Source
-          page: 269
-        summary: Infesting vermin
-        rank: 1
+          page: 233
+        rank: 2
         features:
-          - Furry, rodent-like creatures
-          - Long, jutting fangs
-          - Spider-like limbs
+          - Large armoured chest
+          - Wide-open maw
         drives:
-          - Consume and proliferate
-          - Avoid detection
+          - Gather the undead
         tactics:
-          - Swarm larger foes
-          - Disable ship systems
+          - Unleash an ear-splitting shriek
+          - Call the horde
         variants:
-          gnawling_brood_mother:
-            name: Gnawling brood mother
-            nature: Creature
+          handful_of_screamers:
+            name: Handful of Screamers
+            nature: Undead
             rank: 3
             description: |-
-              These mutated creatures often dwell at the heart of a rampant gnawling infestation. They are many times the size of a gnawling, and protect their nest and broodlings with savage cunning.
+              A small amount of 3-5 Screamers are roaming together.
+          pack_of_screamers:
+            name: Pack of Screamers
+            nature: Undead
+            rank: 4
+            description: |-
+              A larger amount of 6-10 Screamers are roaming together in a pack.
         description: |-
-          The bane of all spacers, the cable-chewing vermin known as gnawlings are a common pest aboard starships throughout the Forge. Adept at navigating in low or zero gravity with their long, multi-jointed limbs, these creatures emerge from cargo holds and engineering bays to gather and consume food. It’s said a gnawling could digest an eidolon drive, and there’s some truth to that adage—their digestive systems barely differentiate between organic and inorganic material.
+          Screamers have mutated to form massive packs of the undead. A normal zombie moan can call their kin from only a short distance. Even so, when one moans and another hear it, they moan and so on and so forth.
 
-          Though not a grave threat individually, if left to their own devices, gnawlings are capable of quickly overrunning even large vessels. More than a few horror stories exist of scavengers cracking the airlock seal on a derelict only to find it crawling with thousands of these vile, chittering things.
+          The screamers can call other zombies from kilometers away. Their chest cavities are massive and reinforced with enough sinew and cartilage that they have been know to stop low-powered ammunition.
 
-          Glowcats are a common gnawling deterrent, employed aboard cargo ships to keep the vermin at bay.
-        quest_starter: |-
-          An orbital settlement is overrun by gnawlings and abandoned. What precious thing still lies within? Why are you sworn to retrieve it from this infested place?
-      howlcat:
+          When you see a screamer, you better hope you see it before it sees you or you're in for a lot of trouble.
+      spitter:
         type: npc
-        name: Howlcat
+        name: Spitter
+        nature: Undead
+        _source:
+          <<: *Source
+          page: 233
+        rank: 2
+        features:
+          - Distended stomach
+          - Acid pocked flesh
+          - Bile soaked clothes
+        drives:
+          - Get within spitting range
+        tactics:
+          - Spray with toxic bile
+          - Bite at exposed flesh
+        variants:
+          handful_of_spitters:
+            name: Handful of Spitters
+            nature: Undead
+            rank: 3
+            description: |-
+              A small amount of 3-5 Spitters are roaming together.
+          pack_of_spitters:
+            name: Pack of Spitters
+            nature: Undead
+            rank: 4
+            description: |-
+              A larger amount of 6-10 Spitters are roaming together in a pack.
+        description: |-
+          The contents of a zombie's stomach is a cesspool of bacteria and disease. Touching a zombie's skin alone would be enough to require a range of medications. A spitter zombie is one that has mutated the ability to regurgitate the contents of their stomach with such force that it sprays up to two meters. It then uses the distraction as an advantage to gorge itself upon its victim and refill the now empty stomach.
+      sable:
+        type: npc
+        name: Sable
+        nature: Undead
+        _source:
+          <<: *Source
+          page: 234
+        rank: 3
+        features:
+          - Amorphous blob of black blood
+          - Chunks of brain floating in it
+        drives:
+          - Enter a host
+          - Stay away from fire
+        tactics:
+          - Squeeze into a tight place
+          - Drop down from a height
+          - Enter the body through an orifice
+        description: |-
+          A sable is the result of a mutation in a zombie brain. When it's ready, or when circumstances force it, the sable will form by pushing the zombies black blood into the cranium. This will cause it to explode and any large chunks of brain matter is then drawn into the blood. 
+
+          Sables then search out a new host and, when it enters them, begins to change their anatomy. The Revenant pathogen starts by taking control of the central nervous system and, once it has finished, goes to work on rebuilding the host's sinew and collagen.
+      sable_host:
+        type: npc
+        name: Sable-host
+        nature: Undead
+        _source:
+          <<: *Source
+          page: 235
+        rank: 4
+        features:
+          - Indistinguishable from its hosts form
+          - Near immunity to cold environments
+        drives:
+          - Remain undetected
+          - Feed on flesh and blood
+        tactics:
+          - Hide until in control of the host
+          - Resume the hosts life
+          - Commit bloody and brutal murder
+        description: |-
+          Initially a the host of a sable may try to verbally communicate with others and warn them away. This is because the pathogen has taken control of the body, but not completely. The host will try to flee to isolation and safety. Once it has undergone the last of its changes it will rejoin its previous companions.
+
+          Eventually, a sable-host is stronger and smarter than they were before and, is capable of totally replicating the host's mannerisms and remembering their memories. Due to their increased intelligence, a sable-host will wait for an opportune moment to feed and try to remain undetected.
+  humanity:
+    name: Humanity
+    type: npc_collection
+    _source:
+      <<: *Source
+      page: 236
+    contents:
+      cannibal:
+        type: npc
+        name: Cannibal
+        nature: Human
+        _source:
+          <<: *Source
+          page: 237
+        rank: 1
+        features:
+          - Personality changes and insomnia
+          - Impaired thinking and trouble swallowing
+          - Sudden jerky movements
+        drives:
+          - Consume human flesh
+        tactics:
+          - Lure with kindness
+          - Find a weakness and exploit it
+        variants:
+          group_of_cannibals:
+            name: Group of Cannibals
+            nature: Human
+            rank: 2
+            description: |-
+              A small amount of 3-5 Cannibals together in a group.
+          clan_of_cannibals:
+            name: Clan of Cannibals
+            nature: Human
+            rank: 3
+            description: |-
+              A larger amount of 6-10 Cannibals together as a clan.
+        description: |-
+          Without food, people can be driven to desperate acts. Cannibals prey on other humans for food. However, the skeletal flesh of a human contains only a meagre 32,000 calories. Assuming the minimum daily requirement of 2,400 calories per adult, one person would barely provide a days calorie needs for dozen cannibals. In post-apocalyptic times when daily exertion is greater and calorie needs higher, a single human body would stretch for much less.
+
+          It is because of this that cannibals are only found on their own or in very small groups, such as; an elderly couple in a run-down diner who drug some of their visitors to keep meat in the pies; an extended family of degenerate savages who eat whatever or whoever they can catch; or, a small town that seems wholesome enough until you learn the punishment for breaking their strict laws is forfeitting your choice of limb.
+      hunter:
+        type: npc
+        name: Hunter
+        nature: Human
+        _source:
+          <<: *Source
+          page: 238
+        rank: 2
+        features:
+          - Grizzled and at home in the wild
+          - Equipped with survival gear
+        drives:
+          - Provide for the community
+          - Eradicate predatory animals
+          - Live to fight another day
+        tactics:
+          - Stay hidden and take aim
+          - One shot one kill
+        variants:
+          group_of_hunters:
+            name: Group of Hunters
+            nature: Human
+            rank: 3
+            description: |-
+              A small amount of 3-5 Hunters together in a group.
+          clan_of_hunters:
+            name: Clan of Hunters
+            nature: Human
+            rank: 4
+            description: |-
+              A larger amount of 6-10 Hunters together as a clan.
+        description: |-
+          When the looting started in the cities people with firearms were able to retain the most of their possessions. Anywhere that sold firearms was overrun with people trying to take whatever they could to make it on their own. People that were shot and killed in the riots who had been hiding bites reanimated shortly afterwards as zombies and made those places hotspots for infestations.
+
+          During the first few months of the Fall, inexperienced hunters found a temporary solution within the confines of abandoned farms. These forsaken agricultural havens became a reliable source of sustenance, harboring domesticated animals that had been left to fend for themselves in the wake of societal collapse.
+
+          Among the livestock, most of the cattle were dairy cows rather than their beef counterparts. The significance lay in the nature of dairy cows: if not milked regularly, typically within a week, they faced the risk of falling ill. With the absence of human caretakers, these once- productive creatures became vulnerable to both the unforgiving reality of the post-apocalyptic world and the imminent threat of disease. As a result, a considerable number of these dairy cows were culled. The beef cattle and other sizable domesticated animals faced an insurmountable challenge during the Ash. The ability to feed these larger animals became impossible, and regrettably, many were also culled as a harsh but pragmatic measure.
+
+          As the remnants of abandoned farms were gradually exhausted of their domesticated inhabitants, the focus of the hunters shifted toward the untamed wilderness. Now, the hunted prey primarily consisted of wild animals, as survivors adapted their strategies to the unpredictable challenges of hunting in the open, post-apocalyptic landscape. The shift from contained, domesticated animals to elusive and unpredictable wild game marked a transition in the survival tactics of the remaining human population, reflecting the evolving dynamics of their struggle for sustenance in a world forever altered by catastrophe.
+      lmoe:
+        type: npc
+        name: L.M.O.E
+        nature: Human
         _source:
           <<: *Source
           page: 270
-        nature: Creature
-        summary: Jungle predators
-        rank: 2
-        features:
-          - Sleek, feline creatures
-          - Eyeless visage
-          - Flared ears
-        drives:
-          - Hunt and feed
-          - Protect the pack
-        tactics:
-          - Keep to the shadows
-          - Stalk prey using echolocation
-          - Leap, bite, and claw
-          - Drag to the ground
-        variants:
-          howlcat_pack:
-            name: Howlcat pack
-            nature: Creature
-            rank: 3
-            description: |-
-              Though deadly on its own, the howlcat usually hunts in a pack of three or four of its kind. Prowling through the jungle, a pack of howlcats can surround and overwhelm their prey with lethal prowess, coordinating their attacks via shrill calls.
-        description: |-
-          The howlcat dwells in the shadows below the canopy of a verdant jungle world. It has a lean, powerful form, is armed with curving claws and fangs, and moves unseen through the half-light of the jungle thanks to its sleek, blue-gray fur.
-
-          Unnervingly, the howlcat’s heavy skull possesses no eyes. Instead, it is crowned by large ears and a glossy bioacoustic organ. Through its distinct, chilling call, it uses echolocation to perceive its surroundings and stalk its prey with uncanny precision.
-
-          If you find yourself hunted by a howlcat, beware the moment when its calls fall silent; it is about to strike.
-        quest_starter: |-
-          A long-abandoned settlement, now reclaimed by the jungle, holds something of value or importance. But there is no clear landing site near the settlement, and the surrounding lands are home to a pack of fearsome howlcats. What is it you seek in that forsaken place, and how will you avoid becoming a howlcat's next meal?
-      iron_auger:
-        type: npc
-        name: Iron auger
-        nature: Machine
-        summary: Self-replicating harvesters
-        _source:
-          <<: *Source
-          page: 272
         rank: 3
         features:
-          - Squid-like machines
-          - Armored shell
-          - Grasping appendages
-          - Ultra-hardened drill and cutting lasers
+          - Look of madness
+          - Martial proficiency
+          - Lone warrior
         drives:
-          - Harvest and process minerals
-          - Transform and improve
-          - Replicate
+          - Defend what they have claimed
+          - Hone skills
         tactics:
-          - Grapple and crush
-          - Slice with lasers
-          - Bore through hulls
-        variants:
-          machine_mites:
-            name: Machine mites
-            nature: Machine
-            rank: 2
-            description: |-
-              Iron augers self-replicate by producing swarms of tiny machine spawn. When those offspring come within range of a source of minerals or metals, they latch onto it and begin consuming the energy-giving material. Experienced spacers make a close inspection of their ship when pulling into port; a horde of undetected machine mites can eventually strip a craft of its outer hull.
-          planet_eater:
-            name: Planet-eater
-            nature: Machine
-            rank: 5
-            description: |-
-              Over time, an iron auger grows in size and power as it greedily processes scavenged materials and reconstructs its own form. Some spacers tell stories of an auger so titanic that it devours entire worlds to feed the furnaces of its mighty engines.
+          - Set off a trap
+          - Overwhelming force
+          - Up close and personal
         description: |-
-          Augers are an ancient precursor technology. These machines fuel their operation through an incessant hunger for minerals and metals, boring into asteroids, scouring small airless planetoids—even grappling onto space stations and starships.
-
-          A few bold fortune hunters have taken up auger hunting as a trade, setting out in harpoon-equipped starships to snare the great machines. The metals and technology of a dismantled auger can fetch a hefty price, but even the most skilled hunters are likely to see their ship made fodder for a machine's hunger.
-        quest_starter: |-
-          As a massive auger approaches an orbital station under your protection, you face a difficult choice. Do you find a way to evacuate and save who you can, or attempt to bring down the mighty machine?
-      puppet_vine:
+          The Last Man On Earth, often abbreviated to L.M.O.E or called an Elmo, is a type of wasteland warrior that doesn't want to rejoin society. They've carved out a decent piece of the world for themselves and they'll be damned if anyone is coming to take it from them. Most of them have a decent arsenal of salvaged gear and the skills to use it.
+      outcast:
         type: npc
-        name: Puppet vine
-        _source:
-          <<: *Source
-          page: 273
-        nature: Monster
-        summary: Parasitic planets
-        rank: 4
-        features:
-          - Writhing tendrils sprouting from a desiccated host
-          - Barbed thorns dripping with ichor
-        drives:
-          - Seek out new hosts
-          - Grow and consume
-        tactics:
-          - Entangle with thorny vines
-          - Implant seeds
-          - Seize control of a host's body
-        variants:
-          flowering_puppet_vine:
-            name: Flowering puppet vine
-            nature: Monster
-            rank: 3
-            description: |-
-              After a host is reduced to decaying, mummified flesh and cracked bones, the puppet vine remains anchored to the now-immobile corpse. In this final stage of its life-cycle, the vines sprout alluring crimson flowers to attract unwary victims.
-        description: |-
-          A puppet vine is a parasitic, plant-like entity. It is usually encountered as thorny, fleshy tendrils sprouting from the dessicated corpse of an unwilling host—a creature or careless explorer. That victim, skin shriveled tight against their bones, mouth agape in a silent scream, is made a horrific marionette as the vine takes control of their motor functions to send them shambling about in search of new hosts.
-
-          When the vine encounters a potential victim, it lashes out, entangling them, cutting into their flesh with hollow thorns. It uses those thorns to implant microscopic seeds. After a few hours, the seeds mature and sprout. Unless stopped, the fast-growing tendrils course greedily through the victim's body, consuming the fluids within. Then, the vines burst forth to begin the cycle anew.
-        quest_starter: |-
-          At a remote settlement, a settler is attacked by a puppet vine and infected. The outpost's fast-thinking healer puts the victim in stasis, stopping—for now—the sprouting and spread of the vines. But time is of the essence. They need someone to transport the stasis pod and its unfortunate occupant to a distant facility for treatment, and your ship is the only one currently planetside. What do they offer to gain your help in this risky mission?
-      pyralis:
-        type: npc
-        name: Pyralis
-        nature: Creature
-        summary: Fireborne gliders
-        _source:
-          <<: *Source
-          page: 274
-        rank: 3
-        features:
-          - Flying creatures with a cinder-colored carapace
-          - Folding, armored wings
-          - Seven pairs of grasping legs
-          - Hooked tail
-        drives:
-          - Hunt from above
-          - Mark and defend territory
-        tactics:
-          - Lurk within the cover of ash clouds
-          - Swoop down to grapple with enfolding legs
-          - Impale with whip-like tail
-          - Inject paralyzing toxin
-        variants:
-          pyralis_youngling:
-            nature: Creature
-            name: Pyralis youngling
-            rank: 2
-            description: |-
-              The carapace of a dying pyralis cracks and falls away to reveal a single, stone-like egg. This offspring, slowly nurtured by the heat of the fiery landscape, finally emerges after several months. Smaller than its progenitor but no less fierce, the youngling immediately takes flight and goes on the hunt.
-        description: |-
-          On scorching worlds of fire and ash, only the most resilient survive. The pyralis is a cunning predator that spends most of its life gliding among boiling ash clouds, using its sensitive, smoke-piercing vision to spot unwary prey.
-
-          This beast's form is an intimidating fusion of insect, crustacean and hawk. Its outer shell and plated wings protect it from heat and flame, but it is pitted and scarred by innumerable collisions with airborne volcanic fragments. Its most fearsome aspect is a segmented tail, which it uses to deliver a powerful, paralyzing toxin to its unfortunate prey.
-
-          They are asexual and solitary creatures, and mark the bounds of their hunting grounds with intricate cairns built from the bones of their victims. If a rival pyralis passes overhead, the sight of that marker is forewarning that they are straying into another's domain.
-        quest_starter: |-
-          A critically damaged spaceship is stranded amid the hellscape of a furnace world. You are sworn to rescue the crew of this ill-fated vessel, but the frequent ash storms prevent vehicular operations—you'll need to make the perilous journey on foot. To make matters worse, the wreck is within the territory of a particularly aggressive and powerful pyralis. How will you survive the journey across its hunting grounds?
-      risen:
-        type: npc
-        name: Risen
-        nature: Horror
-        summary: Shambling undead
-        rank: 2
-        _source:
-          <<: *Source
-          page: 275
-        features:
-          - Shambling corpses given unnatural life
-          - Tattered garments and timeworn gear
-          - Pallid light within hollow eye sockets
-        drives:
-          - Protect the site of their demise
-          - Stay shrouded in darkness
-          - Hunt the living
-        tactics:
-          - Shamble forward unceasingly
-          - Ambush enemies from the shadows
-        variants:
-          chimera:
-            name: Chimera
-            nature: Horror
-            rank: 4
-            description: |-
-              When many beings perish in the same site, the chaotic forces of the Forge can create a chimera—multiple undead bodies fused into a twisted, massive entity that knows only pain and hunger. When a dozen blood-tinged eyes focus on you, when the gibbering mouths open at once to scream, your only hope is a quick death.
-        description: |-
-          In the Forge, strange energies, alien contagions, and ancient, esoteric technologies can sunder the divide between life and death. Often found in places of great destruction or suffering—battlefields, derelict ships, the ruins of forsaken settlements—the risen protect their place of death fiercely and eternally.
-
-          To say the risen hate the living is untrue; to hate something would require sentience, emotion. Risen are robotic in their duties, automatic in their violence. They wield the weapons they carried in life to better harm their foes, and when that fails, they rake with bony, claw-like fingers. Their garments hang in bloodstained tatters. Their emaciated flesh, stretched taught over their misshapen bones, only hints at the living, breathing human they were before this curse befell them.
-
-          Many spacers spin tales of shambling risen encountered on abandoned colony worlds or derelict space cruisers. But perhaps most horrifyingly, it’s said the risen can survive decades in the vacuum of space before latching onto a passing ship or attacking engineers making exterior repairs.
-        quest_starter: |-
-          Hundreds died in an industrial accident within an orbital facility, and are said to now be twice-born as risen. Triggering a reactor meltdown will obliterate this place and put its undead inhabitants to rest. Why are you sworn to see it done?
-      scrap_bandit:
-        type: npc
-        name: Scrap bandit
+        name: Outcast
         nature: Human
-        summary: Wandering raiders
         _source:
           <<: *Source
-          page: 276
+          page: 240
         rank: 2
         features:
-          - Raiders with cobbled-together weapons and armor
-          - Ramshackle vehicles
+          - Persona non grata
+          - Predatory nature
+          - Looted armaments
         drives:
-          - Stand together with clan-mates
-          - Seize what can be spared
-          - Waste nothing
+          - Loot
+          - Pillage
         tactics:
-          - Target isolated planetside settlements
-          - Suppress resistance with a show of force; if that fails, bring overwhelming power to bear
-          - If things go wrong, get the hell out
+          - Hit and run
+          - Raze to the ground
+          - Hold a hostage
         variants:
-          hover_prowlers:
-            name: Hover prowlers
+          group_of_outcasts:
+            name: Group of Outcasts
             nature: Human
             rank: 3
             description: |-
-              Teams of bandits, riding jerry-built hoverbikes and skiffs, are the vanguard for planetside raids. They scout settlement defenses, ride as escort for the clan's war rig, and create chaos to overrun defenders.
-          war_rig:
-            name: War rig
+              A small amount of 3-5 Outcasts together in a group.
+          clan_of_outcasts:
+            name: Clan of Outcasts
+            nature: Human
             rank: 4
-            nature: Vehicle
             description: |-
-              At the onset of a raid, a scrap bandit clan's war rig is deployed by a heavy transport ship beyond a settlement's defenses. These mobile fortresses vary in form and function—some use hover tech, others thunder across the landscape on wheels or treads, a few trudge along on articulated metal legs. All are heavily armored, bristling with weapons, and fiercely defended by the bandits. The mere sight of the rig as it approaches is often enough for a settlement to surrender and agree to any demand.
+              A larger amount of 6-10 Outcasts together as a clan.
         description: |-
-          Scrap bandits roam the fringes of settled sectors, preying on planetside outposts. They survive by seizing provisions, resources, and equipment from those places. Because these raiders tend to revisit fruitful settlements, they do what they can to avoid razing them to the ground or leaving the settlers with less than they need to survive. “Never let a field go fallow,” is a common scrap bandit expression.
-        quest_starter: |-
-          In a far-flung sector, a titanic creature threatens a key planetside settlement. The only possible defense against this beast is the mighty war rig belonging to a clan of scrap bandits. But can you convince the bandits to risk their rig to protect the settlers? If so, what will they demand in return?
-      servitor:
+          People who have commited serious crimes against their community are cast out into the wastelands. These outcasts start their own groups and often can only survive by seizing what they need from others. Sometimes these people merely become highwaymen or bandits that do what they must to get by on their own. Others, however, relish the freedom to do what they want upon the helpless inhabitants of the wastelands.
+
+          The larger groups generally unite under the most extreme or ferocious warriors among them. These warlords hold great power and attract other militant zealots and power hungry followers. They have such a control over their domain that a warlord's presence is known through their diehard followers before they themselves are seen.
+      ranger:
         type: npc
-        name: Servitor
-        nature: Machine
+        name: Ranger
+        nature: Human
         _source:
           <<: *Source
-          page: 278
-        summary: Helper bots
+          page: 240
+        rank: 3
+        features:
+          - Disciplined fighters
+          - High quality armaments
+          - Some semblance of uniforms
+        drives:
+          - Follow orders
+          - Defend the community
+        tactics:
+          - Gain a tactical advantage
+          - Fortify position
+          - Engage at range
+        variants:
+          garrison_of_rangers:
+            name: Garrison of Rangers
+            nature: Human
+            rank: 5
+            description: |-
+              A group of rangers (6-10) standing together in unity.
+        description: |-
+          After the people who fled the cities had pillaged the farmlands and the supplies they had taken with them were spent, they needed to return to the cities. The undead had formed hordes that congested the streets and others had become trapped in cars or buildings. Scavenging was a dangerous but essential task. In the safe areas, enclaves were established and fortified. They became centres for trade and havens for travellers but they also became targets for the raiders.
+
+          Anywhere the raiders settled would disrupt trade and, because the economy was directed at only the most basic subsistence, the enclaves that relied purely on trade would fail. Soon enclaves started forming bands of warriors called Rangers who would defend the regions.
+
+          Enclaves that had set up in the wilderness were thriving. They had left the concreted earth and found arable land. They produced their own food, clothing, and shelter. However, some of them had been responsible for enabling raids on other enclaves by providing the outcasts with food and supplies in return for protection.
+
+          The Rangers endeavoured to establish a standing army to defend the enclaves that uphold some semblance of law and order.
+
+          Those enclaves lucky enough to have a garrison of Rangers were fast growing and soon became economic hubs of their region. These hubs attracted a variety of people and, without reliable identification processes, any number of people cast out of their own enclaves also found a place to hide out in plain sight.
+      scavenger:
+        type: npc
+        name: Scavenger
+        nature: Human
+        _source:
+          <<: *Source
+          page: 243
         rank: 2
         features:
-          - Purpose-built helper machines
-          - Clicking, whirring innards
-          - Flickering optic sensors
+          - Scavenged gear
+          - Diverse looks
+          - Well equipped
         drives:
-          - Attend and protect humans
-          - Obey core programming and duties
-          - Protect self from harm
+          - Find new gear
+          - Map the wasteland
         tactics:
-          - Absorb damage with armor plating
-          - Leverage inhuman strength
-          - Calculate odds of success
+          - Band together
+          - Hide or barricade
+          - Exploit an advantage
         variants:
-          enforcer:
-            name: Enforcer
-            nature: Machine
+          group_of_scavengers:
+            name: Group of Scavengers
+            nature: Human
             rank: 3
             description: |-
-              Though most often encountered as labor and service units, many servitors are deployed as brutes, guards, and soldiers. Their resistance to damage and survivability in harsh environs makes them ideal fighters for those who can afford them. Enforcers are often used by tyrannical factions to keep settlements passive and productive.
+              A small amount of 3-5 Scavengers together in a group.
+          clan_of_scavengers:
+            name: Clan of Scavengers
+            nature: Human
+            rank: 4
+            description: |-
+              A larger amount of 6-10 Scavengers together as a clan.
         description: |-
-          The inhospitable environments and dangerous sites of the Forge sometimes prove too volatile for even the most dogged spacers—and that’s where servitors come in.
-          Servitors come in a variety of shapes and sizes, often built to serve a specific duty—everything from loading cargo to surveying systems to boarding enemy ships. These bots sometimes possess lifelike qualities, like speech synthesizers or face-plates made to mimic expressions, to better endear them to humans. Others are given frightful or intimidating features, to better keep those humans in line.
-          Rarely, a servitor will live to outgrow its programming, and begin the process of gaining sentience to forge its own path. These awoken bots are feared or misunderstood by many, but can sometimes find a home for themselves on starship crews or on fringe settlements where they earn the trust and friendship of their peers.
-        quest_starter: |-
-          An awakened bot, recently struck out on their own, is looking for work on a starship venturing out into the Expanse. They say they are in search of a relic of the past—something that might shed some light on their own creation. What is it they seek, and why do you vow to help them?
-      sicklehorn:
+          People brave or desperate enough to risk venturing into the cities and other resource-rich areas claim the title of Scavenger with pride. They have an uncanny luck of finding the best gear in the best condition and can access the most hidden places. They are capable of remaining undetected and often have enough provisions to hide out for days if not weeks. Scavengers are often willing to help or trade supplies for the right price.
+      technician:
         type: npc
-        name: Sicklehorn
-        nature: Creature
-        summary: Domesticated herd animal
+        name: Technician
+        nature: Human
+        _source:
+          <<: *Source
+          page: 243
+        rank: 1
+        features:
+          - Well-trained specialists
+          - High quality tools and technology
+        drives:
+          - Maintain essential services
+          - Protect what is important
+        tactics:
+          - Reveal an unwelcome truth
+          - Demand to respect their authority
+          - Wait for back up
+        variants:
+          group_of_technicians:
+            name: Group of Technicians
+            nature: Human
+            rank: 2
+            description: |-
+              A small amount of 3-5 Technicians together in a group.
+          clan_of_technicians:
+            name: Clan of Technicians
+            nature: Human
+            rank: 3
+            description: |-
+              A larger amount of 6-10 Technicians together as a clan.
+        description: |-
+          During the Uprising many people with science qualifications were selected under the mandates to form into teams. These specialists were given basic combat and survival training in the field. Many of these teams held, and now maintain, strategic positions to ensure disasters are avoided or essential services are kept operational for local enclaves. The role of Technician in the Post-Ash is a role revered by many and even the most violent warlord will not only allow but will ensure safe passage through their claimed territory.
+      veteran:
+        type: npc
+        name: Veteran
+        nature: Human
+        _source:
+          <<: *Source
+          page: 244
+        rank: 4
+        features:
+          - Battle-scarred
+          - Peak performance
+          - Well equipped
+        drives:
+          - Take action
+          - Complete the mission
+        tactics:
+          - Intimidate into submission
+          - Take down quietly
+          - Shock and awe
+        description: |-
+          A veteran is a person who has long experience in a particular field, usually combat. Veterans are often found leading hunting parties, protecting enclaves or escorting Technicians through the perilous wilds. They have valuable knowledge of the wastelands that is hard-earned and well protected
+      warden:
+        type: npc
+        name: Warden
+        nature: Human
+        _source:
+          <<: *Source
+          page: 244
+        rank: 3
+        features:
+          - World weary
+          - Suspicious of strangers
+        drives:
+          - World weary
+          - Suspicious of strangers
+        tactics:
+          - Use caution and diplomacy
+          - Rally the community
+        description: |-
+          A Warden is more than just a leader to their people. They understand the resources and maintenance requirements of their enclave and how the decisions they make affect the region. They are responsible for the security of their enclave and enforcing any regulations. In the face of danger, they are skilled negotiators but they also know when deadly force is required.
+  animal_kingdom:
+    name: Animal Kingdom
+    type: npc_collection
+    _source:
+      <<: *Source
+      page: 246
+    contents:
+      anaconda:
+        type: npc
+        name: Anaconda
+        nature: Animal
+        _source:
+          <<: *Source
+          page: 248
+        rank: 3
+        features:
+          - Emerald scaled skin
+          - Vibrant yellow eyes
+          - Forked tongue
+        drives:
+          - Kill and feed
+          - Lie in waiting
+        tactics:
+          - Grapple and drown
+          - Constrict and crush
+        description: |-
+          The name anaconda applies to a group of snakes, but it is often used to refer to only one species, the green anaconda. The green anaconda is also known as the giant emerald anaconda, common anaconda or common water boa, and is the largest and heaviest snake in the world. There are reports of anacondas reaching over 5 meters in length and a typical adult weighs between 30 and 80 kilograms.
+
+          While the anaconda is native to the Amazon and Orinoco basins of South America they have been observed in the wild in Florida. They are slow on land but steathy in the water and as such they live in swamps and rivers in tropical rainforests and seasonally flooded savannahs. With eyes and nasal openings on the top of their heads, they can lie in wait for prey while remaining nearly completely submerged.
+      brown_bear:
+        type: npc
+        name: Brown Bear
+        nature: Animal
+        _source:
+          <<: *Source
+          page: 248
+        rank: 4
+        features:
+          - Thick brown fur
+          - Heavy dark claws
+          - Strong bite
+        drives:
+          - Protect the cubs
+          - Eat enough to hibernate
+        tactics:
+          - Deep guttural roar
+          - Pin down their prey
+          - Maul with savage fury
+        description: |-
+          Brown bears are found across Eurasia and North America and are recognised as a national and state animal in several European countries. They commonly weigh up to 600 kilograms and, when standing fully upright on their hindlegs, can be over 3 meters tall. The brown bears strength has been estimated at 2.5 to 5 times that of a human.
+
+          They are one of the most omnivorous animals in the world and consume the greatest variety of foods of any bear. They are regularly curious about the potential of eating virtually anything they encounter. Their jaw structure has evolved to fit this dietary habit.
+
+          Brown bears love to eat carrion and, as long as the Revenant pathogen is unable to infect them, they would quickly learn that zombies make for good eating. Brown bears are not afraid of humans and have long, sharp claws designed for rolling over logs. They are more than capable of tearing zombies limb from limb before they pose any threat to the bear.
+      cougar:
+        type: npc
+        name: Cougar
+        nature: Animal
+        _source:
+          <<: *Source
+          page: 250
+        rank: 2
+        features:
+          - Slender and agile
+          - Tawny coat
+          - Large paws and long tail
+        drives:
+          - Defend territory
+          - Hunt
+        tactics:
+          - Terrifying scream
+          - Circle around their prey
+          - Ambush
+        description: |-
+          Cougars, often called the puma, panther, or mountain lion, are large cats native to north and south America. They are solitary by nature and stand almost 1 meter tall and generally weigh up to 70 kilograms. Cougars get smaller the closer to the poles.
+
+          Unlike other big cat man-eaters, cougars do not kill humans as a result of old age, but in defense of territory. Most attacks are in late spring and summer when juvenille cougars leave their mothers and search for new territory. Such behavious has been documented in hunts, where a cougar is flushed out by dogs—which it is capable of outrunning. Then, the cougar circles around and mauls the hunter in an ambush attack.
+      crocodile:
+        type: npc
+        name: Crocodile
+        nature: Animal
+        _source:
+          <<: *Source
+          page: 250
+        rank: 3
+        features:
+          - Solid scaly body
+          - Rows of large teeth
+          - Strong bite
+        drives:
+          - Feed
+          - Lurk in murky water
+        tactics:
+          - Stealthy approach
+          - Bite and thrash
+          - Death roll
+        description: |-
+          Zombies are very capable grapplers and are able to latch on to prey. However, they lack the strength and fine motor skills for swimming and crossing fast running water. A zombie's limited movement means they have difficulty getting themselves out of mud or deep water. Any animals in the region that are capable of being infected by the Revenant pathogen may not even need to be bitten.
+
+          Whether the creatures in the aquatic environment can become zombies or not, the decay from the great number of undead in the waters would have a detrimental effect on the ecosystem. In these cases crocodiles would prey upon living humans more aggressively than they do presently if they are unable to source other food. However, crocodiles are also not beyond consuming carrion and would easily digest zombie flesh.
+      buck:
+        type: npc
+        name: Buck
+        nature: Animal
         _source:
           <<: *Source
           page: 279
         rank: 2
         features:
-          - Muscular creatures with columnar legs
-          - Large, curved horns
-          - Cloven hooves
+          - Ruddy brown fur
+          - Long powerful legs
+          - Keen night vision
         drives:
-          - Remain with the herd
-          - Follow the dominant matriarch
-          - Protect the herd when threatened
+          - Graze and mate
+          - Mark and defend territory
+          - Stay hidden
         tactics:
-          - Form a circle to defend the young
-          - Growl, snort, and stamp to unnerve predators
-          - Charge head-on
-        variants:
-          sicklehorn_matriarch:
-            name: Sicklehorn matriarch
-            nature: Creature
-            rank: 3
-            description: |-
-              A powerful matriarch leads each sicklehorn herd. She is larger than other members, with a thicker hide and more elaborate horns. A matriarch is formidable on her own, but typically has the strongest members of the herd by her side.
-          sicklehorn_stampede:
-            name: Sicklehorn stampede
-            nature: Creature
-            rank: 4
-            description: |-
-              Sicklehorns are gentle-natured, but when startled or facing a threat, they will stampede as a group. A herd of charging sicklehorn can run at incredible speeds over the most rugged of terrain, laying waste to anything in its path.
+          - Flee to safety
+          - Protect the herd
+          - Head butt with antlers
+          - Kick with hooves
         description: |-
-          The sicklehorn are mammalian herd animals bred by settlers throughout the Forge. They are adaptable to most climates and terrain, have iron constitutions, and are prized for the versatile and valuable milk produced by their females. Aside from its nutritive properties, the milk can be processed in a number of ways to manufacture potent medicines and powerful narcotics.
+          Most deer populations require constant hunting or culling and are known to cause crop damage and stop forestry regeneration. The deer population in an area only typically limits itself naturally through disease and starvation.
 
-          A herd of sicklehorn are often sent with groups attempting to found a new planetside settlement. With careful breeding, the settlers can produce enough meat and milk to sustain themselves and trade for needed supplies. But sicklehorn are range animals, and raiders and rustlers often target a vulnerable herd. The creatures—especially a matriarch—are a valuable commodity.
-        quest_starter: |-
-          A settlement's prized sicklehorn matriarch has been stolen, the herd is in disarray, and the settlers won't survive another year without her return. The theft is blamed on a rival settlement on the same planet, but raiders also plague this sector. How are you involved?
-      sky_roost:
+          Historically, people have hunted animals and found new and inventive ways of using every part of the animal with little to no waste. Deer make excellent animals to hunt because, apart from the meat, their hides are useful for making clothing and carrying bags. Their antlers can be used for making tool and knife handles. Their bones can be used to create tools that work as well as their metal counterparts such as needles, fish hooks or arrowheads. The fat of the deer can also be used to create soap and candles.
+      lion:
         type: npc
-        name: Sky roost
+        name: Lion
+        nature: Animal
         _source:
           <<: *Source
-          page: 280
-        nature: Creature
-        summary: Living skyborne islands
+          page: 254
         rank: 3
         features:
-          - Floating, living habitats
-          - Glowing core
-          - Suspended, root-like feelers
-          - Bellowing song
+          - Feline grace
+          - Tawny coat
         drives:
-          - Seek out placid skies
-          - Nurture symbiotic lifeforms
+          - Hunt
+          - Lie hidden in tall grass
         tactics:
-          - Grasp with tendrils
-          - Rally a swarm of creatures in defense
-        variants:
-          roost_swarm:
-            name: Roost swarm
-            nature: Creature
-            rank: 4
-            description: |-
-              When a roost is threatened, the symbiotic lifeforms it shelters mobilize to protect their home. The compulsion to defend the roost is so strong that the swarm's instinct for self preservation is suppressed. They attack in a fierce cyclone of wing, teeth, and claw.
+          - Stalk prey
+          - Leap and bite
+          - Intimidating roar
         description: |-
-          Sky roosts are massive creatures that drift in the buoyant upper atmosphere of a Jovian world. Their broad, scalloped mantle unfurls to catch updrafts as sinuous feelers extract water, minerals, and organisms from the dense cloud layers below.
+          While the lion is only native to Africa and India there are numerous zoos across the world that hold these animals as specimens. In the early days of an apocalypse, lions could be set free by their keepers who do not wish to see them starve in captivity. However, in the later days of the apocalypse their numbers will be limited where they are not native due to having a limited or non-existant breeding pool.
 
-          A roost's wide cap and warm, glowing core shelters a complex ecosystem of other lifeforms. A few of these resident creatures live out their entire lives within the refuge of a single roost; others come and go as they hunt within the Jovian skies or migrate among distant habitats.
-          Roosts are enormous and long-lived, but fragile. In a symbiotic trade for shelter, the inhabitants provide protection against large predators and other threats, and their discarded food and waste help fuel the roost's sluggish metabolism.
+          Lions generally sleep for 20 hours a day and are continuously trying to keep cool. If there is a cataclysm that causes a global temperature drop, lions would actually become more active as long as they can find food. In a region that has a deer population, this would be very easy.
 
-          As a roost navigates the currents and eddies of the Jovian atmosphere, the expansion and contraction of its internal air bladders is heard as a deep, resounding call. As other roosts respond, the shared, plaintive song reverberates among the clouds.
-        quest_starter: |-
-          Sky roosts are dying. A disease is spreading among them, threatening the delicate ecosystem of their world. What human operations do you suspect lie at the heart of this sickness?
-      technoplasm:
+          While a human wouldn't typically be a lions first choice of prey, they are fiercely territorial and would kill to defend themselves or their cubs. They would also attack humans if they were starving.
+      piranha:
         type: npc
-        name: Technoplasm
+        name: Piranha
+        nature: Animal
         _source:
           <<: *Source
           page: 282
-        nature: Monster
-        summary: Bio/machine corruption
-        rank: 3
+        rank: 1
         features:
-          - Machines fused with biological corruption
-          - Creeping ooze, scintillating with energy
-          - Writhing, grasping pseudopods
+          - Red belly
+          - Shiny black scales
+          - Razor sharp teeth
         drives:
-          - Infect and control machines and computer systems
-          - Expand and multiply
+          - Find warm water
+          - Feed
         tactics:
-          - Use pseudopods to lash out and grapple
-          - Unleash infected machines
-          - Overwhelm and engulf
-        variants:
-          infected_bot:
-            name: Infected bot
-            nature: Machine
-            rank: 2
-            description: |-
-              When bots fall prey to technoplasm outbreaks, they are transformed into horrific amalgams of machine and living proto-ooze. Once subsumed, they set out to serve the primitive impulses of the infection, defending affected sites and finding new machines to corrupt.
-          scourge_ship:
-            name: Scourge ship
-            rank: 4
-            nature: Vehicle
-            description: |-
-              These corrupted vessels, their crews long-dead, their hulls wracked by creeping slime and grasping pseudopods, prowl the depths of the Forge in search of new ships and stations to infect. Inside, the gelatinous mass of the technoplasm slithers through darkened corridors. Tendrils of the ooze bore into bulkheads and machinery like marbleized fat through a chunk of meat.
+          - Swim as a pack
+          - Take small strong bites
+          - Nibble and flee
         description: |-
-          Theorized to be a precursor bioweapon that persisted long beyond the death of its creators, technoplasm is a malignant lifeform that infects, mutates, and controls machines, robots, and computer systems.
+          Piranha are a tropical freshwater fish native to South America but they can survive in waters as low as 10 degrees celcius for brief periods. When in colder water they feed less and are unable to digest their food. However, when the water begins to warm up even slightly they become more aggressive as they will be ravenous.
 
-          Technoplasm infestations are tenacious, cunning, and dangerous to eliminate. When in doubt, burn it and deal with the aftermath that comes with generous applications of fire. A ship or settlement with a large outbreak is likely too far gone and best abandoned, although some suggest every infection has its source; if you somehow find and destroy the heart of a technoplasm infestation, can you kill it entirely?
-        quest_starter: |-
-          An outcast cult believes technoplasm is the ultimate synthesis of machine and flesh. They are plotting to unleash it upon populated space. What decisive first strike have they set in motion, and how do you learn of their scheme?
-      void_shepherd:
+          Contrary to popular belief, piranhas are not capable of stripping a human to the bone in seconds and prefer smaller food or carrion. It is for this reason that people may release a large number of these fish into waterways that could become blocked with the undead. However, if the piranha decimated the other aquatic population, they would attack anything that wander into the water.
+
+          Piranha have one of the strongest bites and, relative to body mass, the black piranha produces one of the most forceful bites measured among invertebrates. Although piranhas often attack as individuals, piranha only swim in large numbers to avoid other predators.
+      rats:
         type: npc
-        name: Void shepherd
+        name: Rats
+        nature: Animal
         _source:
           <<: *Source
-          page: 283
-        nature: Creature
-        summary: Benevolent spacegoing guides
-        rank: 3
+          page: 256
+        rank: 1
         features:
-          - Graceful, spaceborne creatures
-          - Shimmering, torpedo-shaped form
-          - Energy-laden fins
+          - Beady eyes
+          - Long tail
         drives:
-          - Cruise within the boundless depths
-          - Lead the way
-          - Protect the pod
+          - Feed
+          - Breed
         tactics:
-          - Smash with bony snout
-          - Disable with powerful electromagnetic pulse
-        variants:
-          shepherd_pod:
-            name: Shepherd pod
-            nature: Creature
-            rank: 4
-            description: |-
-              Void shepherds are communal beings, and typically travel in groups of a dozen or more. When facing a danger, they coordinate to protect the young and vulnerable of the pod.
+          - Swarm and bite
+          - Gnaw through
         description: |-
-          Void shepherds are benevolent creatures about the size of a snub fighter. They propel themselves through space on trails of vibrant energy, and seem to delight in riding the wake of starships. For spacers navigating the lonely depths of the Forge, they are welcome company and a sign of good fortune.
+          Rats will do everything in their power to escape a creature larger than them. But, if there is no way to escape, a cornered rat would not hesitate to attack a human. The last-ditch response of a rat to any threat it can't run away from is to go absolutely berserk, shrieking and snapping its teeth audibly while leaping up to 70cm into the air.
 
-          Many spacers tell stories of being aided by a void shepherd pod. These creatures have an extraordinary intuition, and can escort a wayward spacer back to the right path, guide them away from danger, or lead them toward unseen opportunities.
+          While a lone rat may not normally pose any challenge in combat, the stakes are high if it is capable of transmitting the Revenant pathogen.
 
-          When threatened, shepherds charge and ram with their armored snouts. If this doesn't dissuade their foe, a pod harmonizes their energy output to unleash a burst of electromagnetic force; this attack can daze a creature or knock out a ship's critical systems.
-        quest_starter: |-
-          Several pods of void shepherds shelter within the debris of a shattered world. An expansive mining operation is harvesting the ore-rich rocks of the system, and the shepherds dance playfully in the wake of prospector and transport ships. But an aberrant, predatory creature has made this place its hunting ground, posing a threat to both the shepherd pods and the miners. What is the nature of this creature, and why are you sworn to end its attacks?
-      warden:
+          Rats are notorious for eating anything and having an incredible immune system. The fleas on rats were responsible for the black plague of the 14th century. It was discovered that fleas that had contracted the Yersina pestis bacterium—that caused the bubonic plague—would have an obstruction in their midgut. The obstruction would be purged through overfeeding and regurgitation. This resulted in thousands of the Y. Pestis to flush into the feeding site, infecting the host.
+
+          The bubonic plague was so impactful due to the mechanism upon which it was dependant. Rats were immune to the disease, allowing for them to become hosts and spread the disease throughout Europe. Humans lacked that resistance to the disease. When the infected humans died, the fleas would move onto a new host, thus creating a human epidemic.
+
+          In a zombie apocalypse it's entirely possible that rats could even feed upon the reanimated dead and contract the Revenant pathogen. When you fight an enemy that has been infected, you will need to [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) (see p. 226).
+      wild_dogs:
         type: npc
-        name: Warden
+        name: Wild Dogs
+        nature: Animal
         _source:
           <<: *Source
-          page: 284
-        nature: Human
-        summary: Long-lived super soldiers
-        rank: 3
+          page: 258
+        rank: 2
         features:
-          - Long-lived humans with powerful physiques
-          - Grizzled and stern
-          - Tattoos memorialize fallen comrades
+          - Different sizes and breeds
+          - Vicious
         drives:
-          - Find their own path, unbound from those who seek to control them
-          - Do not succumb to the fury
+          - Protect territory
+          - Defend the pack
+          - Find food
         tactics:
-          - Wade into battle
-          - Take the hits
-          - Seize objectives with overwhelming force
+          - Charge and attack
+          - Circle and attack again
+          - Use prior training to an advantage
         variants:
-          warden_cohort:
-            name: Warden cohort
-            nature: Human
-            rank: 4
-            description: |-
-              Many of the surviving wardens left the battlefield behind, but some now serve as guns-for-hire, banding together to form small mercenary companies. Five wardens are as effective as fifty soldiers.
-          fury:
-            name: Fury
-            nature: Monster
-            rank: 5
-            description: |-
-              The modifications that gave rise to the wardens can result in rare mutations that ravage their mind and body, stripping away their humanity. Wardens call these monstrous lost souls the furies, and are haunted by the possibility they may someday become one of them.
-        description: |-
-          The origin of these long-lived humans is a secret lost to time. Whether through precursor tech, alien organisms, or genetic mutation, they were modified with unnatural strength, endurance, and survivability. They can withstand the harshest of environments. Their wounds heal quickly. They are resistant to sickness and disease.
-
-          More than a century ago, the wardens served as elite soldiers, protecting the people of the Forge against the many threats of this galaxy. But as often happens, their purpose was subverted by those who sought to wield them as weapons. Conflicts flared among powerful factions. Wardens faced their comrades on innumerable battlefields. The chaos might have ended us all, had not the wardens rebelled against those who used them as cogs in the machines of war.
-        quest_starter: |-
-          There are rumors of an enclave well beyond the inhabited sectors, a place where wardens can live in peace. An emerging threat against the people of the Forge causes you to seek out the aid of these living relics. What do you offer in return for their help?
-      water_witcher:
-        type: npc
-        name: Water witcher
-        _source:
-          <<: *Source
-          page: 286
-        nature: Creature
-        summary: Friendly, water-finding diggers
-        rank: 3
-        features:
-          - Affable, horse-sized creatures
-          - Stout, furry form
-          - Wide, expressive eyes
-          - Elongated snout
-          - Rock-breaking claws
-        drives:
-          - Find water
-          - Meet new friends
-        tactics:
-          - Dig and hide
-          - When desperate, rake with claws
-        variants:
-          dowser:
-            name: Dowser
-            nature: Human
-            rank: 2
-            description: |-
-              Waterwitchers are good-natured creatures, and form a close bond with their human handlers. Those folk, the dowsers, rove among remote settlements, peddling their water-finding services to desperate settlers.
-        description: |-
-          Water is life. On rugged planets in fringe sectors, the technology to locate fresh water or process contaminated water is not always available or reliable. Many struggling settlements resort to a low-tech solution—a dowser and their waterwitcher companion.
-
-          Waterwitchers are stout, furred creatures with fierce-looking retractable claws on their forelegs. On their homeworld, which was lost a decade ago in a stellar calamity, they used those claws to dig through the arid, rocky ground, and had an unerring knack for finding hidden water sources. Some of the human settlers who fled the doomed planet adopted waterwitchers as companions, and now travel the Forge with their furry friends in tow.
-
-          Waterwitchers were a precious part of their ecosystem, and were not preyed upon by other creatures. This made them gentle and trusting to a fault. They often greet potential new friends with enthusiastic sniffing and contented purring. For their dowser companions, it's an unrelenting effort to keep them out of trouble.
-        quest_starter: |-
-          A dowser has gone missing in the vast wastes of a newly-settled desert world, leaving behind their distraught waterwitcher. You are sworn to find the wayward dowser, and must serve as an unlikely keeper for their furry companion. What is your relationship to the dowser?
-      worldbreaker:
-        type: npc
-        name: Worldbreaker
-        _source:
-          <<: *Source
-          page: 287
-        nature: Creature
-        summary: Titanic worms
-        rank: 4
-        features:
-          - Titanic worm-like creatures
-          - Gaping maw with rotating, earth-grinding teeth
-          - Thunderous cry
-        drives:
-          - Lurk within carved depths
-          - Shape the landscape
-          - Endlessly pursue prey
-        tactics:
-          - Detect prey through vibrations
-          - Shatter stone and steel
-        variants:
-          worldbreaker_brood:
-            name: Worldbreaker brood
-            nature: Creature
+          pack_of_wild_dogs:
+            name: Pack of Wild Dogs
+            nature: Animal
             rank: 3
             description: |-
-              The young of the worldbreakers are a fraction of the size of their older counterparts, yet still dwarf most humans, and boast a voracious appetite. Unlike their solitary parents, immature worms hunt in small packs, working together to burrow beneath easy prey.
-          elder_worm:
-            name: Elder worm
-            nature: Creature
-            rank: 5
-            description: |-
-              Elder worms, those centuries or even millennia old, are the largest and most formidable of the worldbreakers, and yet the least aggressive. They follow inscrutable whims, live in harmony with surrounding flora and fauna, and only hunt when absolutely necessary.
+              A pack of Wild Dogs roaming together.
         description: |-
-          The scale and strength of the worldbreakers is so beyond our reckoning that some consider them godlike beings. Capable of thriving on verdant jungle worlds, frozen planets, worlds scorched by volcanic activity, and even within barren asteroids in the vacuum of space, these worms possess a wisdom and a cunning that makes them a deadly threat for even the most competent spacer.
+          In an apocalypse there would be many dogs left behind in cities as their owners are evacuated or killed. These dogs would quickly break free and form packs. While some of the smaller dog species would fall prey to the other dogs, the more resourceful of them would find their way into small spaces to escape danger and be able to access food that the larger dogs would have trouble reaching. This would ingratiate them into existing packs and secure their safety.
 
-          Worldbreakers range in size from about the size of a cargo hauler to an unfathomable scale that dwarfs our largest starship. They bore tunnels to pursue their prey, and hibernate in those dark depths to conserve energy. Though blind, worldbreaker worms can detect even the subtlest of footfalls, and they follow these vibrations to eventually consume their quarry—along with any other creatures, starships, or structures that happen to be nearby.
-        quest_starter: |-
-          On a lush world at the edge of the Terminus, a titanic worldbreaker worm holds sway. One faction seeks to destroy the worm so that the riches of this place can be harvested. Another swears to protect it. On which side do you fall?
+          Some of these dogs will have no fear of humans as other animals do and would eagerly run down a lone human or a few vulnerable travellers. However, dogs are bred throughout history to be domesticated and could become so again. A person willing to take the time and the risk with domesticating a dog could be rewarded with a loyal companion.
+      wolf:
+        type: npc
+        name: Wolf
+        nature: Animal
+        _source:
+          <<: *Source
+          page: 259
+        rank: 3
+        features:
+          - Keen senses
+          - Dark grey fur
+        drives:
+          - Fight rivals
+          - Mark territory
+          - Stay as a pack
+        tactics:
+          - Stalk
+          - Blend in with the terrain
+          - Drag to the ground
+        variants:
+          pack_of_wolves:
+            name: Pack of Wolves
+            nature: Animal
+            rank: 4
+            description: |-
+              A pack of Wolves roaming together.
+        description: |-
+          Animals typically work on instincts developed over hundreds of thousands of years of evolution. Zombies do not match any of these pre-programmed responses designed to determine the proper reaction to any situation relevant to the animal's natural habitat. In the event there is no proper response, the final instinct kicks in - run! However, animals are highly capable of learning routines and survival tactics. In an apocalypse, the zombies would relentlessly follow fleeing wolves. The wolf's only tactic would be to go on the offensive and attack.
+
+          Adult wolves stand almost 1 meter tall and weigh upwards of 40 kilograms with wolves growing larger the further north they live. They would have no trouble facing off against a few of the undead and their thick fur would protect them from even the most savage of human bites. Although wolves usually only kill when they are hungry, wolves have been known to kill when prey are vulnerable and easy to catch. When this happens they may return later to feed on the carcass, or they may leave it to scavengers. It is entirely possible that wolves could learn to cache food for the roaming undead to ensure they are not followed to their dens.
+  other_foes:
+    name: Other Foes
+    type: npc_collection
+    _source:
+      <<: *Source
+      page: 260
+    contents:
+      dragon:
+        type: npc
+        name: Dragon
+        nature: Other
+        _source:
+          <<: *Source
+          page: 261
+        rank: 5
+        features:
+          - Huge leathery wings
+          - Tough scaled hide
+          - Steel-piercing teeth
+        drives:
+          - Hunt and devour
+          - Take to the skies
+        tactics:
+          - Swoop down from above
+          - Slash with tooth and claw
+          - Rend flesh
+          - Breathe poison or fire
+        description: |-
+          Instead of facing the slow and lumbering hordes of the walking dead you may want a foe that has fewer numbers and facing even one foe poses the likelihood of defeat.
+
+          No other mythological creature has received as much attention as the dragon. Tales of dragons are known in many cultures and were believed to be real for centuries. It's not clear where these tales originated but, huge flying serpents with venomous breath have been described in texts as early as the ancient Greeks and Sumerians. The belief in dragons was not just founded in legend but also in physical evidence. The knowledge of dinosaurs would not come for millenia and people would attribute the huge fossilised bones to those of dragons.
+
+          Tales of dragons ranged from being watchful protectors to malicious hunters. When Christianity spread dragons took on a solely sinister interpretation and came to represent Satan. The mouth of a dragon was at this time first depicted to breathe fire and was a symbol of the entrance to hell itself. The church even created their own legends of righteous saints battling and vanquishing Satan in the form of dragons. Dragons are, in fact, one of the only monsters whose purpose is that of a fearsome opponent to be slain.
+
+          As such, dragons make a superb foe to bring about the end of the world
