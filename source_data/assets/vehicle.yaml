@@ -1,0 +1,63 @@
+_id: revenant
+datasworn_version: "0.1.0"
+type: ruleset
+assets:
+  vehicle:
+    type: asset_collection
+    _source:
+      <<: &Source
+        title: 'Revenant'
+        license: https://creativecommons.org/licenses/by-sa/4.0
+        url: https://www.drivethrurpg.com/en/product/457762/revenant
+        date: 2025-06-23
+        authors:
+          - name: Killian Gillespie
+      page: 189
+    name: Vehicle Assets
+    description: |-
+      Vehicles are much like equipment in that they allow you to make moves that you would not be able to make were they not in your control. Certain types of vehicles may even allow you to disregard making a move, allowing the narrative to move on in your favour without rolling at all.
+      
+       Some talents may allow you to add a bonus when you are in control of a certain type of vehicle. A former motocross champion would have a better chance than others of outrunning a road warrior on the hunt.
+    contents:
+      vehicle:
+        name: Vehicle
+        type: asset
+        category: Vehicle
+        shared: true
+        options:
+          name:
+            field_type: text
+            label: name
+        _source:
+          <<: *Source
+          page: 189
+        abilities:
+        - enabled: true
+          text: |-
+            Envision the type of vehicle and assign a maximum integrity as follow:
+              * Heavy: 5 integrity
+              * Medium: 4 integrity
+              * Light: 3 integrity 
+            
+            __Battered__ may be marked when your vehicle is at 0 integrity and you fail to [Withstand Damage](datasworn:move:revenant/suffer/withstand_damage).
+            
+            Vehicle troubles are linked to a specific vehicle and are only a factor when you are piloting or aboard that vehicle. Otherwise, they do not count as an impact or affect your momentum.
+            
+            The battered impact can be cleared when you successfully [Repair](datasworn:move:revenant/recover/repair) the vehicle. Until you do so, you cannot raise the vehicle's integrity.
+        controls:
+          integrity:
+            label: integrity
+            field_type: condition_meter
+            max: 5
+            value: 5
+            min: 0
+            moves:
+              suffer:
+                - move:revenant/suffer/withstand_damage
+              recover:
+                - move:revenant/recover/repair
+            controls:
+              battered:
+                label: battered
+                field_type: checkbox
+                is_impact: true
