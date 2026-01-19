@@ -1742,8 +1742,7 @@ moves:
               roll_options:
                 - using: asset_control
                   assets:
-                    - 'asset:*/command_vehicle/*'
-                    - 'asset:*/support_vehicle/*'
+                    - 'asset:*/vehicle/*'
                   control: integrity
         oracles:
           withstand_damage:
