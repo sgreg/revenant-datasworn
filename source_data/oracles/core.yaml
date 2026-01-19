@@ -1,4 +1,4 @@
-_id: starforged
+_id: revenant
 datasworn_version: "0.1.0"
 type: ruleset
 oracles:
@@ -8,13 +8,13 @@ oracles:
     type: oracle_collection
     _source:
       <<: &Source
-        title: 'Ironsworn: Starforged Rulebook'
-        license: https://creativecommons.org/licenses/by/4.0
-        url: https://ironswornrpg.com
-        date: 2022-05-06
+        title: 'Revenant'
+        license: https://creativecommons.org/licenses/by-sa/4.0
+        url: https://www.drivethrurpg.com/en/product/457762/revenant
+        date: 2025-06-23
         authors:
-          - name: Shawn Tomkin
-      page: 296
+          - name: Killian Gillespie
+      page: 268
     contents:
       action:
         name: Action
@@ -22,11 +22,11 @@ oracles:
         type: oracle_rollable
         _source:
           <<: *Source
-          page: 296
+          page: 269
         suggestions:
-            - oracle_rollable:starforged/core/theme
-        summary: &ActionThemeSummary |-
-          When you [Ask the Oracle](datasworn:move:starforged/fate/ask_the_oracle) about a goal, situation, or event, roll for an [Action](datasworn:oracle_rollable:starforged/core/action) and [Theme](datasworn:oracle_rollable:starforged/core/theme). Together, these provide an interpretative verb/noun prompt.
+            - oracle_rollable:revenant/core/theme
+        summary: |-
+          Use this table to inspire a discovery, event, character goal, or situation. A roll on this table can be combined with a [Theme](datasworn:oracle_rollable:revenant/core/theme) to provide an action and a subject. Then, interpret the result based on the context of the question and your current situation.
         rows:
           - _i18n: &Verb
               text:
@@ -98,184 +98,184 @@ oracles:
             text: Command
           - _i18n: *Verb
             roll: { min: 23, max: 23 }
-            text: Communicate
-          - _i18n: *Verb
-            roll: { min: 24, max: 24 }
             text: Construct
           - _i18n: *Verb
-            roll: { min: 25, max: 25 }
+            roll: { min: 24, max: 24 }
             text: Control
           - _i18n: *Verb
-            roll: { min: 26, max: 26 }
+            roll: { min: 25, max: 25 }
             text: Coordinate
           - _i18n: *Verb
-            roll: { min: 27, max: 27 }
+            roll: { min: 26, max: 26 }
             text: Create
           - _i18n: *Verb
-            roll: { min: 28, max: 28 }
+            roll: { min: 27, max: 27 }
             text: Debate
           - _i18n: *Verb
-            roll: { min: 29, max: 29 }
+            roll: { min: 28, max: 28 }
             text: Defeat
           - _i18n: *Verb
-            roll: { min: 30, max: 30 }
+            roll: { min: 29, max: 29 }
             text: Defend
           - _i18n: *Verb
-            roll: { min: 31, max: 31 }
+            roll: { min: 30, max: 30 }
             text: Deflect
           - _i18n: *Verb
-            roll: { min: 32, max: 32 }
+            roll: { min: 31, max: 31 }
             text: Defy
           - _i18n: *Verb
-            roll: { min: 33, max: 33 }
+            roll: { min: 32, max: 32 }
             text: Deliver
           - _i18n: *Verb
-            roll: { min: 34, max: 34 }
+            roll: { min: 33, max: 33 }
             text: Demand
           - _i18n: *Verb
-            roll: { min: 35, max: 35 }
+            roll: { min: 34, max: 34 }
             text: Depart
           - _i18n: *Verb
-            roll: { min: 36, max: 36 }
+            roll: { min: 35, max: 35 }
             text: Destroy
           - _i18n: *Verb
-            roll: { min: 37, max: 37 }
+            roll: { min: 36, max: 36 }
             text: Distract
           - _i18n: *Verb
-            roll: { min: 38, max: 38 }
+            roll: { min: 37, max: 37 }
             text: Eliminate
           - _i18n: *Verb
-            roll: { min: 39, max: 39 }
+            roll: { min: 38, max: 38 }
             text: Endure
           - _i18n: *Verb
-            roll: { min: 40, max: 40 }
+            roll: { min: 39, max: 39 }
             text: Escalate
           - _i18n: *Verb
-            roll: { min: 41, max: 41 }
+            roll: { min: 40, max: 40 }
             text: Escort
           - _i18n: *Verb
-            roll: { min: 42, max: 42 }
+            roll: { min: 41, max: 41 }
             text: Evade
           - _i18n: *Verb
-            roll: { min: 43, max: 43 }
+            roll: { min: 42, max: 42 }
             text: Explore
           - _i18n: *Verb
-            roll: { min: 44, max: 44 }
+            roll: { min: 43, max: 43 }
             text: Falter
           - _i18n: *Verb
-            roll: { min: 45, max: 45 }
+            roll: { min: 44, max: 44 }
             text: Find
           - _i18n: *Verb
-            roll: { min: 46, max: 46 }
+            roll: { min: 45, max: 45 }
             text: Finish
           - _i18n: *Verb
-            roll: { min: 47, max: 47 }
+            roll: { min: 46, max: 46 }
             text: Focus
           - _i18n: *Verb
-            roll: { min: 48, max: 48 }
+            roll: { min: 47, max: 47 }
             text: Follow
           - _i18n: *Verb
-            roll: { min: 49, max: 49 }
+            roll: { min: 48, max: 48 }
             text: Fortify
           - _i18n: *Verb
-            roll: { min: 50, max: 50 }
+            roll: { min: 49, max: 49 }
             text: Gather
           - _i18n: *Verb
-            roll: { min: 51, max: 51 }
+            roll: { min: 50, max: 50 }
             text: Guard
           - _i18n: *Verb
-            roll: { min: 52, max: 52 }
+            roll: { min: 51, max: 51 }
             text: Hide
           - _i18n: *Verb
-            roll: { min: 53, max: 53 }
+            roll: { min: 52, max: 52 }
             text: Hold
           - _i18n: *Verb
-            roll: { min: 54, max: 54 }
+            roll: { min: 53, max: 53 }
             text: Hunt
           - _i18n: *Verb
-            roll: { min: 55, max: 55 }
+            roll: { min: 54, max: 54 }
             text: Impress
           - _i18n: *Verb
-            roll: { min: 56, max: 56 }
+            roll: { min: 55, max: 55 }
             text: Initiate
           - _i18n: *Verb
-            roll: { min: 57, max: 57 }
+            roll: { min: 56, max: 56 }
             text: Inspect
           - _i18n: *Verb
-            roll: { min: 58, max: 58 }
+            roll: { min: 57, max: 57 }
             text: Investigate
           - _i18n: *Verb
-            roll: { min: 59, max: 59 }
+            roll: { min: 58, max: 58 }
             text: Journey
           - _i18n: *Verb
-            roll: { min: 60, max: 60 }
+            roll: { min: 59, max: 59 }
             text: Learn
           - _i18n: *Verb
-            roll: { min: 61, max: 61 }
+            roll: { min: 60, max: 60 }
             text: Leave
           - _i18n: *Verb
-            roll: { min: 62, max: 62 }
+            roll: { min: 61, max: 61 }
             text: Locate
           - _i18n: *Verb
-            roll: { min: 63, max: 63 }
+            roll: { min: 62, max: 62 }
             text: Lose
           - _i18n: *Verb
-            roll: { min: 64, max: 64 }
+            roll: { min: 63, max: 63 }
             text: Manipulate
           - _i18n: *Verb
-            roll: { min: 65, max: 65 }
+            roll: { min: 64, max: 64 }
             text: Mourn
           - _i18n: *Verb
-            roll: { min: 66, max: 66 }
+            roll: { min: 65, max: 65 }
             text: Move
           - _i18n: *Verb
-            roll: { min: 67, max: 67 }
+            roll: { min: 66, max: 66 }
             text: Oppose
           - _i18n: *Verb
-            roll: { min: 68, max: 68 }
+            roll: { min: 67, max: 67 }
             text: Overwhelm
           - _i18n: *Verb
-            roll: { min: 69, max: 69 }
+            roll: { min: 68, max: 68 }
             text: Persevere
           - _i18n: *Verb
-            roll: { min: 70, max: 70 }
+            roll: { min: 69, max: 69 }
             text: Preserve
           - _i18n: *Verb
-            roll: { min: 71, max: 71 }
+            roll: { min: 70, max: 70 }
             text: Protect
           - _i18n: *Verb
-            roll: { min: 72, max: 72 }
+            roll: { min: 71, max: 71 }
             text: Raid
           - _i18n: *Verb
-            roll: { min: 73, max: 73 }
+            roll: { min: 72, max: 72 }
             text: Reduce
           - _i18n: *Verb
-            roll: { min: 74, max: 74 }
+            roll: { min: 73, max: 73 }
             text: Refuse
           - _i18n: *Verb
-            roll: { min: 75, max: 75 }
+            roll: { min: 74, max: 74 }
             text: Reject
           - _i18n: *Verb
-            roll: { min: 76, max: 76 }
+            roll: { min: 75, max: 75 }
             text: Release
           - _i18n: *Verb
-            roll: { min: 77, max: 77 }
+            roll: { min: 76, max: 76 }
             text: Remove
           - _i18n: *Verb
-            roll: { min: 78, max: 78 }
+            roll: { min: 77, max: 77 }
             text: Research
           - _i18n: *Verb
-            roll: { min: 79, max: 79 }
+            roll: { min: 78, max: 78 }
             text: Resist
           - _i18n: *Verb
-            roll: { min: 80, max: 80 }
+            roll: { min: 79, max: 79 }
             text: Restore
           - _i18n: *Verb
-            roll: { min: 81, max: 81 }
+            roll: { min: 80, max: 80 }
             text: Reveal
           - _i18n: *Verb
-            roll: { min: 82, max: 82 }
+            roll: { min: 81, max: 81 }
             text: Risk
+          - _i18n: *Verb
+            roll: { min: 82, max: 82 }
+            text: Scavenge
           - _i18n: *Verb
             roll: { min: 83, max: 83 }
             text: Scheme
@@ -311,7 +311,7 @@ oracles:
             text: Surrender
           - _i18n: *Verb
             roll: { min: 94, max: 94 }
-            text: Swear
+            text: Take
           - _i18n: *Verb
             roll: { min: 95, max: 95 }
             text: Threaten
@@ -338,8 +338,9 @@ oracles:
           <<: *Source
           page: 297
         suggestions:
-            - oracle_rollable:starforged/core/action
-        summary: *ActionThemeSummary
+            - oracle_rollable:revenant/core/action
+        summary: |-
+          As with the [Action](datasworn:oracle_rollable:revenant/core/action) oracle, this is an interpretative table which you can use to answer questions or generate new situations. Combined, the Action and Theme tables provide creative prompts suitable for most
         rows:
           - _i18n: &CommonNoun
               text:
@@ -363,37 +364,37 @@ oracles:
             text: Barrier
           - _i18n: *CommonNoun
             roll: { min: 7, max: 7 }
-            text: Belief
+            text: Battle
           - _i18n: *CommonNoun
             roll: { min: 8, max: 8 }
-            text: Blood
+            text: Belief
           - _i18n: *CommonNoun
             roll: { min: 9, max: 9 }
-            text: Bond
+            text: Blood
           - _i18n: *CommonNoun
             roll: { min: 10, max: 10 }
-            text: Burden
+            text: Bond
           - _i18n: *CommonNoun
             roll: { min: 11, max: 11 }
-            text: Commerce
+            text: Burden
           - _i18n: *CommonNoun
             roll: { min: 12, max: 12 }
-            text: Community
+            text: Commerce
           - _i18n: *CommonNoun
             roll: { min: 13, max: 13 }
-            text: Corruption
+            text: Community
           - _i18n: *CommonNoun
             roll: { min: 14, max: 14 }
-            text: Creation
+            text: Corruption
           - _i18n: *CommonNoun
             roll: { min: 15, max: 15 }
-            text: Crime
+            text: Creation
           - _i18n: *CommonNoun
             roll: { min: 16, max: 16 }
-            text: Culture
+            text: Creature
           - _i18n: *CommonNoun
             roll: { min: 17, max: 17 }
-            text: Cure
+            text: Culture
           - _i18n: *CommonNoun
             roll: { min: 18, max: 18 }
             text: Danger
@@ -411,121 +412,121 @@ oracles:
             text: Deception
           - _i18n: *CommonNoun
             roll: { min: 23, max: 23 }
-            text: Defense
-          - _i18n: *CommonNoun
-            roll: { min: 24, max: 24 }
             text: Destiny
           - _i18n: *CommonNoun
-            roll: { min: 25, max: 25 }
-            text: Disaster
-          - _i18n: *CommonNoun
-            roll: { min: 26, max: 26 }
+            roll: { min: 24, max: 24 }
             text: Discovery
           - _i18n: *CommonNoun
-            roll: { min: 27, max: 27 }
+            roll: { min: 25, max: 25 }
             text: Disease
           - _i18n: *CommonNoun
-            roll: { min: 28, max: 28 }
+            roll: { min: 26, max: 26 }
             text: Dominion
           - _i18n: *CommonNoun
-            roll: { min: 29, max: 29 }
+            roll: { min: 27, max: 27 }
             text: Dream
           - _i18n: *CommonNoun
-            roll: { min: 30, max: 30 }
+            roll: { min: 28, max: 28 }
             text: Duty
           - _i18n: *CommonNoun
-            roll: { min: 31, max: 31 }
+            roll: { min: 29, max: 29 }
             text: Enemy
           - _i18n: *CommonNoun
-            roll: { min: 32, max: 32 }
+            roll: { min: 30, max: 30 }
             text: Expedition
           - _i18n: *CommonNoun
-            roll: { min: 33, max: 33 }
+            roll: { min: 31, max: 31 }
             text: Faction
           - _i18n: *CommonNoun
-            roll: { min: 34, max: 34 }
+            roll: { min: 32, max: 32 }
             text: Fame
           - _i18n: *CommonNoun
-            roll: { min: 35, max: 35 }
+            roll: { min: 33, max: 33 }
             text: Family
           - _i18n: *CommonNoun
-            roll: { min: 36, max: 36 }
+            roll: { min: 34, max: 34 }
             text: Fear
           - _i18n: *CommonNoun
-            roll: { min: 37, max: 37 }
+            roll: { min: 35, max: 35 }
             text: Fellowship
           - _i18n: *CommonNoun
-            roll: { min: 38, max: 38 }
+            roll: { min: 36, max: 36 }
             text: Freedom
           - _i18n: *CommonNoun
-            roll: { min: 39, max: 39 }
+            roll: { min: 37, max: 37 }
             text: Greed
           - _i18n: *CommonNoun
-            roll: { min: 40, max: 40 }
+            roll: { min: 38, max: 38 }
             text: Hardship
           - _i18n: *CommonNoun
-            roll: { min: 41, max: 41 }
+            roll: { min: 39, max: 39 }
             text: Hate
           - _i18n: *CommonNoun
-            roll: { min: 42, max: 42 }
+            roll: { min: 40, max: 40 }
             text: Health
           - _i18n: *CommonNoun
-            roll: { min: 43, max: 43 }
+            roll: { min: 41, max: 41 }
             text: History
           - _i18n: *CommonNoun
-            roll: { min: 44, max: 44 }
+            roll: { min: 42, max: 42 }
             text: Home
           - _i18n: *CommonNoun
-            roll: { min: 45, max: 45 }
-            text: Honor
+            roll: { min: 43, max: 43 }
+            text: Honour
           - _i18n: *CommonNoun
-            roll: { min: 46, max: 46 }
+            roll: { min: 44, max: 44 }
             text: Hope
           - _i18n: *CommonNoun
-            roll: { min: 47, max: 47 }
+            roll: { min: 45, max: 45 }
             text: Humanity
           - _i18n: *CommonNoun
-            roll: { min: 48, max: 48 }
+            roll: { min: 46, max: 46 }
             text: Innocence
           - _i18n: *CommonNoun
-            roll: { min: 49, max: 49 }
+            roll: { min: 47, max: 47 }
             text: Knowledge
           - _i18n: *CommonNoun
-            roll: { min: 50, max: 50 }
-            text: Labor
+            roll: { min: 48, max: 48 }
+            text: Labour
           - _i18n: *CommonNoun
-            roll: { min: 51, max: 51 }
+            roll: { min: 49, max: 49 }
             text: Language
           - _i18n: *CommonNoun
-            roll: { min: 52, max: 52 }
+            roll: { min: 50, max: 50 }
             text: Law
           - _i18n: *CommonNoun
-            roll: { min: 53, max: 53 }
+            roll: { min: 51, max: 51 }
             text: Legacy
           - _i18n: *CommonNoun
-            roll: { min: 54, max: 54 }
+            roll: { min: 52, max: 52 }
             text: Life
           - _i18n: *CommonNoun
-            roll: { min: 55, max: 55 }
+            roll: { min: 53, max: 53 }
             text: Love
           - _i18n: *CommonNoun
-            roll: { min: 56, max: 56 }
+            roll: { min: 54, max: 54 }
             text: Memory
           - _i18n: *CommonNoun
-            roll: { min: 57, max: 57 }
+            roll: { min: 55, max: 55 }
             text: Nature
           - _i18n: *CommonNoun
-            roll: { min: 58, max: 58 }
+            roll: { min: 56, max: 56 }
             text: Opportunity
           - _i18n: *CommonNoun
-            roll: { min: 59, max: 59 }
+            roll: { min: 57, max: 57 }
             text: Passage
+          - _i18n: *CommonNoun
+            roll: { min: 58, max: 58 }
+            text: Path
+          - _i18n: *CommonNoun
+            roll: { min: 59, max: 59 }
+            text: Parley
           - _i18n: *CommonNoun
             roll: { min: 60, max: 60 }
             text: Peace
           - _i18n: *CommonNoun
             roll: { min: 61, max: 61 }
-            text: Phenomenon
+            text: Portent
           - _i18n: *CommonNoun
             roll: { min: 62, max: 62 }
             text: Possession
@@ -543,34 +544,34 @@ oracles:
             text: Prize
           - _i18n: *CommonNoun
             roll: { min: 67, max: 67 }
-            text: Prophesy
+            text: Progress
           - _i18n: *CommonNoun
             roll: { min: 68, max: 68 }
             text: Protection
           - _i18n: *CommonNoun
             roll: { min: 69, max: 69 }
-            text: Quest
+            text: Provision
           - _i18n: *CommonNoun
             roll: { min: 70, max: 70 }
             text: Relationship
           - _i18n: *CommonNoun
             roll: { min: 71, max: 71 }
-            text: Religion
-          - _i18n: *CommonNoun
-            roll: { min: 72, max: 72 }
             text: Reputation
           - _i18n: *CommonNoun
-            roll: { min: 73, max: 73 }
+            roll: { min: 72, max: 72 }
             text: Resource
           - _i18n: *CommonNoun
-            roll: { min: 74, max: 74 }
+            roll: { min: 73, max: 73 }
             text: Revenge
           - _i18n: *CommonNoun
-            roll: { min: 75, max: 75 }
+            roll: { min: 74, max: 74 }
             text: Rival
           - _i18n: *CommonNoun
+            roll: { min: 75, max: 75 }
+            text: Ruin
+          - _i18n: *CommonNoun
             roll: { min: 76, max: 76 }
-            text: Rumor
+            text: Rumour
           - _i18n: *CommonNoun
             roll: { min: 77, max: 77 }
             text: Safety
@@ -579,52 +580,52 @@ oracles:
             text: Sanctuary
           - _i18n: *CommonNoun
             roll: { min: 79, max: 79 }
-            text: Secret
+            text: Salvage
           - _i18n: *CommonNoun
             roll: { min: 80, max: 80 }
-            text: Solution
+            text: Science
           - _i18n: *CommonNoun
             roll: { min: 81, max: 81 }
-            text: Spirit
+            text: Secret
           - _i18n: *CommonNoun
             roll: { min: 82, max: 82 }
-            text: Stranger
+            text: Solution
           - _i18n: *CommonNoun
             roll: { min: 83, max: 83 }
-            text: Strategy
+            text: Spirit
           - _i18n: *CommonNoun
             roll: { min: 84, max: 84 }
-            text: Strength
+            text: Stranger
           - _i18n: *CommonNoun
             roll: { min: 85, max: 85 }
-            text: Superstition
+            text: Strategy
           - _i18n: *CommonNoun
             roll: { min: 86, max: 86 }
-            text: Supply
+            text: Strength
           - _i18n: *CommonNoun
             roll: { min: 87, max: 87 }
-            text: Survival
+            text: Structure
           - _i18n: *CommonNoun
             roll: { min: 88, max: 88 }
-            text: Technology
+            text: Supply
           - _i18n: *CommonNoun
             roll: { min: 89, max: 89 }
-            text: Time
+            text: Survival
           - _i18n: *CommonNoun
             roll: { min: 90, max: 90 }
-            text: Tool
+            text: Time
           - _i18n: *CommonNoun
             roll: { min: 91, max: 91 }
-            text: Trade
+            text: Tool
           - _i18n: *CommonNoun
             roll: { min: 92, max: 92 }
-            text: Truth
+            text: Trade
           - _i18n: *CommonNoun
             roll: { min: 93, max: 93 }
-            text: Vengeance
+            text: Truth
           - _i18n: *CommonNoun
             roll: { min: 94, max: 94 }
-            text: Vow
+            text: Vengeance
           - _i18n: *CommonNoun
             roll: { min: 95, max: 95 }
             text: War
@@ -644,7 +645,7 @@ oracles:
             text: Weapon
           - _i18n: *CommonNoun
             roll: { min: 100, max: 100 }
-            text: World
+            text: Wound
       descriptor:
         name: Descriptor
         oracle_type: table_text
@@ -653,9 +654,9 @@ oracles:
           <<: *Source
           page: 298
         suggestions:
-            - oracle_rollable:starforged/core/focus
-        summary: &DescriptorFocusSummary |-
-          When you [Ask the Oracle](datasworn:move:starforged/fate/ask_the_oracle) to help define the nature of a location, discovery, or encounter, roll for a [Descriptor](datasworn:oracle_rollable:starforged/core/descriptor) and a [Focus](datasworn:oracle_rollable:starforged/core/focus) for an adjective/noun prompt.
+            - oracle_rollable:revenant/core/focus
+        summary: |-
+          This oracle is similar to the [Action](datasworn:oracle_rollable:revenant/core/action) and [Theme](datasworn:oracle_rollable:revenant/core/theme) oracles. They are abstract word prompts you can use to generate the details of a location or event, or to answer questions about it's nature. A roll on this table can be combined with a [Focus](datasworn:oracle_rollable:revenant/core/focus) to provide an adjective and a noun.
         rows:
           - _i18n: &Adjective
               text:
@@ -670,295 +671,296 @@ oracles:
             text: Active
           - _i18n: *Adjective
             roll: { min: 4, max: 4 }
-            text: Advanced
-          - _i18n: *Adjective
-            roll: { min: 5, max: 5 }
-            text: Alien
-          - _i18n: *Adjective
-            roll: { min: 6, max: 6 }
             text: Ancient
           - _i18n: *Adjective
-            roll: { min: 7, max: 7 }
-            text: Archaic
-          - _i18n: *Adjective
-            roll: { min: 8, max: 8 }
-            text: Automated
-          - _i18n: *Adjective
-            roll: { min: 9, max: 9 }
+            roll: { min: 5, max: 5 }
             text: Barren
           - _i18n: *Adjective
-            roll: { min: 10, max: 10 }
-            text: Biological
-          - _i18n: *Adjective
-            roll: { min: 11, max: 11 }
+            roll: { min: 6, max: 6 }
             text: Blighted
           - _i18n: *Adjective
-            roll: { min: 12, max: 12 }
+            roll: { min: 7, max: 7 }
             text: Blocked
           - _i18n: *Adjective
-            roll: { min: 13, max: 13 }
+            roll: { min: 8, max: 8 }
             text: Breached
           - _i18n: *Adjective
-            roll: { min: 14, max: 14 }
+            roll: { min: 9, max: 9 }
             text: Broken
           - _i18n: *Adjective
-            roll: { min: 15, max: 15 }
+            roll: { min: 10, max: 10 }
             text: Captured
           - _i18n: *Adjective
-            roll: { min: 16, max: 16 }
+            roll: { min: 11, max: 11 }
             text: Chaotic
           - _i18n: *Adjective
-            roll: { min: 17, max: 17 }
-            text: Civilized
+            roll: { min: 12, max: 12 }
+            text: Civilised
           - _i18n: *Adjective
-            roll: { min: 18, max: 18 }
+            roll: { min: 13, max: 13 }
+            text: Cold
+          - _i18n: *Adjective
+            roll: { min: 14, max: 14 }
             text: Collapsed
           - _i18n: *Adjective
-            roll: { min: 19, max: 19 }
+            roll: { min: 15, max: 15 }
             text: Colossal
           - _i18n: *Adjective
-            roll: { min: 20, max: 20 }
+            roll: { min: 16, max: 16 }
             text: Confined
           - _i18n: *Adjective
-            roll: { min: 21, max: 21 }
-            text: Conspicuous
+            roll: { min: 17, max: 17 }
+            text: Conflicted
           - _i18n: *Adjective
-            roll: { min: 22, max: 22 }
-            text: Constructed
-          - _i18n: *Adjective
-            roll: { min: 23, max: 23 }
+            roll: { min: 18, max: 18 }
             text: Contested
           - _i18n: *Adjective
-            roll: { min: 24, max: 24 }
+            roll: { min: 19, max: 19 }
             text: Corrupted
           - _i18n: *Adjective
-            roll: { min: 25, max: 25 }
-            text: Created
+            roll: { min: 20, max: 20 }
+            text: Crafted
           - _i18n: *Adjective
-            roll: { min: 26, max: 26 }
+            roll: { min: 21, max: 21 }
             text: Damaged
           - _i18n: *Adjective
-            roll: { min: 27, max: 27 }
+            roll: { min: 22, max: 22 }
             text: Dead
-          - _i18n: *Adjective
-            roll: { min: 28, max: 28 }
-            text: Deadly
           - _i18n: *Gerund
-            roll: { min: 29, max: 29 }
+            roll: { min: 23, max: 23 }
             text: Decaying
           - _i18n: *Adjective
-            roll: { min: 30, max: 30 }
+            roll: { min: 24, max: 24 }
+            text: Deadly
+          - _i18n: *Adjective
+            roll: { min: 25, max: 25 }
+            text: Deep
+          - _i18n: *Adjective
+            roll: { min: 26, max: 26 }
             text: Defended
           - _i18n: *Adjective
-            roll: { min: 31, max: 31 }
+            roll: { min: 27, max: 27 }
+            text: Dense
+          - _i18n: *Adjective
+            roll: { min: 28, max: 28 }
             text: Depleted
           - _i18n: *Adjective
-            roll: { min: 32, max: 32 }
+            roll: { min: 29, max: 29 }
             text: Desolate
           - _i18n: *Adjective
-            roll: { min: 33, max: 33 }
+            roll: { min: 30, max: 30 }
             text: Destroyed
           - _i18n: *Adjective
-            roll: { min: 34, max: 34 }
+            roll: { min: 31, max: 31 }
             text: Diverse
           - _i18n: *Adjective
-            roll: { min: 35, max: 35 }
+            roll: { min: 32, max: 32 }
             text: Empty
           - _i18n: *Adjective
-            roll: { min: 36, max: 36 }
+            roll: { min: 33, max: 33 }
             text: Engulfed
           - _i18n: *Gerund
-            roll: { min: 37, max: 37 }
+            roll: { min: 34, max: 34 }
             text: Ensnaring
           - _i18n: *Adjective
-            roll: { min: 38, max: 38 }
+            roll: { min: 35, max: 35 }
             text: Expansive
           - _i18n: *Adjective
-            roll: { min: 39, max: 39 }
+            roll: { min: 36, max: 36 }
             text: Exposed
           - _i18n: *Adjective
-            roll: { min: 40, max: 40 }
+            roll: { min: 37, max: 37 }
+            text: Fertile
+          - _i18n: *Adjective
+            roll: { min: 38, max: 38 }
             text: Fiery
+          - _i18n: *Adjective
+            roll: { min: 39, max: 39 }
+            text: Flooded
           - _i18n: *Gerund
-            roll: { min: 41, max: 41 }
+            roll: { min: 40, max: 40 }
             text: Foreboding
           - _i18n: *Adjective
-            roll: { min: 42, max: 42 }
+            roll: { min: 41, max: 41 }
             text: Forgotten
           - _i18n: *Adjective
-            roll: { min: 43, max: 43 }
+            roll: { min: 42, max: 42 }
             text: Forsaken
           - _i18n: *Adjective
-            roll: { min: 44, max: 44 }
+            roll: { min: 43, max: 43 }
             text: Fortified
           - _i18n: *Adjective
-            roll: { min: 45, max: 45 }
+            roll: { min: 44, max: 44 }
             text: Foul
           - _i18n: *Adjective
-            roll: { min: 46, max: 46 }
+            roll: { min: 45, max: 45 }
             text: Fragile
           - _i18n: *Adjective
-            roll: { min: 47, max: 47 }
-            text: Frozen
-          - _i18n: *Adjective
-            roll: { min: 48, max: 48 }
-            text: Functional
-          - _i18n: *Adjective
-            roll: { min: 49, max: 49 }
+            roll: { min: 46, max: 46 }
             text: Grim
           - _i18n: *Adjective
-            roll: { min: 50, max: 50 }
+            roll: { min: 47, max: 47 }
             text: Guarded
           - _i18n: *Adjective
-            roll: { min: 51, max: 51 }
+            roll: { min: 48, max: 48 }
             text: Haunted
           - _i18n: *Adjective
-            roll: { min: 52, max: 52 }
+            roll: { min: 49, max: 49 }
             text: Hidden
           - _i18n: *Adjective
-            roll: { min: 53, max: 53 }
+            roll: { min: 50, max: 50 }
             text: Hoarded
           - _i18n: *Adjective
-            roll: { min: 54, max: 54 }
+            roll: { min: 51, max: 51 }
             text: Hostile
           - _i18n: *Adjective
-            roll: { min: 55, max: 55 }
-            text: Immersed
-          - _i18n: *Adjective
-            roll: { min: 56, max: 56 }
+            roll: { min: 52, max: 52 }
             text: Inaccessible
           - _i18n: *Adjective
-            roll: { min: 57, max: 57 }
+            roll: { min: 53, max: 53 }
             text: Infested
           - _i18n: *Adjective
-            roll: { min: 58, max: 58 }
-            text: Inhabited
-          - _i18n: *Adjective
-            roll: { min: 59, max: 59 }
+            roll: { min: 54, max: 54 }
             text: Isolated
           - _i18n: *Gerund
-            roll: { min: 60, max: 60 }
+            roll: { min: 55, max: 55 }
             text: Living
           - _i18n: *Adjective
-            roll: { min: 61, max: 61 }
+            roll: { min: 56, max: 56 }
             text: Lost
           - _i18n: *Adjective
-            roll: { min: 62, max: 62 }
+            roll: { min: 57, max: 57 }
             text: Lush
           - _i18n: *Adjective
-            roll: { min: 63, max: 63 }
+            roll: { min: 58, max: 58 }
             text: Makeshift
           - _i18n: *Adjective
-            roll: { min: 64, max: 64 }
-            text: Mechanical
+            roll: { min: 59, max: 59 }
+            text: Military
           - _i18n: *Gerund
-            roll: { min: 65, max: 65 }
+            roll: { min: 60, max: 60 }
             text: Misleading
           - _i18n: *Gerund
-            roll: { min: 66, max: 66 }
+            roll: { min: 61, max: 61 }
             text: Moving
           - _i18n: *Adjective
-            roll: { min: 67, max: 67 }
+            roll: { min: 62, max: 62 }
             text: Mysterious
           - _i18n: *Adjective
-            roll: { min: 68, max: 68 }
+            roll: { min: 63, max: 63 }
+            text: Narrow
+          - _i18n: *Adjective
+            roll: { min: 64, max: 64 }
             text: Natural
           - _i18n: *Adjective
-            roll: { min: 69, max: 69 }
+            roll: { min: 65, max: 65 }
             text: New
           - _i18n: *Adjective
-            roll: { min: 70, max: 70 }
+            roll: { min: 66, max: 66 }
             text: Obscured
           - _i18n: *Adjective
-            roll: { min: 71, max: 71 }
+            roll: { min: 67, max: 67 }
+            text: Occupied
+          - _i18n: *Adjective
+            roll: { min: 68, max: 68 }
             text: Open
           - _i18n: *Adjective
-            roll: { min: 72, max: 72 }
+            roll: { min: 69, max: 69 }
             text: Peaceful
           - _i18n: *Adjective
-            roll: { min: 73, max: 73 }
+            roll: { min: 70, max: 70 }
             text: Perilous
           - _i18n: *Adjective
-            roll: { min: 74, max: 74 }
+            roll: { min: 71, max: 71 }
             text: Pillaged
           - _i18n: *Adjective
-            roll: { min: 75, max: 75 }
+            roll: { min: 72, max: 72 }
             text: Powerful
           - _i18n: *Adjective
-            roll: { min: 76, max: 76 }
+            roll: { min: 73, max: 73 }
             text: Preserved
           - _i18n: *Adjective
-            roll: { min: 77, max: 77 }
+            roll: { min: 74, max: 74 }
             text: Prominent
           - _i18n: *Adjective
-            roll: { min: 78, max: 78 }
+            roll: { min: 75, max: 75 }
             text: Protected
           - _i18n: *Adjective
-            roll: { min: 79, max: 79 }
+            roll: { min: 76, max: 76 }
             text: Radiant
           - _i18n: *Adjective
-            roll: { min: 80, max: 80 }
+            roll: { min: 77, max: 77 }
             text: Rare
           - _i18n: *Adjective
-            roll: { min: 81, max: 81 }
+            roll: { min: 78, max: 78 }
             text: Remote
           - _i18n: *Adjective
-            roll: { min: 82, max: 82 }
+            roll: { min: 79, max: 79 }
             text: Rich
           - _i18n: *Adjective
-            roll: { min: 83, max: 83 }
+            roll: { min: 80, max: 80 }
+            text: Rough
+          - _i18n: *Adjective
+            roll: { min: 81, max: 81 }
             text: Ruined
           - _i18n: *Adjective
-            roll: { min: 84, max: 84 }
+            roll: { min: 82, max: 82 }
             text: Sacred
           - _i18n: *Adjective
-            roll: { min: 85, max: 85 }
+            roll: { min: 83, max: 83 }
             text: Safe
           - _i18n: *Adjective
-            roll: { min: 86, max: 86 }
+            roll: { min: 84, max: 84 }
             text: Sealed
           - _i18n: *Adjective
-            roll: { min: 87, max: 87 }
+            roll: { min: 85, max: 85 }
             text: Secret
           - _i18n: *Adjective
-            roll: { min: 88, max: 88 }
+            roll: { min: 86, max: 86 }
             text: Settled
           - _i18n: *Adjective
-            roll: { min: 89, max: 89 }
-            text: Shrouded
+            roll: { min: 87, max: 87 }
+            text: Shadowy
           - _i18n: *Adjective
-            roll: { min: 90, max: 90 }
-            text: Stolen
-          - _i18n: *Adjective
-            roll: { min: 91, max: 91 }
+            roll: { min: 88, max: 88 }
             text: Strange
           - _i18n: *Adjective
-            roll: { min: 92, max: 92 }
-            text: Subsurface
+            roll: { min: 89, max: 89 }
+            text: Sunken
           - _i18n: *Adjective
-            roll: { min: 93, max: 93 }
+            roll: { min: 90, max: 90 }
             text: Toxic
           - _i18n: *Adjective
-            roll: { min: 94, max: 94 }
+            roll: { min: 91, max: 91 }
             text: Trapped
           - _i18n: *Adjective
-            roll: { min: 95, max: 95 }
-            text: Undiscovered
+            roll: { min: 92, max: 92 }
+            text: Treacherous
           - _i18n: *Adjective
-            roll: { min: 96, max: 96 }
+            roll: { min: 93, max: 93 }
             text: Unnatural
           - _i18n: *Adjective
-            roll: { min: 97, max: 97 }
+            roll: { min: 94, max: 94 }
+            text: Unorganised
+          - _i18n: *Adjective
+            roll: { min: 95, max: 95 }
             text: Unstable
           - _i18n: *Adjective
+            roll: { min: 96, max: 96 }
+            text: Unusual
+          - _i18n: *Adjective
+            roll: { min: 97, max: 97 }
+            text: Veiled
+          - _i18n: *Adjective
             roll: { min: 98, max: 98 }
-            text: Untamed
+            text: Violent
           - _i18n: *Adjective
             roll: { min: 99, max: 99 }
-            text: Valuable
+            text: Wide
           - _i18n: *Adjective
             roll: { min: 100, max: 100 }
-            text: Violent
+            text: Wild
+
       focus:
         name: Focus
         oracle_type: table_text
@@ -967,8 +969,9 @@ oracles:
           <<: *Source
           page: 299
         suggestions:
-            - oracle_rollable:starforged/core/descriptor
-        summary: *DescriptorFocusSummary
+            - oracle_rollable:revenant/core/descriptor
+        summary: |-
+          As with the [Descriptor](datasworn:oracle_rollable:revenant/core/descriptor) oracle, this is an interpretative table which you can use to answer questions or generate new situations. Combined, the Descriptor and Focus tables provide creative prompts suitable for most locations and events.
         rows:
           - _i18n: *CommonNoun
             roll: { min: 1, max: 1 }
@@ -990,34 +993,34 @@ oracles:
             text: Artifact
           - _i18n: *CommonNoun
             roll: { min: 7, max: 7 }
-            text: Atmosphere
+            text: Attack
           - _i18n: *CommonNoun
             roll: { min: 8, max: 8 }
-            text: Battleground
-          - _i18n: *CommonNoun
-            roll: { min: 9, max: 9 }
-            text: Beacon
+            text: Battle
           - _i18n: *Gerund
-            roll: { min: 10, max: 10 }
+            roll: { min: 9, max: 9 }
             text: Being
           - _i18n: *CommonNoun
-            roll: { min: 11, max: 11 }
+            roll: { min: 10, max: 10 }
             text: Blockade
           - _i18n: *CommonNoun
-            roll: { min: 12, max: 12 }
+            roll: { min: 11, max: 11 }
             text: Boundary
           - _i18n: *CommonNoun
+            roll: { min: 12, max: 12 }
+            text: Breach
+          - _i18n: *CommonNoun
             roll: { min: 13, max: 13 }
-            text: Cache
+            text: Cargo
           - _i18n: *CommonNoun
             roll: { min: 14, max: 14 }
-            text: Cargo
+            text: Chest
           - _i18n: *CommonNoun
             roll: { min: 15, max: 15 }
             text: Commodity
           - _i18n: *CommonNoun
             roll: { min: 16, max: 16 }
-            text: Confinement
+            text: Component
           - _i18n: *CommonNoun
             roll: { min: 17, max: 17 }
             text: Connection
@@ -1026,247 +1029,247 @@ oracles:
             text: Container
           - _i18n: *CommonNoun
             roll: { min: 19, max: 19 }
-            text: Creation
+            text: Corruption
           - _i18n: *CommonNoun
             roll: { min: 20, max: 20 }
-            text: Creature
-          - _i18n: *Gerund
+            text: Craft
+          - _i18n: *CommonNoun
             roll: { min: 21, max: 21 }
-            text: Crossing
+            text: Creation
           - _i18n: *CommonNoun
             roll: { min: 22, max: 22 }
-            text: Data
-          - _i18n: *CommonNoun
+            text: Creature
+          - _i18n: *Gerund
             roll: { min: 23, max: 23 }
-            text: Debris
+            text: Crossing
           - _i18n: *CommonNoun
             roll: { min: 24, max: 24 }
-            text: Device
+            text: Darkness
           - _i18n: *CommonNoun
             roll: { min: 25, max: 25 }
-            text: Dimension
+            text: Death
           - _i18n: *CommonNoun
             roll: { min: 26, max: 26 }
-            text: Discovery
+            text: Debris
           - _i18n: *CommonNoun
             roll: { min: 27, max: 27 }
-            text: Ecosystem
+            text: Denizen
           - _i18n: *CommonNoun
             roll: { min: 28, max: 28 }
-            text: Enclosure
+            text: Discovery
           - _i18n: *CommonNoun
             roll: { min: 29, max: 29 }
-            text: Energy
+            text: Enclosure
           - _i18n: *CommonNoun
             roll: { min: 30, max: 30 }
-            text: Environment
+            text: Energy
           - _i18n: *CommonNoun
             roll: { min: 31, max: 31 }
-            text: Equipment
+            text: Entry
           - _i18n: *CommonNoun
             roll: { min: 32, max: 32 }
-            text: Experiment
+            text: Environment
           - _i18n: *CommonNoun
             roll: { min: 33, max: 33 }
-            text: Facility
+            text: Equipment
           - _i18n: *CommonNoun
             roll: { min: 34, max: 34 }
-            text: Faction
+            text: Exit
           - _i18n: *CommonNoun
             roll: { min: 35, max: 35 }
-            text: Fleet
+            text: Experiment
           - _i18n: *CommonNoun
             roll: { min: 36, max: 36 }
-            text: Force
+            text: Faction
           - _i18n: *CommonNoun
             roll: { min: 37, max: 37 }
-            text: Fortification
+            text: Force
           - _i18n: *CommonNoun
             roll: { min: 38, max: 38 }
-            text: Gas
+            text: Fortification
           - _i18n: *CommonNoun
             roll: { min: 39, max: 39 }
-            text: Grave
+            text: Function
           - _i18n: *CommonNoun
             roll: { min: 40, max: 40 }
-            text: Habitat
+            text: Gas
           - _i18n: *CommonNoun
             roll: { min: 41, max: 41 }
-            text: Hazard
+            text: Grave
           - _i18n: *CommonNoun
             roll: { min: 42, max: 42 }
-            text: Hideaway
+            text: Habitation
           - _i18n: *CommonNoun
             roll: { min: 43, max: 43 }
-            text: Home
+            text: Hazard
           - _i18n: *CommonNoun
             roll: { min: 44, max: 44 }
-            text: Illusion
+            text: Hideaway
           - _i18n: *CommonNoun
             roll: { min: 45, max: 45 }
-            text: Industry
+            text: History
           - _i18n: *CommonNoun
             roll: { min: 46, max: 46 }
-            text: Intelligence
+            text: Home
           - _i18n: *CommonNoun
             roll: { min: 47, max: 47 }
-            text: Lair
+            text: Illumination
           - _i18n: *CommonNoun
             roll: { min: 48, max: 48 }
-            text: Lifeform
+            text: Illusion
           - _i18n: *CommonNoun
             roll: { min: 49, max: 49 }
-            text: Liquid
+            text: Information
           - _i18n: *CommonNoun
             roll: { min: 50, max: 50 }
-            text: Machine
+            text: Lair
           - _i18n: *CommonNoun
             roll: { min: 51, max: 51 }
-            text: Material
+            text: Liquid
           - _i18n: *CommonNoun
             roll: { min: 52, max: 52 }
-            text: Mechanism
+            text: Material
           - _i18n: *CommonNoun
             roll: { min: 53, max: 53 }
-            text: Message
+            text: Mechanism
           - _i18n: *CommonNoun
             roll: { min: 54, max: 54 }
-            text: Mineral
+            text: Message
           - _i18n: *CommonNoun
             roll: { min: 55, max: 55 }
-            text: Monument
+            text: Mineral
           - _i18n: *CommonNoun
             roll: { min: 56, max: 56 }
-            text: Obstacle
+            text: Monument
           - _i18n: *CommonNoun
             roll: { min: 57, max: 57 }
-            text: Organism
+            text: Nature
           - _i18n: *CommonNoun
             roll: { min: 58, max: 58 }
-            text: Outbreak
+            text: Obstacle
           - _i18n: *CommonNoun
             roll: { min: 59, max: 59 }
-            text: Outpost
+            text: Outbreak
           - _i18n: *CommonNoun
             roll: { min: 60, max: 60 }
-            text: Path
+            text: Outpost
           - _i18n: *CommonNoun
             roll: { min: 61, max: 61 }
-            text: People
+            text: Path
           - _i18n: *CommonNoun
             roll: { min: 62, max: 62 }
-            text: Person
+            text: People
           - _i18n: *CommonNoun
             roll: { min: 63, max: 63 }
-            text: Plant
+            text: Person
           - _i18n: *CommonNoun
             roll: { min: 64, max: 64 }
-            text: Portal
+            text: Plant
           - _i18n: *CommonNoun
             roll: { min: 65, max: 65 }
-            text: Reality
+            text: Portal
           - _i18n: *CommonNoun
             roll: { min: 66, max: 66 }
-            text: Refuge
+            text: Power
           - _i18n: *CommonNoun
             roll: { min: 67, max: 67 }
-            text: Relic
+            text: Prisoner
           - _i18n: *CommonNoun
             roll: { min: 68, max: 68 }
-            text: Remains
+            text: Reality
           - _i18n: *CommonNoun
             roll: { min: 69, max: 69 }
-            text: Rendezvous
+            text: Refuge
           - _i18n: *CommonNoun
             roll: { min: 70, max: 70 }
-            text: Resource
+            text: Relic
           - _i18n: *CommonNoun
             roll: { min: 71, max: 71 }
-            text: Route
+            text: Remains
           - _i18n: *CommonNoun
             roll: { min: 72, max: 72 }
-            text: Ruins
+            text: Rendezvous
           - _i18n: *CommonNoun
             roll: { min: 73, max: 73 }
-            text: Salvage
+            text: Resource
           - _i18n: *CommonNoun
             roll: { min: 74, max: 74 }
-            text: Settlement
+            text: Route
           - _i18n: *CommonNoun
             roll: { min: 75, max: 75 }
-            text: Shelter
+            text: Ruins
           - _i18n: *CommonNoun
             roll: { min: 76, max: 76 }
-            text: Ship
+            text: Salvage
           - _i18n: *CommonNoun
             roll: { min: 77, max: 77 }
-            text: Shortcut
+            text: Settlement
           - _i18n: *CommonNoun
             roll: { min: 78, max: 78 }
-            text: Signal
+            text: Shelter
           - _i18n: *CommonNoun
             roll: { min: 79, max: 79 }
-            text: Sound
+            text: Ship
           - _i18n: *CommonNoun
             roll: { min: 80, max: 80 }
-            text: Storage
+            text: Shortcut
           - _i18n: *CommonNoun
             roll: { min: 81, max: 81 }
-            text: Storm
+            text: Sign
           - _i18n: *CommonNoun
             roll: { min: 82, max: 82 }
-            text: Structure
+            text: Sound
           - _i18n: *CommonNoun
             roll: { min: 83, max: 83 }
-            text: Supply
+            text: Storage
           - _i18n: *CommonNoun
             roll: { min: 84, max: 84 }
-            text: Symbol
+            text: Storm
           - _i18n: *CommonNoun
             roll: { min: 85, max: 85 }
-            text: System
+            text: Structure
           - _i18n: *CommonNoun
             roll: { min: 86, max: 86 }
-            text: Technology
+            text: Supply
           - _i18n: *CommonNoun
             roll: { min: 87, max: 87 }
-            text: Terrain
+            text: Symbol
           - _i18n: *CommonNoun
             roll: { min: 88, max: 88 }
-            text: Territory
+            text: Terrain
           - _i18n: *CommonNoun
             roll: { min: 89, max: 89 }
-            text: Threshold
+            text: Territory
           - _i18n: *CommonNoun
             roll: { min: 90, max: 90 }
-            text: Time
+            text: Threshold
           - _i18n: *CommonNoun
             roll: { min: 91, max: 91 }
-            text: Transport
+            text: Time
           - _i18n: *CommonNoun
             roll: { min: 92, max: 92 }
-            text: Trap
+            text: Trail
           - _i18n: *CommonNoun
             roll: { min: 93, max: 93 }
-            text: Treasure
+            text: Transport
           - _i18n: *CommonNoun
             roll: { min: 94, max: 94 }
-            text: Vault
+            text: Trap
           - _i18n: *CommonNoun
             roll: { min: 95, max: 95 }
-            text: Vehicle
+            text: Treasure
           - _i18n: *CommonNoun
             roll: { min: 96, max: 96 }
-            text: Viewpoint
+            text: Valuables
           - _i18n: *CommonNoun
             roll: { min: 97, max: 97 }
-            text: Void
+            text: Viewpoint
           - _i18n: *CommonNoun
             roll: { min: 98, max: 98 }
-            text: Weapon
+            text: Water
           - _i18n: *CommonNoun
             roll: { min: 99, max: 99 }
-            text: World
+            text: Weapon
           - _i18n: *CommonNoun
             roll: { min: 100, max: 100 }
             text: Wreckage
