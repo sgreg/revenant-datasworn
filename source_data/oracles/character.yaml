@@ -1,4 +1,4 @@
-_id: starforged
+_id: revenant
 datasworn_version: "0.1.0"
 type: ruleset
 oracles:
@@ -9,16 +9,16 @@ oracles:
     type: oracle_collection
     _source:
       <<: &Source
-        title: 'Ironsworn: Starforged Rulebook'
-        license: https://creativecommons.org/licenses/by/4.0
-        url: https://ironswornrpg.com
-        date: 2022-05-06
+        title: 'Revenant'
+        license: https://creativecommons.org/licenses/by-sa/4.0
+        url: https://www.drivethrurpg.com/en/product/457762/revenant
+        date: 2025-06-23
         authors:
-          - name: Shawn Tomkin
-      page: 330
+          - name: Killian Gillespie
+      page: 274
     # Aliases: [NPC]
     summary: |-
-      Don’t try to build a fully formed understanding character when you first encounter them; instead, focus on what your character learns or perceives as a first impression using oracles such as [First Look](datasworn:oracle_rollable:starforged/character/first_look) and [Initial Disposition](datasworn:oracle_rollable:starforged/character/initial_disposition). Then envision or generate additional details over time.
+      Use these oracles when you encounter new NPCs or if you want further inspiration when you create your own character.
     collections:
       name:
         name: Character Name
@@ -26,1278 +26,2525 @@ oracles:
         type: oracle_collection
         _source:
           <<: *Source
-          page: 333
+          page: 275
         summary: |-
-          Given and family names are presented as a pair, so you may roll once for both or twice to mix-and-match. You can also try reversing given and family names, or use either independently as a standalone name. If you’d like to give a character a callsign, which are the monikers used by spacers, you may roll separately or take the one provided for your rolled name.
-        # usage:
-        #   initial: true
+          The name of a character might be the first or last detail revealed. You may only know a person's name and begin an arduous hunt to find them or, you might meet a lone traveller in the wasteland and only after revealing other details of the encounter would you learn their name.
         contents:
-          given_name:
-            name: Given Name
+          name_array_one:
+            name: Name (1)
             summary: |-
-              Given and family names can be used independently as standalone names. In many cases you can reverse the order.
-            suggestions:
-                - oracle_rollable:starforged/character/name/callsign
-                - oracle_rollable:starforged/character/name/family_name
+              First set of names.
             oracle_type: column_text
             type: oracle_rollable
+            _source:
+              <<: *Source
+              page: 276
             rows:
-              - roll: { min: 1, max: 1 }
-                text: Akim
-                _i18n: &ProperNoun
+              - _i18n: &ProperNoun
                   text:
                     part_of_speech: proper_noun
-              - roll: { min: 2, max: 2 }
+                roll: { min: 1, max: 1 }
+                text: Aarav
+              - _i18n: *ProperNoun
+                roll: { min: 2, max: 2 }
+                text: Adrian
+              - _i18n: *ProperNoun
+                roll: { min: 3, max: 3 }
                 text: Alex
-                _i18n: *ProperNoun
-              - roll: { min: 3, max: 3 }
-                text: Alexis
-                _i18n: *ProperNoun
-              - roll: { min: 4, max: 4 }
-                text: Alisa
-                _i18n: *ProperNoun
-              - roll: { min: 5, max: 5 }
-                text: Althea
-                _i18n: *ProperNoun
-              - roll: { min: 6, max: 6 }
-                text: Amari
-                _i18n: *ProperNoun
-              - roll: { min: 7, max: 7 }
-                text: Aparna
-                _i18n: *ProperNoun
-              - roll: { min: 8, max: 8 }
-                text: Argus
-                _i18n: *ProperNoun
-              - roll: { min: 9, max: 9 }
-                text: Arnav
-                _i18n: *ProperNoun
-              - roll: { min: 10, max: 10 }
-                text: Ash
-                _i18n: *ProperNoun
-              - roll: { min: 11, max: 11 }
-                text: Asha
-                _i18n: *ProperNoun
-              - roll: { min: 12, max: 12 }
-                text: Astrid
-                _i18n: *ProperNoun
-              - roll: { min: 13, max: 13 }
-                text: Aurora
-                _i18n: *ProperNoun
-              - roll: { min: 14, max: 14 }
-                text: Ayako
-                _i18n: *ProperNoun
-              - roll: { min: 15, max: 15 }
-                text: Azriel
-                _i18n: *ProperNoun
-              - roll: { min: 16, max: 16 }
-                text: Blake
-                _i18n: *ProperNoun
-              - roll: { min: 17, max: 17 }
-                text: Brennan
-                _i18n: *ProperNoun
-              - roll: { min: 18, max: 18 }
-                text: Brianna
-                _i18n: *ProperNoun
-              - roll: { min: 19, max: 19 }
-                text: Bruna
-                _i18n: *ProperNoun
-              - roll: { min: 20, max: 20 }
-                text: Bruno
-                _i18n: *ProperNoun
-              - roll: { min: 21, max: 21 }
-                text: Cassidy
-                _i18n: *ProperNoun
-              - roll: { min: 22, max: 22 }
-                text: Christa
-                _i18n: *ProperNoun
-              - roll: { min: 23, max: 23 }
-                text: Cole
-                _i18n: *ProperNoun
-              - roll: { min: 24, max: 24 }
-                text: Corey
-                _i18n: *ProperNoun
-              - roll: { min: 25, max: 25 }
-                text: Creed
-                _i18n: *ProperNoun
-              - roll: { min: 26, max: 26 }
-                text: Derya
-                _i18n: *ProperNoun
-              - roll: { min: 27, max: 27 }
-                text: Dex
-                _i18n: *ProperNoun
-              - roll: { min: 28, max: 28 }
-                text: Doran
-                _i18n: *ProperNoun
-              - roll: { min: 29, max: 29 }
-                text: Echo
-                _i18n: *ProperNoun
-              - roll: { min: 30, max: 30 }
-                text: Eren
-                _i18n: *ProperNoun
-              - roll: { min: 31, max: 31 }
-                text: Erim
-                _i18n: *ProperNoun
-              - roll: { min: 32, max: 32 }
-                text: Esana
-                _i18n: *ProperNoun
-              - roll: { min: 33, max: 33 }
-                text: Eveline
-                _i18n: *ProperNoun
-              - roll: { min: 34, max: 34 }
-                text: Faye
-                _i18n: *ProperNoun
-              - roll: { min: 35, max: 35 }
-                text: Fletcher
-                _i18n: *ProperNoun
-              - roll: { min: 36, max: 36 }
-                text: Flint
-                _i18n: *ProperNoun
-              - roll: { min: 37, max: 37 }
-                text: Florian
-                _i18n: *ProperNoun
-              - roll: { min: 38, max: 38 }
-                text: Gavin
-                _i18n: *ProperNoun
-              - roll: { min: 39, max: 39 }
-                text: Halia
-                _i18n: *ProperNoun
-              - roll: { min: 40, max: 40 }
-                text: Ike
-                _i18n: *ProperNoun
-              - roll: { min: 41, max: 41 }
+              - _i18n: *ProperNoun
+                roll: { min: 4, max: 4 }
+                text: Alyssa
+              - _i18n: *ProperNoun
+                roll: { min: 5, max: 5 }
+                text: Angus
+              - _i18n: *ProperNoun
+                roll: { min: 6, max: 6 }
+                text: Annabelle
+              - _i18n: *ProperNoun
+                roll: { min: 7, max: 7 }
+                text: Arnold
+              - _i18n: *ProperNoun
+                roll: { min: 8, max: 8 }
+                text: Aurel
+              - _i18n: *ProperNoun
+                roll: { min: 9, max: 9 }
+                text: Ava
+              - _i18n: *ProperNoun
+                roll: { min: 10, max: 10 }
+                text: Bernard
+              - _i18n: *ProperNoun
+                roll: { min: 11, max: 11 }
+                text: Blaine
+              - _i18n: *ProperNoun
+                roll: { min: 12, max: 12 }
+                text: Brenda
+              - _i18n: *ProperNoun
+                roll: { min: 13, max: 13 }
+                text: Brodie
+              - _i18n: *ProperNoun
+                roll: { min: 14, max: 14 }
+                text: Calum
+              - _i18n: *ProperNoun
+                roll: { min: 15, max: 15 }
+                text: Camilla
+              - _i18n: *ProperNoun
+                roll: { min: 16, max: 16 }
+                text: Carlos
+              - _i18n: *ProperNoun
+                roll: { min: 17, max: 17 }
+                text: Carly
+              - _i18n: *ProperNoun
+                roll: { min: 18, max: 18 }
+                text: Chris
+              - _i18n: *ProperNoun
+                roll: { min: 19, max: 19 }
+                text: Clare
+              - _i18n: *ProperNoun
+                roll: { min: 20, max: 20 }
+                text: Damon
+              - _i18n: *ProperNoun
+                roll: { min: 21, max: 21 }
+                text: Denise
+              - _i18n: *ProperNoun
+                roll: { min: 22, max: 22 }
+                text: Dona
+              - _i18n: *ProperNoun
+                roll: { min: 23, max: 23 }
+                text: Elsa
+              - _i18n: *ProperNoun
+                roll: { min: 24, max: 24 }
+                text: Emma
+              - _i18n: *ProperNoun
+                roll: { min: 25, max: 25 }
+                text: Erin
+              - _i18n: *ProperNoun
+                roll: { min: 26, max: 26 }
+                text: Finley
+              - _i18n: *ProperNoun
+                roll: { min: 27, max: 27 }
+                text: Fintan
+              - _i18n: *ProperNoun
+                roll: { min: 28, max: 28 }
+                text: Florence
+              - _i18n: *ProperNoun
+                roll: { min: 29, max: 29 }
+                text: Francine
+              - _i18n: *ProperNoun
+                roll: { min: 30, max: 30 }
+                text: Frederick
+              - _i18n: *ProperNoun
+                roll: { min: 31, max: 31 }
+                text: Fynn
+              - _i18n: *ProperNoun
+                roll: { min: 32, max: 32 }
+                text: Gethin
+              - _i18n: *ProperNoun
+                roll: { min: 33, max: 33 }
+                text: Gloria
+              - _i18n: *ProperNoun
+                roll: { min: 34, max: 34 }
+                text: Haider
+              - _i18n: *ProperNoun
+                roll: { min: 35, max: 35 }
+                text: Harry
+              - _i18n: *ProperNoun
+                roll: { min: 36, max: 36 }
+                text: Hasan
+              - _i18n: *ProperNoun
+                roll: { min: 37, max: 37 }
+                text: Inaya
+              - _i18n: *ProperNoun
+                roll: { min: 38, max: 38 }
                 text: Isaac
-                _i18n: *ProperNoun
-              - roll: { min: 42, max: 42 }
-                text: James
-                _i18n: *ProperNoun
-              - roll: { min: 43, max: 43 }
-                text: Janya
-                _i18n: *ProperNoun
-              - roll: { min: 44, max: 44 }
-                text: Jihun
-                _i18n: *ProperNoun
-              - roll: { min: 45, max: 45 }
-                text: Jorunn
-                _i18n: *ProperNoun
-              - roll: { min: 46, max: 46 }
-                text: Juliana
-                _i18n: *ProperNoun
-              - roll: { min: 47, max: 47 }
-                text: Juro
-                _i18n: *ProperNoun
-              - roll: { min: 48, max: 48 }
-                text: Kaisa
-                _i18n: *ProperNoun
-              - roll: { min: 49, max: 49 }
-                text: Karthik
-                _i18n: *ProperNoun
-              - roll: { min: 50, max: 50 }
-                text: Kayla
-                _i18n: *ProperNoun
-              - roll: { min: 51, max: 51 }
-                text: Kei
-                _i18n: *ProperNoun
-              - roll: { min: 52, max: 52 }
-                text: Kiana
-                _i18n: *ProperNoun
-              - roll: { min: 53, max: 53 }
-                text: Kieran
-                _i18n: *ProperNoun
-              - roll: { min: 54, max: 54 }
-                text: Kierra
-                _i18n: *ProperNoun
-              - roll: { min: 55, max: 55 }
-                text: Kimora
-                _i18n: *ProperNoun
-              - roll: { min: 56, max: 56 }
-                text: Kiri
-                _i18n: *ProperNoun
-              - roll: { min: 57, max: 57 }
-                text: Kirsa
-                _i18n: *ProperNoun
-              - roll: { min: 58, max: 58 }
-                text: Kwan
-                _i18n: *ProperNoun
-              - roll: { min: 59, max: 59 }
-                text: Kylar
-                _i18n: *ProperNoun
-              - roll: { min: 60, max: 60 }
-                text: Landry
-                _i18n: *ProperNoun
-              - roll: { min: 61, max: 61 }
-                text: Logan
-                _i18n: *ProperNoun
-              - roll: { min: 62, max: 62 }
-                text: Lowell
-                _i18n: *ProperNoun
-              - roll: { min: 63, max: 63 }
-                text: Lucas
-                _i18n: *ProperNoun
-              - roll: { min: 64, max: 64 }
-                text: Curtis
-                _i18n: *ProperNoun
-              - roll: { min: 65, max: 65 }
-                text: Luna
-                _i18n: *ProperNoun
-              - roll: { min: 66, max: 66 }
-                text: Lux
-                _i18n: *ProperNoun
-              - roll: { min: 67, max: 67 }
-                text: Mae
-                _i18n: *ProperNoun
-              - roll: { min: 68, max: 68 }
-                text: Magnus
-                _i18n: *ProperNoun
-              - roll: { min: 69, max: 69 }
-                text: Mave
-                _i18n: *ProperNoun
-              - roll: { min: 70, max: 70 }
-                text: Merrick
-                _i18n: *ProperNoun
-              - roll: { min: 71, max: 71 }
-                text: Mina
-                _i18n: *ProperNoun
-              - roll: { min: 72, max: 72 }
-                text: Nashida
-                _i18n: *ProperNoun
-              - roll: { min: 73, max: 73 }
-                text: Nassar
-                _i18n: *ProperNoun
-              - roll: { min: 74, max: 74 }
-                text: Ostara
-                _i18n: *ProperNoun
-              - roll: { min: 75, max: 75 }
-                text: Qasira
-                _i18n: *ProperNoun
-              - roll: { min: 76, max: 76 }
-                text: Quinn
-                _i18n: *ProperNoun
-              - roll: { min: 77, max: 77 }
-                text: Ragnar
-                _i18n: *ProperNoun
-              - roll: { min: 78, max: 78 }
-                text: Raven
-                _i18n: *ProperNoun
-              - roll: { min: 79, max: 79 }
-                text: Ria
-                _i18n: *ProperNoun
-              - roll: { min: 80, max: 80 }
-                text: Rokuro
-                _i18n: *ProperNoun
-              - roll: { min: 81, max: 81 }
-                text: Roland
-                _i18n: *ProperNoun
-              - roll: { min: 82, max: 82 }
-                text: Rowena
-                _i18n: *ProperNoun
-              - roll: { min: 83, max: 83 }
-                text: Sage
-                _i18n: *ProperNoun
-              - roll: { min: 84, max: 84 }
-                text: Saren
-                _i18n: *ProperNoun
-              - roll: { min: 85, max: 85 }
-                text: Annora
-                _i18n: *ProperNoun
-              - roll: { min: 86, max: 86 }
-                text: Severinus
-                _i18n: *ProperNoun
-              - roll: { min: 87, max: 87 }
-                text: Shen
-                _i18n: *ProperNoun
-              - roll: { min: 88, max: 88 }
-                text: Talia
-                _i18n: *ProperNoun
-              - roll: { min: 89, max: 89 }
-                text: Tomiko
-                _i18n: *ProperNoun
-              - roll: { min: 90, max: 90 }
-                text: Ulan
-                _i18n: *ProperNoun
-              - roll: { min: 91, max: 91 }
-                text: Valda
-                _i18n: *ProperNoun
-              - roll: { min: 92, max: 92 }
-                text: Venri
-                _i18n: *ProperNoun
-              - roll: { min: 93, max: 93 }
-                text: Vesper
-                _i18n: *ProperNoun
-              - roll: { min: 94, max: 94 }
-                text: Vuldar
-                _i18n: *ProperNoun
-              - roll: { min: 95, max: 95 }
-                text: William
-                _i18n: *ProperNoun
-              - roll: { min: 96, max: 96 }
-                text: Yelena
-                _i18n: *ProperNoun
-              - roll: { min: 97, max: 97 }
-                text: Zakia
-                _i18n: *ProperNoun
-              - roll: { min: 98, max: 98 }
-                text: Zari
-                _i18n: *ProperNoun
-              - roll: { min: 99, max: 99 }
-                text: Zephyr
-                _i18n: *ProperNoun
-              - roll: { min: 100, max: 100 }
-                text: Zoya
-                _i18n: *ProperNoun
-          callsign:
-            name: Callsign
-            summary: |-
-              Spacers are often known only by their callsigns, with their “dirtside names” reserved for family and close friends.
-            suggestions:
-                - oracle_rollable:starforged/character/name/given_name
-                - oracle_rollable:starforged/character/name/family_name
-            oracle_type: column_text
-            type: oracle_rollable
-            rows:
-              - roll: { min: 1, max: 1 }
-                text: Albatross
-                _i18n: *ProperNoun
-              - roll: { min: 2, max: 2 }
-                text: Angler
-                _i18n: *ProperNoun
-              - roll: { min: 3, max: 3 }
-                text: Anvil
-                _i18n: *ProperNoun
-              - roll: { min: 4, max: 4 }
-                text: Badger
-                _i18n: *ProperNoun
-              - roll: { min: 5, max: 5 }
-                text: Bandit
-                _i18n: *ProperNoun
-              - roll: { min: 6, max: 6 }
-                text: Bash
-                _i18n: *ProperNoun
-              - roll: { min: 7, max: 7 }
-                text: Basilisk
-                _i18n: *ProperNoun
-              - roll: { min: 8, max: 8 }
-                text: Bingo
-                _i18n: *ProperNoun
-              - roll: { min: 9, max: 9 }
-                text: Blackbird
-                _i18n: *ProperNoun
-              - roll: { min: 10, max: 10 }
-                text: Blade
-                _i18n: *ProperNoun
-              - roll: { min: 11, max: 11 }
-                text: Bloodshot
-                _i18n: *ProperNoun
-              - roll: { min: 12, max: 12 }
-                text: Bluewing
-                _i18n: *ProperNoun
-              - roll: { min: 13, max: 13 }
-                text: Bonfire
-                _i18n: *ProperNoun
-              - roll: { min: 14, max: 14 }
-                text: Book
-                _i18n: *ProperNoun
-              - roll: { min: 15, max: 15 }
-                text: Breaker
-                _i18n: *ProperNoun
-              - roll: { min: 16, max: 16 }
-                text: Brick
-                _i18n: *ProperNoun
-              - roll: { min: 17, max: 17 }
-                text: Buzz
-                _i18n: *ProperNoun
-              - roll: { min: 18, max: 18 }
-                text: Buzzard
-                _i18n: *ProperNoun
-              - roll: { min: 19, max: 19 }
-                text: Centurion
-                _i18n: *ProperNoun
-              - roll: { min: 20, max: 20 }
-                text: Chimera
-                _i18n: *ProperNoun
-              - roll: { min: 21, max: 21 }
-                text: Circuit
-                _i18n: *ProperNoun
-              - roll: { min: 22, max: 22 }
-                text: Clank
-                _i18n: *ProperNoun
-              - roll: { min: 23, max: 23 }
-                text: Cleric
-                _i18n: *ProperNoun
-              - roll: { min: 24, max: 24 }
-                text: Crash
-                _i18n: *ProperNoun
-              - roll: { min: 25, max: 25 }
-                text: Cutter
-                _i18n: *ProperNoun
-              - roll: { min: 26, max: 26 }
-                text: Cutthroat
-                _i18n: *ProperNoun
-              - roll: { min: 27, max: 27 }
-                text: Cypher
-                _i18n: *ProperNoun
-              - roll: { min: 28, max: 28 }
-                text: Dagger
-                _i18n: *ProperNoun
-              - roll: { min: 29, max: 29 }
-                text: Dancer
-                _i18n: *ProperNoun
-              - roll: { min: 30, max: 30 }
-                text: Dash
-                _i18n: *ProperNoun
-              - roll: { min: 31, max: 31 }
-                text: Deadeye
-                _i18n: *ProperNoun
-              - roll: { min: 32, max: 32 }
-                text: Deuce
-                _i18n: *ProperNoun
-              - roll: { min: 33, max: 33 }
-                text: Failsafe
-                _i18n: *ProperNoun
-              - roll: { min: 34, max: 34 }
-                text: Farseer
-                _i18n: *ProperNoun
-              - roll: { min: 35, max: 35 }
-                text: Fidget
-                _i18n: *ProperNoun
-              - roll: { min: 36, max: 36 }
-                text: Firestarter
-                _i18n: *ProperNoun
-              - roll: { min: 37, max: 37 }
-                text: Fixer
-                _i18n: *ProperNoun
-              - roll: { min: 38, max: 38 }
-                text: Flatline
-                _i18n: *ProperNoun
-              - roll: { min: 39, max: 39 }
-                text: Ghost
-                _i18n: *ProperNoun
-              - roll: { min: 40, max: 40 }
-                text: Grudge
-                _i18n: *ProperNoun
-              - roll: { min: 41, max: 41 }
-                text: Gutshot
-                _i18n: *ProperNoun
-              - roll: { min: 42, max: 42 }
-                text: Harrow
-                _i18n: *ProperNoun
-              - roll: { min: 43, max: 43 }
-                text: Havoc
-                _i18n: *ProperNoun
-              - roll: { min: 44, max: 44 }
-                text: Hellhound
-                _i18n: *ProperNoun
-              - roll: { min: 45, max: 45 }
-                text: Hellion
-                _i18n: *ProperNoun
-              - roll: { min: 46, max: 46 }
-                text: Hex
-                _i18n: *ProperNoun
-              - roll: { min: 47, max: 47 }
-                text: Hush
-                _i18n: *ProperNoun
-              - roll: { min: 48, max: 48 }
-                text: Ironclad
-                _i18n: *ProperNoun
-              - roll: { min: 49, max: 49 }
-                text: Jackal
-                _i18n: *ProperNoun
-              - roll: { min: 50, max: 50 }
-                text: Jackpot
-                _i18n: *ProperNoun
-              - roll: { min: 51, max: 51 }
-                text: Jester
-                _i18n: *ProperNoun
-              - roll: { min: 52, max: 52 }
-                text: Link
-                _i18n: *ProperNoun
-              - roll: { min: 53, max: 53 }
-                text: Longshot
-                _i18n: *ProperNoun
-              - roll: { min: 54, max: 54 }
-                text: Mainframe
-                _i18n: *ProperNoun
-              - roll: { min: 55, max: 55 }
-                text: Mantis
-                _i18n: *ProperNoun
-              - roll: { min: 56, max: 56 }
-                text: Mimic
-                _i18n: *ProperNoun
-              - roll: { min: 57, max: 57 }
-                text: Mole
-                _i18n: *ProperNoun
-              - roll: { min: 58, max: 58 }
-                text: Monarch
-                _i18n: *ProperNoun
-              - roll: { min: 59, max: 59 }
-                text: Mongoose
-                _i18n: *ProperNoun
-              - roll: { min: 60, max: 60 }
-                text: Nails
-                _i18n: *ProperNoun
-              - roll: { min: 61, max: 61 }
-                text: Ogre
-                _i18n: *ProperNoun
-              - roll: { min: 62, max: 62 }
-                text: Omega
-                _i18n: *ProperNoun
-              - roll: { min: 63, max: 63 }
-                text: Overload
-                _i18n: *ProperNoun
-              - roll: { min: 64, max: 64 }
-                text: Packrat
-                _i18n: *ProperNoun
-              - roll: { min: 65, max: 65 }
-                text: Paladin
-                _i18n: *ProperNoun
-              - roll: { min: 66, max: 66 }
-                text: Phantom
-                _i18n: *ProperNoun
-              - roll: { min: 67, max: 67 }
-                text: Phoenix
-                _i18n: *ProperNoun
-              - roll: { min: 68, max: 68 }
-                text: Pyro
-                _i18n: *ProperNoun
-              - roll: { min: 69, max: 69 }
-                text: Quickdraw
-                _i18n: *ProperNoun
-              - roll: { min: 70, max: 70 }
-                text: Razor
-                _i18n: *ProperNoun
-              - roll: { min: 71, max: 71 }
-                text: Rogue
-                _i18n: *ProperNoun
-              - roll: { min: 72, max: 72 }
-                text: Rook
-                _i18n: *ProperNoun
-              - roll: { min: 73, max: 73 }
-                text: Rover
-                _i18n: *ProperNoun
-              - roll: { min: 74, max: 74 }
-                text: Scout
-                _i18n: *ProperNoun
-              - roll: { min: 75, max: 75 }
-                text: Shadow
-                _i18n: *ProperNoun
-              - roll: { min: 76, max: 76 }
-                text: Shark
-                _i18n: *ProperNoun
-              - roll: { min: 77, max: 77 }
-                text: Shutdown
-                _i18n: *ProperNoun
-              - roll: { min: 78, max: 78 }
-                text: Slack
-                _i18n: *ProperNoun
-              - roll: { min: 79, max: 79 }
-                text: Slash
-                _i18n: *ProperNoun
-              - roll: { min: 80, max: 80 }
-                text: Snipe
-                _i18n: *ProperNoun
-              - roll: { min: 81, max: 81 }
-                text: Spider
-                _i18n: *ProperNoun
-              - roll: { min: 82, max: 82 }
-                text: Splinter
-                _i18n: *ProperNoun
-              - roll: { min: 83, max: 83 }
-                text: Static
-                _i18n: *ProperNoun
-              - roll: { min: 84, max: 84 }
-                text: Stinger
-                _i18n: *ProperNoun
-              - roll: { min: 85, max: 85 }
-                text: Straggler
-                _i18n: *ProperNoun
-              - roll: { min: 86, max: 86 }
-                text: Swindle
-                _i18n: *ProperNoun
-              - roll: { min: 87, max: 87 }
-                text: Tinker
-                _i18n: *ProperNoun
-              - roll: { min: 88, max: 88 }
-                text: Touchdown
-                _i18n: *ProperNoun
-              - roll: { min: 89, max: 89 }
-                text: Tycoon
-                _i18n: *ProperNoun
-              - roll: { min: 90, max: 90 }
-                text: Vagabond
-                _i18n: *ProperNoun
-              - roll: { min: 91, max: 91 }
-                text: Valkyrie
-                _i18n: *ProperNoun
-              - roll: { min: 92, max: 92 }
-                text: Vanguard
-                _i18n: *ProperNoun
-              - roll: { min: 93, max: 93 }
-                text: Vertigo
-                _i18n: *ProperNoun
-              - roll: { min: 94, max: 94 }
-                text: Warden
-                _i18n: *ProperNoun
-              - roll: { min: 95, max: 95 }
-                text: Watchdog
-                _i18n: *ProperNoun
-              - roll: { min: 96, max: 96 }
-                text: Wayfinder
-                _i18n: *ProperNoun
-              - roll: { min: 97, max: 97 }
-                text: Whisper
-                _i18n: *ProperNoun
-              - roll: { min: 98, max: 98 }
-                text: Wraith
-                _i18n: *ProperNoun
-              - roll: { min: 99, max: 99 }
-                text: Wrongway
-                _i18n: *ProperNoun
-              - roll: { min: 100, max: 100 }
-                text: Zephyr
-                _i18n: *ProperNoun
-          family_name:
-            name: Family Name
-            summary: |-
-              Given and family names can be used independently as standalone names. In many cases you can reverse the order.
-            suggestions:
-                - oracle_rollable:starforged/character/name/given_name
-                - oracle_rollable:starforged/character/name/callsign
-            oracle_type: column_text
-            type: oracle_rollable
-            rows:
-              - roll: { min: 1, max: 1 }
-                text: Kuzmin
-                _i18n: *ProperNoun
-              - roll: { min: 2, max: 2 }
-                text: Durant
-                _i18n: *ProperNoun
-              - roll: { min: 3, max: 3 }
-                text: Jefferies
-                _i18n: *ProperNoun
-              - roll: { min: 4, max: 4 }
-                text: Velez
-                _i18n: *ProperNoun
-              - roll: { min: 5, max: 5 }
-                text: Lontoc
-                _i18n: *ProperNoun
-              - roll: { min: 6, max: 6 }
-                text: Wade
-                _i18n: *ProperNoun
-              - roll: { min: 7, max: 7 }
-                text: Kade
-                _i18n: *ProperNoun
-              - roll: { min: 8, max: 8 }
-                text: Thorn
-                _i18n: *ProperNoun
-              - roll: { min: 9, max: 9 }
-                text: Khosla
-                _i18n: *ProperNoun
-              - roll: { min: 10, max: 10 }
-                text: Hendrix
-                _i18n: *ProperNoun
-              - roll: { min: 11, max: 11 }
-                text: Okiro
-                _i18n: *ProperNoun
-              - roll: { min: 12, max: 12 }
-                text: Ripley
-                _i18n: *ProperNoun
-              - roll: { min: 13, max: 13 }
-                text: Talin
-                _i18n: *ProperNoun
-              - roll: { min: 14, max: 14 }
-                text: Jin
-                _i18n: *ProperNoun
-              - roll: { min: 15, max: 15 }
-                text: Finn
-                _i18n: *ProperNoun
-              - roll: { min: 16, max: 16 }
-                text: Solas
-                _i18n: *ProperNoun
-              - roll: { min: 17, max: 17 }
-                text: Quint
-                _i18n: *ProperNoun
-              - roll: { min: 18, max: 18 }
-                text: Keelan
-                _i18n: *ProperNoun
-              - roll: { min: 19, max: 19 }
-                text: Silva
-                _i18n: *ProperNoun
-              - roll: { min: 20, max: 20 }
-                text: Valk
-                _i18n: *ProperNoun
-              - roll: { min: 21, max: 21 }
-                text: O'Brien
-                _i18n: *ProperNoun
-              - roll: { min: 22, max: 22 }
-                text: Ruiz
-                _i18n: *ProperNoun
-              - roll: { min: 23, max: 23 }
-                text: Stallard
-                _i18n: *ProperNoun
-              - roll: { min: 24, max: 24 }
-                text: Mackenson
-                _i18n: *ProperNoun
-              - roll: { min: 25, max: 25 }
-                text: Jensen
-                _i18n: *ProperNoun
-              - roll: { min: 26, max: 26 }
-                text: Sakir
-                _i18n: *ProperNoun
-              - roll: { min: 27, max: 27 }
-                text: Tolari
-                _i18n: *ProperNoun
-              - roll: { min: 28, max: 28 }
-                text: Kain
-                _i18n: *ProperNoun
-              - roll: { min: 29, max: 29 }
-                text: Carr
-                _i18n: *ProperNoun
-              - roll: { min: 30, max: 30 }
-                text: Valenus
-                _i18n: *ProperNoun
-              - roll: { min: 31, max: 31 }
+              - _i18n: *ProperNoun
+                roll: { min: 39, max: 39 }
+                text: Ismail
+              - _i18n: *ProperNoun
+                roll: { min: 40, max: 40 }
+                text: Jade
+              - _i18n: *ProperNoun
+                roll: { min: 41, max: 41 }
+                text: Jaden
+              - _i18n: *ProperNoun
+                roll: { min: 42, max: 42 }
+                text: Jed
+              - _i18n: *ProperNoun
+                roll: { min: 43, max: 43 }
+                text: Jemma
+              - _i18n: *ProperNoun
+                roll: { min: 44, max: 44 }
+                text: Jessica
+              - _i18n: *ProperNoun
+                roll: { min: 45, max: 45 }
+                text: Jim
+              - _i18n: *ProperNoun
+                roll: { min: 46, max: 46 }
+                text: Josef
+              - _i18n: *ProperNoun
+                roll: { min: 47, max: 47 }
+                text: Junaid
+              - _i18n: *ProperNoun
+                roll: { min: 48, max: 48 }
                 text: Kaan
-                _i18n: *ProperNoun
-              - roll: { min: 32, max: 32 }
-                text: Taylan
-                _i18n: *ProperNoun
-              - roll: { min: 33, max: 33 }
-                text: Legrand
-                _i18n: *ProperNoun
-              - roll: { min: 34, max: 34 }
-                text: Jemison
-                _i18n: *ProperNoun
-              - roll: { min: 35, max: 35 }
-                text: Arden
-                _i18n: *ProperNoun
-              - roll: { min: 36, max: 36 }
-                text: Sayer
-                _i18n: *ProperNoun
-              - roll: { min: 37, max: 37 }
-                text: Kai
-                _i18n: *ProperNoun
-              - roll: { min: 38, max: 38 }
-                text: Slater
-                _i18n: *ProperNoun
-              - roll: { min: 39, max: 39 }
-                text: Edris
-                _i18n: *ProperNoun
-              - roll: { min: 40, max: 40 }
-                text: Sutton
-                _i18n: *ProperNoun
-              - roll: { min: 41, max: 41 }
-                text: Savarin
-                _i18n: *ProperNoun
-              - roll: { min: 42, max: 42 }
-                text: Bridger
-                _i18n: *ProperNoun
-              - roll: { min: 43, max: 43 }
-                text: Mital
-                _i18n: *ProperNoun
-              - roll: { min: 44, max: 44 }
-                text: Shin
-                _i18n: *ProperNoun
-              - roll: { min: 45, max: 45 }
-                text: Nadir
-                _i18n: *ProperNoun
-              - roll: { min: 46, max: 46 }
-                text: Santos
-                _i18n: *ProperNoun
-              - roll: { min: 47, max: 47 }
-                text: Mihara
-                _i18n: *ProperNoun
-              - roll: { min: 48, max: 48 }
-                text: Buhari
-                _i18n: *ProperNoun
-              - roll: { min: 49, max: 49 }
-                text: Salvi
-                _i18n: *ProperNoun
-              - roll: { min: 50, max: 50 }
-                text: Adler
-                _i18n: *ProperNoun
-              - roll: { min: 51, max: 51 }
-                text: Takara
-                _i18n: *ProperNoun
-              - roll: { min: 52, max: 52 }
-                text: Shelton
-                _i18n: *ProperNoun
-              - roll: { min: 53, max: 53 }
-                text: Vandu
-                _i18n: *ProperNoun
-              - roll: { min: 54, max: 54 }
-                text: Vega
-                _i18n: *ProperNoun
-              - roll: { min: 55, max: 55 }
-                text: Zhang
-                _i18n: *ProperNoun
-              - roll: { min: 56, max: 56 }
-                text: Savela
-                _i18n: *ProperNoun
-              - roll: { min: 57, max: 57 }
-                text: Hawking
-                _i18n: *ProperNoun
-              - roll: { min: 58, max: 58 }
-                text: Jen
-                _i18n: *ProperNoun
-              - roll: { min: 59, max: 59 }
-                text: Hobbs
-                _i18n: *ProperNoun
-              - roll: { min: 60, max: 60 }
-                text: Holland
-                _i18n: *ProperNoun
-              - roll: { min: 61, max: 61 }
-                text: Silvius
-                _i18n: *ProperNoun
-              - roll: { min: 62, max: 62 }
-                text: Freeman
-                _i18n: *ProperNoun
-              - roll: { min: 63, max: 63 }
-                text: Barbosa
-                _i18n: *ProperNoun
-              - roll: { min: 64, max: 64 }
-                text: Winter
-                _i18n: *ProperNoun
-              - roll: { min: 65, max: 65 }
-                text: Hammond
-                _i18n: *ProperNoun
-              - roll: { min: 66, max: 66 }
-                text: Archer
-                _i18n: *ProperNoun
-              - roll: { min: 67, max: 67 }
-                text: Barlowe
-                _i18n: *ProperNoun
-              - roll: { min: 68, max: 68 }
-                text: Shepherd
-                _i18n: *ProperNoun
-              - roll: { min: 69, max: 69 }
-                text: Griffin
-                _i18n: *ProperNoun
-              - roll: { min: 70, max: 70 }
-                text: Frost
-                _i18n: *ProperNoun
-              - roll: { min: 71, max: 71 }
-                text: Quon
-                _i18n: *ProperNoun
-              - roll: { min: 72, max: 72 }
-                text: Malek
-                _i18n: *ProperNoun
-              - roll: { min: 73, max: 73 }
-                text: Murad
-                _i18n: *ProperNoun
-              - roll: { min: 74, max: 74 }
-                text: Becker
-                _i18n: *ProperNoun
-              - roll: { min: 75, max: 75 }
-                text: Ammar
-                _i18n: *ProperNoun
-              - roll: { min: 76, max: 76 }
-                text: Braddock
-                _i18n: *ProperNoun
-              - roll: { min: 77, max: 77 }
-                text: Blackstone
-                _i18n: *ProperNoun
-              - roll: { min: 78, max: 78 }
-                text: Hadley
-                _i18n: *ProperNoun
-              - roll: { min: 79, max: 79 }
-                text: Farin
-                _i18n: *ProperNoun
-              - roll: { min: 80, max: 80 }
-                text: Kobayashi
-                _i18n: *ProperNoun
-              - roll: { min: 81, max: 81 }
-                text: Duval
-                _i18n: *ProperNoun
-              - roll: { min: 82, max: 82 }
-                text: Hunter
-                _i18n: *ProperNoun
-              - roll: { min: 83, max: 83 }
-                text: Beckett
-                _i18n: *ProperNoun
-              - roll: { min: 84, max: 84 }
-                text: Dykstra
-                _i18n: *ProperNoun
-              - roll: { min: 85, max: 85 }
-                text: Gray
-                _i18n: *ProperNoun
-              - roll: { min: 86, max: 86 }
-                text: Sedano
-                _i18n: *ProperNoun
-              - roll: { min: 87, max: 87 }
-                text: Bai
-                _i18n: *ProperNoun
-              - roll: { min: 88, max: 88 }
-                text: Booker
-                _i18n: *ProperNoun
-              - roll: { min: 89, max: 89 }
-                text: Sato
-                _i18n: *ProperNoun
-              - roll: { min: 90, max: 90 }
-                text: Vayan
-                _i18n: *ProperNoun
-              - roll: { min: 91, max: 91 }
-                text: Bond
-                _i18n: *ProperNoun
-              - roll: { min: 92, max: 92 }
-                text: Stark
-                _i18n: *ProperNoun
-              - roll: { min: 93, max: 93 }
-                text: Stirling
-                _i18n: *ProperNoun
-              - roll: { min: 94, max: 94 }
-                text: Wolfe
-                _i18n: *ProperNoun
-              - roll: { min: 95, max: 95 }
-                text: O'Niel
-                _i18n: *ProperNoun
-              - roll: { min: 96, max: 96 }
-                text: Petrov
-                _i18n: *ProperNoun
-              - roll: { min: 97, max: 97 }
-                text: Nazari
-                _i18n: *ProperNoun
-              - roll: { min: 98, max: 98 }
-                text: Darwin
-                _i18n: *ProperNoun
-              - roll: { min: 99, max: 99 }
-                text: Pearson
-                _i18n: *ProperNoun
-              - roll: { min: 100, max: 100 }
-                text: Volkov
-                _i18n: *ProperNoun
+              - _i18n: *ProperNoun
+                roll: { min: 49, max: 49 }
+                text: Kameke
+              - _i18n: *ProperNoun
+                roll: { min: 50, max: 50 }
+                text: Kamil
+              - _i18n: *ProperNoun
+                roll: { min: 51, max: 51 }
+                text: Kaylum
+              - _i18n: *ProperNoun
+                roll: { min: 52, max: 52 }
+                text: Kristen
+              - _i18n: *ProperNoun
+                roll: { min: 53, max: 53 }
+                text: Lars
+              - _i18n: *ProperNoun
+                roll: { min: 54, max: 54 }
+                text: Leigh
+              - _i18n: *ProperNoun
+                roll: { min: 55, max: 55 }
+                text: Leon
+              - _i18n: *ProperNoun
+                roll: { min: 56, max: 56 }
+                text: Leona
+              - _i18n: *ProperNoun
+                roll: { min: 57, max: 57 }
+                text: Levi
+              - _i18n: *ProperNoun
+                roll: { min: 58, max: 58 }
+                text: Lewis
+              - _i18n: *ProperNoun
+                roll: { min: 59, max: 59 }
+                text: Leyton
+              - _i18n: *ProperNoun
+                roll: { min: 60, max: 60 }
+                text: Liam
+              - _i18n: *ProperNoun
+                roll: { min: 61, max: 61 }
+                text: Libby
+              - _i18n: *ProperNoun
+                roll: { min: 62, max: 62 }
+                text: Lilian
+              - _i18n: *ProperNoun
+                roll: { min: 63, max: 63 }
+                text: Lothur
+              - _i18n: *ProperNoun
+                roll: { min: 64, max: 64 }
+                text: Mabel
+              - _i18n: *ProperNoun
+                roll: { min: 65, max: 65 }
+                text: Mariam
+              - _i18n: *ProperNoun
+                roll: { min: 66, max: 66 }
+                text: Mateo
+              - _i18n: *ProperNoun
+                roll: { min: 67, max: 67 }
+                text: Mattie
+              - _i18n: *ProperNoun
+                roll: { min: 68, max: 68 }
+                text: Melanie
+              - _i18n: *ProperNoun
+                roll: { min: 69, max: 69 }
+                text: Melissa
+              - _i18n: *ProperNoun
+                roll: { min: 70, max: 70 }
+                text: Michael
+              - _i18n: *ProperNoun
+                roll: { min: 71, max: 71 }
+                text: Mohammed
+              - _i18n: *ProperNoun
+                roll: { min: 72, max: 72 }
+                text: Mollie
+              - _i18n: *ProperNoun
+                roll: { min: 73, max: 73 }
+                text: Norman
+              - _i18n: *ProperNoun
+                roll: { min: 74, max: 74 }
+                text: Nuala
+              - _i18n: *ProperNoun
+                roll: { min: 75, max: 75 }
+                text: Olli
+              - _i18n: *ProperNoun
+                roll: { min: 76, max: 76 }
+                text: Opal
+              - _i18n: *ProperNoun
+                roll: { min: 77, max: 77 }
+                text: Ralph
+              - _i18n: *ProperNoun
+                roll: { min: 78, max: 78 }
+                text: Riku
+              - _i18n: *ProperNoun
+                roll: { min: 79, max: 79 }
+                text: Romeo
+              - _i18n: *ProperNoun
+                roll: { min: 80, max: 80 }
+                text: Ronan
+              - _i18n: *ProperNoun
+                roll: { min: 81, max: 81 }
+                text: Rose
+              - _i18n: *ProperNoun
+                roll: { min: 82, max: 82 }
+                text: Ruby
+              - _i18n: *ProperNoun
+                roll: { min: 83, max: 83 }
+                text: Salma
+              - _i18n: *ProperNoun
+                roll: { min: 84, max: 84 }
+                text: Samia
+              - _i18n: *ProperNoun
+                roll: { min: 85, max: 85 }
+                text: Song
+              - _i18n: *ProperNoun
+                roll: { min: 86, max: 86 }
+                text: Susan
+              - _i18n: *ProperNoun
+                roll: { min: 87, max: 87 }
+                text: Takata
+              - _i18n: *ProperNoun
+                roll: { min: 88, max: 88 }
+                text: Tamara
+              - _i18n: *ProperNoun
+                roll: { min: 89, max: 89 }
+                text: Tan
+              - _i18n: *ProperNoun
+                roll: { min: 90, max: 90 }
+                text: Tanisha
+              - _i18n: *ProperNoun
+                roll: { min: 91, max: 91 }
+                text: Terence
+              - _i18n: *ProperNoun
+                roll: { min: 92, max: 92 }
+                text: Tristan
+              - _i18n: *ProperNoun
+                roll: { min: 93, max: 93 }
+                text: Veach
+              - _i18n: *ProperNoun
+                roll: { min: 94, max: 94 }
+                text: Verity
+              - _i18n: *ProperNoun
+                roll: { min: 95, max: 95 }
+                text: Willow
+              - _i18n: *ProperNoun
+                roll: { min: 96, max: 96 }
+                text: Wojciech
+              - _i18n: *ProperNoun
+                roll: { min: 97, max: 97 }
+                text: Xavier
+              - _i18n: *ProperNoun
+                roll: { min: 98, max: 98 }
+                text: Zach
+              - _i18n: *ProperNoun
+                roll: { min: 99, max: 99 }
+                text: Zaki
+              - _i18n: *ProperNoun
+                roll: { min: 100, max: 100 }
+                text: Zoe
+          name_array_two:
+            name: Name (2)
+            summary: |-
+              Second set of names.
+            oracle_type: column_text
+            type: oracle_rollable
+            _source:
+              <<: *Source
+              page: 277
+            rows:
+              - _i18n: *ProperNoun
+                roll: { min: 1, max: 1 }
+                text: Aled
+              - _i18n: *ProperNoun
+                roll: { min: 2, max: 2 }
+                text: Alessandro
+              - _i18n: *ProperNoun
+                roll: { min: 3, max: 3 }
+                text: Alessia
+              - _i18n: *ProperNoun
+                roll: { min: 4, max: 4 }
+                text: Alexander
+              - _i18n: *ProperNoun
+                roll: { min: 5, max: 5 }
+                text: Alia
+              - _i18n: *ProperNoun
+                roll: { min: 6, max: 6 }
+                text: Almeric
+              - _i18n: *ProperNoun
+                roll: { min: 7, max: 7 }
+                text: Angel
+              - _i18n: *ProperNoun
+                roll: { min: 8, max: 8 }
+                text: Annika
+              - _i18n: *ProperNoun
+                roll: { min: 9, max: 9 }
+                text: Azaan
+              - _i18n: *ProperNoun
+                roll: { min: 10, max: 10 }
+                text: Bjorn
+              - _i18n: *ProperNoun
+                roll: { min: 11, max: 11 }
+                text: Carl
+              - _i18n: *ProperNoun
+                roll: { min: 12, max: 12 }
+                text: Celeste
+              - _i18n: *ProperNoun
+                roll: { min: 13, max: 13 }
+                text: Charley
+              - _i18n: *ProperNoun
+                roll: { min: 14, max: 14 }
+                text: Clarence
+              - _i18n: *ProperNoun
+                roll: { min: 15, max: 15 }
+                text: Colm
+              - _i18n: *ProperNoun
+                roll: { min: 16, max: 16 }
+                text: Connie
+              - _i18n: *ProperNoun
+                roll: { min: 17, max: 17 }
+                text: Conrad
+              - _i18n: *ProperNoun
+                roll: { min: 18, max: 18 }
+                text: Constance
+              - _i18n: *ProperNoun
+                roll: { min: 19, max: 19 }
+                text: Cynthia
+              - _i18n: *ProperNoun
+                roll: { min: 20, max: 20 }
+                text: Dante
+              - _i18n: *ProperNoun
+                roll: { min: 21, max: 21 }
+                text: Darragh
+              - _i18n: *ProperNoun
+                roll: { min: 22, max: 22 }
+                text: Dawson
+              - _i18n: *ProperNoun
+                roll: { min: 23, max: 23 }
+                text: Eleni
+              - _i18n: *ProperNoun
+                roll: { min: 24, max: 24 }
+                text: Elissa
+              - _i18n: *ProperNoun
+                roll: { min: 25, max: 25 }
+                text: Ella
+              - _i18n: *ProperNoun
+                roll: { min: 26, max: 26 }
+                text: Elspeth
+              - _i18n: *ProperNoun
+                roll: { min: 27, max: 27 }
+                text: Eric
+              - _i18n: *ProperNoun
+                roll: { min: 28, max: 28 }
+                text: Fergus
+              - _i18n: *ProperNoun
+                roll: { min: 29, max: 29 }
+                text: Ffion
+              - _i18n: *ProperNoun
+                roll: { min: 30, max: 30 }
+                text: Gareth
+              - _i18n: *ProperNoun
+                roll: { min: 31, max: 31 }
+                text: Gary
+              - _i18n: *ProperNoun
+                roll: { min: 32, max: 32 }
+                text: Gerald
+              - _i18n: *ProperNoun
+                roll: { min: 33, max: 33 }
+                text: Gina
+              - _i18n: *ProperNoun
+                roll: { min: 34, max: 34 }
+                text: Haris
+              - _i18n: *ProperNoun
+                roll: { min: 35, max: 35 }
+                text: Helen
+              - _i18n: *ProperNoun
+                roll: { min: 36, max: 36 }
+                text: Helena
+              - _i18n: *ProperNoun
+                roll: { min: 37, max: 37 }
+                text: Iestyn
+              - _i18n: *ProperNoun
+                roll: { min: 38, max: 38 }
+                text: Irene
+              - _i18n: *ProperNoun
+                roll: { min: 39, max: 39 }
+                text: Jake
+              - _i18n: *ProperNoun
+                roll: { min: 40, max: 40 }
+                text: James
+              - _i18n: *ProperNoun
+                roll: { min: 41, max: 41 }
+                text: Jengo
+              - _i18n: *ProperNoun
+                roll: { min: 42, max: 42 }
+                text: Jessie
+              - _i18n: *ProperNoun
+                roll: { min: 43, max: 43 }
+                text: Joe
+              - _i18n: *ProperNoun
+                roll: { min: 44, max: 44 }
+                text: Johnny
+              - _i18n: *ProperNoun
+                roll: { min: 45, max: 45 }
+                text: Justin
+              - _i18n: *ProperNoun
+                roll: { min: 46, max: 46 }
+                text: Kayleigh
+              - _i18n: *ProperNoun
+                roll: { min: 47, max: 47 }
+                text: Keiran
+              - _i18n: *ProperNoun
+                roll: { min: 48, max: 48 }
+                text: Kito
+              - _i18n: *ProperNoun
+                roll: { min: 49, max: 49 }
+                text: Leilani
+              - _i18n: *ProperNoun
+                roll: { min: 50, max: 50 }
+                text: Liang
+              - _i18n: *ProperNoun
+                roll: { min: 51, max: 51 }
+                text: Lillie
+              - _i18n: *ProperNoun
+                roll: { min: 52, max: 52 }
+                text: Logan
+              - _i18n: *ProperNoun
+                roll: { min: 53, max: 53 }
+                text: Madiha
+              - _i18n: *ProperNoun
+                roll: { min: 54, max: 54 }
+                text: Magnus
+              - _i18n: *ProperNoun
+                roll: { min: 55, max: 55 }
+                text: Marjorie
+              - _i18n: *ProperNoun
+                roll: { min: 56, max: 56 }
+                text: Mary
+              - _i18n: *ProperNoun
+                roll: { min: 57, max: 57 }
+                text: Matt
+              - _i18n: *ProperNoun
+                roll: { min: 58, max: 58 }
+                text: Maxwell
+              - _i18n: *ProperNoun
+                roll: { min: 59, max: 59 }
+                text: Miah
+              - _i18n: *ProperNoun
+                roll: { min: 60, max: 60 }
+                text: Michelle
+              - _i18n: *ProperNoun
+                roll: { min: 61, max: 61 }
+                text: Mike
+              - _i18n: *ProperNoun
+                roll: { min: 62, max: 62 }
+                text: Milan
+              - _i18n: *ProperNoun
+                roll: { min: 63, max: 63 }
+                text: Nakai
+              - _i18n: *ProperNoun
+                roll: { min: 64, max: 64 }
+                text: Nancy
+              - _i18n: *ProperNoun
+                roll: { min: 65, max: 65 }
+                text: Nellie
+              - _i18n: *ProperNoun
+                roll: { min: 66, max: 66 }
+                text: Niama
+              - _i18n: *ProperNoun
+                roll: { min: 67, max: 67 }
+                text: Nina
+              - _i18n: *ProperNoun
+                roll: { min: 68, max: 68 }
+                text: Okumura
+              - _i18n: *ProperNoun
+                roll: { min: 69, max: 69 }
+                text: Owais
+              - _i18n: *ProperNoun
+                roll: { min: 70, max: 70 }
+                text: Pauline
+              - _i18n: *ProperNoun
+                roll: { min: 71, max: 71 }
+                text: Pearl
+              - _i18n: *ProperNoun
+                roll: { min: 72, max: 72 }
+                text: Phil
+              - _i18n: *ProperNoun
+                roll: { min: 73, max: 73 }
+                text: Phyllis
+              - _i18n: *ProperNoun
+                roll: { min: 74, max: 74 }
+                text: Polly
+              - _i18n: *ProperNoun
+                roll: { min: 75, max: 75 }
+                text: Qi
+              - _i18n: *ProperNoun
+                roll: { min: 76, max: 76 }
+                text: Rex
+              - _i18n: *ProperNoun
+                roll: { min: 77, max: 77 }
+                text: Rhea
+              - _i18n: *ProperNoun
+                roll: { min: 78, max: 78 }
+                text: Rishi
+              - _i18n: *ProperNoun
+                roll: { min: 79, max: 79 }
+                text: Robbie
+              - _i18n: *ProperNoun
+                roll: { min: 80, max: 80 }
+                text: Roseanna
+              - _i18n: *ProperNoun
+                roll: { min: 81, max: 81 }
+                text: Rueben
+              - _i18n: *ProperNoun
+                roll: { min: 82, max: 82 }
+                text: Rufus
+              - _i18n: *ProperNoun
+                roll: { min: 83, max: 83 }
+                text: Saba
+              - _i18n: *ProperNoun
+                roll: { min: 84, max: 84 }
+                text: Sachin
+              - _i18n: *ProperNoun
+                roll: { min: 85, max: 85 }
+                text: Saffron
+              - _i18n: *ProperNoun
+                roll: { min: 86, max: 86 }
+                text: Sana
+              - _i18n: *ProperNoun
+                roll: { min: 87, max: 87 }
+                text: Shania
+              - _i18n: *ProperNoun
+                roll: { min: 88, max: 88 }
+                text: Shawn
+              - _i18n: *ProperNoun
+                roll: { min: 89, max: 89 }
+                text: Siobhan
+              - _i18n: *ProperNoun
+                roll: { min: 90, max: 90 }
+                text: Sofia
+              - _i18n: *ProperNoun
+                roll: { min: 91, max: 91 }
+                text: Stanley
+              - _i18n: *ProperNoun
+                roll: { min: 92, max: 92 }
+                text: Stephen
+              - _i18n: *ProperNoun
+                roll: { min: 93, max: 93 }
+                text: Tamsin
+              - _i18n: *ProperNoun
+                roll: { min: 94, max: 94 }
+                text: Tillie
+              - _i18n: *ProperNoun
+                roll: { min: 95, max: 95 }
+                text: Tyler
+              - _i18n: *ProperNoun
+                roll: { min: 96, max: 96 }
+                text: Tyrell
+              - _i18n: *ProperNoun
+                roll: { min: 97, max: 97 }
+                text: Walter
+              - _i18n: *ProperNoun
+                roll: { min: 98, max: 98 }
+                text: Wesley
+              - _i18n: *ProperNoun
+                roll: { min: 99, max: 99 }
+                text: Wilma
+              - _i18n: *ProperNoun
+                roll: { min: 100, max: 100 }
+                text: Zander
+          name_array_three:
+            name: Name (3)
+            summary: |-
+              Third set of names.
+            oracle_type: column_text
+            type: oracle_rollable
+            _source:
+              <<: *Source
+              page: 278
+            rows:
+              - _i18n: *ProperNoun
+                roll: { min: 1, max: 1 }
+                text: Aaron
+              - _i18n: *ProperNoun
+                roll: { min: 2, max: 2 }
+                text: Abbie
+              - _i18n: *ProperNoun
+                roll: { min: 3, max: 3 }
+                text: Abdullah
+              - _i18n: *ProperNoun
+                roll: { min: 4, max: 4 }
+                text: Adem
+              - _i18n: *ProperNoun
+                roll: { min: 5, max: 5 }
+                text: Aiden
+              - _i18n: *ProperNoun
+                roll: { min: 6, max: 6 }
+                text: Alan
+              - _i18n: *ProperNoun
+                roll: { min: 7, max: 7 }
+                text: Alison
+              - _i18n: *ProperNoun
+                roll: { min: 8, max: 8 }
+                text: Andrew
+              - _i18n: *ProperNoun
+                roll: { min: 9, max: 9 }
+                text: Arabella
+              - _i18n: *ProperNoun
+                roll: { min: 10, max: 10 }
+                text: Aurora
+              - _i18n: *ProperNoun
+                roll: { min: 11, max: 11 }
+                text: Barney
+              - _i18n: *ProperNoun
+                roll: { min: 12, max: 12 }
+                text: Bibi
+              - _i18n: *ProperNoun
+                roll: { min: 13, max: 13 }
+                text: Blanche
+              - _i18n: *ProperNoun
+                roll: { min: 14, max: 14 }
+                text: Brian
+              - _i18n: *ProperNoun
+                roll: { min: 15, max: 15 }
+                text: Cade
+              - _i18n: *ProperNoun
+                roll: { min: 16, max: 16 }
+                text: Cai
+              - _i18n: *ProperNoun
+                roll: { min: 17, max: 17 }
+                text: Christine
+              - _i18n: *ProperNoun
+                roll: { min: 18, max: 18 }
+                text: Cody
+              - _i18n: *ProperNoun
+                roll: { min: 19, max: 19 }
+                text: Connor
+              - _i18n: *ProperNoun
+                roll: { min: 20, max: 20 }
+                text: Danyal
+              - _i18n: *ProperNoun
+                roll: { min: 21, max: 21 }
+                text: Dean
+              - _i18n: *ProperNoun
+                roll: { min: 22, max: 22 }
+                text: Derin
+              - _i18n: *ProperNoun
+                roll: { min: 23, max: 23 }
+                text: Edward
+              - _i18n: *ProperNoun
+                roll: { min: 24, max: 24 }
+                text: Eleri
+              - _i18n: *ProperNoun
+                roll: { min: 25, max: 25 }
+                text: Enzi
+              - _i18n: *ProperNoun
+                roll: { min: 26, max: 26 }
+                text: Eshal
+              - _i18n: *ProperNoun
+                roll: { min: 27, max: 27 }
+                text: Eshe
+              - _i18n: *ProperNoun
+                roll: { min: 28, max: 28 }
+                text: Ester
+              - _i18n: *ProperNoun
+                roll: { min: 29, max: 29 }
+                text: Ezekiel
+              - _i18n: *ProperNoun
+                roll: { min: 30, max: 30 }
+                text: Faisal
+              - _i18n: *ProperNoun
+                roll: { min: 31, max: 31 }
+                text: Fatima
+              - _i18n: *ProperNoun
+                roll: { min: 32, max: 32 }
+                text: Genevra
+              - _i18n: *ProperNoun
+                roll: { min: 33, max: 33 }
+                text: Georgia
+              - _i18n: *ProperNoun
+                roll: { min: 34, max: 34 }
+                text: Gianluca
+              - _i18n: *ProperNoun
+                roll: { min: 35, max: 35 }
+                text: Gladys
+              - _i18n: *ProperNoun
+                roll: { min: 36, max: 36 }
+                text: Hajra
+              - _i18n: *ProperNoun
+                roll: { min: 37, max: 37 }
+                text: Harri
+              - _i18n: *ProperNoun
+                roll: { min: 38, max: 38 }
+                text: Hollie
+              - _i18n: *ProperNoun
+                roll: { min: 39, max: 39 }
+                text: Humaira
+              - _i18n: *ProperNoun
+                roll: { min: 40, max: 40 }
+                text: Imani
+              - _i18n: *ProperNoun
+                roll: { min: 41, max: 41 }
+                text: Ines
+              - _i18n: *ProperNoun
+                roll: { min: 42, max: 42 }
+                text: Ishaq
+              - _i18n: *ProperNoun
+                roll: { min: 43, max: 43 }
+                text: Janet
+              - _i18n: *ProperNoun
+                roll: { min: 44, max: 44 }
+                text: Jason
+              - _i18n: *ProperNoun
+                roll: { min: 45, max: 45 }
+                text: Jenson
+              - _i18n: *ProperNoun
+                roll: { min: 46, max: 46 }
+                text: Jerome
+              - _i18n: *ProperNoun
+                roll: { min: 47, max: 47 }
+                text: Jerry
+              - _i18n: *ProperNoun
+                roll: { min: 48, max: 48 }
+                text: Joel
+              - _i18n: *ProperNoun
+                roll: { min: 49, max: 49 }
+                text: Josie
+              - _i18n: *ProperNoun
+                roll: { min: 50, max: 50 }
+                text: Kacie
+              - _i18n: *ProperNoun
+                roll: { min: 51, max: 51 }
+                text: Kathleen
+              - _i18n: *ProperNoun
+                roll: { min: 52, max: 52 }
+                text: Katrina
+              - _i18n: *ProperNoun
+                roll: { min: 53, max: 53 }
+                text: Kay
+              - _i18n: *ProperNoun
+                roll: { min: 54, max: 54 }
+                text: Kurt
+              - _i18n: *ProperNoun
+                roll: { min: 55, max: 55 }
+                text: Kyle
+              - _i18n: *ProperNoun
+                roll: { min: 56, max: 56 }
+                text: Lachlan
+              - _i18n: *ProperNoun
+                roll: { min: 57, max: 57 }
+                text: Laurie
+              - _i18n: *ProperNoun
+                roll: { min: 58, max: 58 }
+                text: Leah
+              - _i18n: *ProperNoun
+                roll: { min: 59, max: 59 }
+                text: Leonie
+              - _i18n: *ProperNoun
+                roll: { min: 60, max: 60 }
+                text: Lloyd
+              - _i18n: *ProperNoun
+                roll: { min: 61, max: 61 }
+                text: Lottie
+              - _i18n: *ProperNoun
+                roll: { min: 62, max: 62 }
+                text: Lupita
+              - _i18n: *ProperNoun
+                roll: { min: 63, max: 63 }
+                text: Malakai
+              - _i18n: *ProperNoun
+                roll: { min: 64, max: 64 }
+                text: Martin
+              - _i18n: *ProperNoun
+                roll: { min: 65, max: 65 }
+                text: Mason
+              - _i18n: *ProperNoun
+                roll: { min: 66, max: 66 }
+                text: May
+              - _i18n: *ProperNoun
+                roll: { min: 67, max: 67 }
+                text: Melvin
+              - _i18n: *ProperNoun
+                roll: { min: 68, max: 68 }
+                text: Mercedes
+              - _i18n: *ProperNoun
+                roll: { min: 69, max: 69 }
+                text: Mila
+              - _i18n: *ProperNoun
+                roll: { min: 70, max: 70 }
+                text: Miles
+              - _i18n: *ProperNoun
+                roll: { min: 71, max: 71 }
+                text: Millicent
+              - _i18n: *ProperNoun
+                roll: { min: 72, max: 72 }
+                text: Morgan
+              - _i18n: *ProperNoun
+                roll: { min: 73, max: 73 }
+                text: Nadine
+              - _i18n: *ProperNoun
+                roll: { min: 74, max: 74 }
+                text: Nathanael
+              - _i18n: *ProperNoun
+                roll: { min: 75, max: 75 }
+                text: Ned
+              - _i18n: *ProperNoun
+                roll: { min: 76, max: 76 }
+                text: Nicola
+              - _i18n: *ProperNoun
+                roll: { min: 77, max: 77 }
+                text: Nora
+              - _i18n: *ProperNoun
+                roll: { min: 78, max: 78 }
+                text: Omer
+              - _i18n: *ProperNoun
+                roll: { min: 79, max: 79 }
+                text: Pablo
+              - _i18n: *ProperNoun
+                roll: { min: 80, max: 80 }
+                text: Penny
+              - _i18n: *ProperNoun
+                roll: { min: 81, max: 81 }
+                text: Raymond
+              - _i18n: *ProperNoun
+                roll: { min: 82, max: 82 }
+                text: Rehan
+              - _i18n: *ProperNoun
+                roll: { min: 83, max: 83 }
+                text: Ryu
+              - _i18n: *ProperNoun
+                roll: { min: 84, max: 84 }
+                text: Safia
+              - _i18n: *ProperNoun
+                roll: { min: 85, max: 85 }
+                text: Saif
+              - _i18n: *ProperNoun
+                roll: { min: 86, max: 86 }
+                text: Samir
+              - _i18n: *ProperNoun
+                roll: { min: 87, max: 87 }
+                text: Sebastian
+              - _i18n: *ProperNoun
+                roll: { min: 88, max: 88 }
+                text: Seon
+              - _i18n: *ProperNoun
+                roll: { min: 89, max: 89 }
+                text: Shannon
+              - _i18n: *ProperNoun
+                roll: { min: 90, max: 90 }
+                text: Sinead
+              - _i18n: *ProperNoun
+                roll: { min: 91, max: 91 }
+                text: Skyla
+              - _i18n: *ProperNoun
+                roll: { min: 92, max: 92 }
+                text: Tabitha
+              - _i18n: *ProperNoun
+                roll: { min: 93, max: 93 }
+                text: Taylor
+              - _i18n: *ProperNoun
+                roll: { min: 94, max: 94 }
+                text: Theodore
+              - _i18n: *ProperNoun
+                roll: { min: 95, max: 95 }
+                text: Tomas
+              - _i18n: *ProperNoun
+                roll: { min: 96, max: 96 }
+                text: Victoria
+              - _i18n: *ProperNoun
+                roll: { min: 97, max: 97 }
+                text: Yahya
+              - _i18n: *ProperNoun
+                roll: { min: 98, max: 98 }
+                text: Yaseen
+              - _i18n: *ProperNoun
+                roll: { min: 99, max: 99 }
+                text: Zhu
+              - _i18n: *ProperNoun
+                roll: { min: 100, max: 100 }
+                text: Zou
+          name_array_four:
+            name: Name (4)
+            summary: |-
+              Fourth set of names.
+            oracle_type: column_text
+            type: oracle_rollable
+            _source:
+              <<: *Source
+              page: 279
+            rows:
+              - _i18n: *ProperNoun
+                roll: { min: 1, max: 1 }
+                text: Ace
+              - _i18n: *ProperNoun
+                roll: { min: 2, max: 2 }
+                text: Adelaide
+              - _i18n: *ProperNoun
+                roll: { min: 3, max: 3 }
+                text: Aiza
+              - _i18n: *ProperNoun
+                roll: { min: 4, max: 4 }
+                text: Aki
+              - _i18n: *ProperNoun
+                roll: { min: 5, max: 5 }
+                text: Aleeze
+              - _i18n: *ProperNoun
+                roll: { min: 6, max: 6 }
+                text: Amaan
+              - _i18n: *ProperNoun
+                roll: { min: 7, max: 7 }
+                text: Amin
+              - _i18n: *ProperNoun
+                roll: { min: 8, max: 8 }
+                text: Anaya
+              - _i18n: *ProperNoun
+                roll: { min: 9, max: 9 }
+                text: Anisha
+              - _i18n: *ProperNoun
+                roll: { min: 10, max: 10 }
+                text: Asad
+              - _i18n: *ProperNoun
+                roll: { min: 11, max: 11 }
+                text: Ashton
+              - _i18n: *ProperNoun
+                roll: { min: 12, max: 12 }
+                text: Asia
+              - _i18n: *ProperNoun
+                roll: { min: 13, max: 13 }
+                text: Ayden
+              - _i18n: *ProperNoun
+                roll: { min: 14, max: 14 }
+                text: Barry
+              - _i18n: *ProperNoun
+                roll: { min: 15, max: 15 }
+                text: Batini
+              - _i18n: *ProperNoun
+                roll: { min: 16, max: 16 }
+                text: Bella
+              - _i18n: *ProperNoun
+                roll: { min: 17, max: 17 }
+                text: Bernice
+              - _i18n: *ProperNoun
+                roll: { min: 18, max: 18 }
+                text: Bessie
+              - _i18n: *ProperNoun
+                roll: { min: 19, max: 19 }
+                text: Bill
+              - _i18n: *ProperNoun
+                roll: { min: 20, max: 20 }
+                text: Brianna
+              - _i18n: *ProperNoun
+                roll: { min: 21, max: 21 }
+                text: Callan
+              - _i18n: *ProperNoun
+                roll: { min: 22, max: 22 }
+                text: Callie
+              - _i18n: *ProperNoun
+                roll: { min: 23, max: 23 }
+                text: Carys
+              - _i18n: *ProperNoun
+                roll: { min: 24, max: 24 }
+                text: Christian
+              - _i18n: *ProperNoun
+                roll: { min: 25, max: 25 }
+                text: Cohen
+              - _i18n: *ProperNoun
+                roll: { min: 26, max: 26 }
+                text: Daisie
+              - _i18n: *ProperNoun
+                roll: { min: 27, max: 27 }
+                text: Edgar
+              - _i18n: *ProperNoun
+                roll: { min: 28, max: 28 }
+                text: Eliana
+              - _i18n: *ProperNoun
+                roll: { min: 29, max: 29 }
+                text: Ellis
+              - _i18n: *ProperNoun
+                roll: { min: 30, max: 30 }
+                text: Enzo
+              - _i18n: *ProperNoun
+                roll: { min: 31, max: 31 }
+                text: Evelyn
+              - _i18n: *ProperNoun
+                roll: { min: 32, max: 32 }
+                text: Fahad
+              - _i18n: *ProperNoun
+                roll: { min: 33, max: 33 }
+                text: Francis
+              - _i18n: *ProperNoun
+                roll: { min: 34, max: 34 }
+                text: Frank
+              - _i18n: *ProperNoun
+                roll: { min: 35, max: 35 }
+                text: Freddie
+              - _i18n: *ProperNoun
+                roll: { min: 36, max: 36 }
+                text: Georgiana
+              - _i18n: *ProperNoun
+                roll: { min: 37, max: 37 }
+                text: Hannah
+              - _i18n: *ProperNoun
+                roll: { min: 38, max: 38 }
+                text: Henrietta
+              - _i18n: *ProperNoun
+                roll: { min: 39, max: 39 }
+                text: Honey
+              - _i18n: *ProperNoun
+                roll: { min: 40, max: 40 }
+                text: Huw
+              - _i18n: *ProperNoun
+                roll: { min: 41, max: 41 }
+                text: Iona
+              - _i18n: *ProperNoun
+                roll: { min: 42, max: 42 }
+                text: Isla
+              - _i18n: *ProperNoun
+                roll: { min: 43, max: 43 }
+                text: Itoh
+              - _i18n: *ProperNoun
+                roll: { min: 44, max: 44 }
+                text: Joanna
+              - _i18n: *ProperNoun
+                roll: { min: 45, max: 45 }
+                text: Jordanne
+              - _i18n: *ProperNoun
+                roll: { min: 46, max: 46 }
+                text: Julia
+              - _i18n: *ProperNoun
+                roll: { min: 47, max: 47 }
+                text: Juliet
+              - _i18n: *ProperNoun
+                roll: { min: 48, max: 48 }
+                text: Kabir
+              - _i18n: *ProperNoun
+                roll: { min: 49, max: 49 }
+                text: Kaine
+              - _i18n: *ProperNoun
+                roll: { min: 50, max: 50 }
+                text: Kaylee
+              - _i18n: *ProperNoun
+                roll: { min: 51, max: 51 }
+                text: Kayne
+              - _i18n: *ProperNoun
+                roll: { min: 52, max: 52 }
+                text: Kerry
+              - _i18n: *ProperNoun
+                roll: { min: 53, max: 53 }
+                text: Kira
+              - _i18n: *ProperNoun
+                roll: { min: 54, max: 54 }
+                text: Konishi
+              - _i18n: *ProperNoun
+                roll: { min: 55, max: 55 }
+                text: Kuno
+              - _i18n: *ProperNoun
+                roll: { min: 56, max: 56 }
+                text: Kyron
+              - _i18n: *ProperNoun
+                roll: { min: 57, max: 57 }
+                text: Lacey
+              - _i18n: *ProperNoun
+                roll: { min: 58, max: 58 }
+                text: Leonard
+              - _i18n: *ProperNoun
+                roll: { min: 59, max: 59 }
+                text: Maddison
+              - _i18n: *ProperNoun
+                roll: { min: 60, max: 60 }
+                text: Madeleine
+              - _i18n: *ProperNoun
+                roll: { min: 61, max: 61 }
+                text: Maisey
+              - _i18n: *ProperNoun
+                roll: { min: 62, max: 62 }
+                text: Margaret
+              - _i18n: *ProperNoun
+                roll: { min: 63, max: 63 }
+                text: Mario
+              - _i18n: *ProperNoun
+                roll: { min: 64, max: 64 }
+                text: Megan
+              - _i18n: *ProperNoun
+                roll: { min: 65, max: 65 }
+                text: Mehmet
+              - _i18n: *ProperNoun
+                roll: { min: 66, max: 66 }
+                text: Mikey
+              - _i18n: *ProperNoun
+                roll: { min: 67, max: 67 }
+                text: Mikolaj
+              - _i18n: *ProperNoun
+                roll: { min: 68, max: 68 }
+                text: Nannie
+              - _i18n: *ProperNoun
+                roll: { min: 69, max: 69 }
+                text: Neil
+              - _i18n: *ProperNoun
+                roll: { min: 70, max: 70 }
+                text: Nicole
+              - _i18n: *ProperNoun
+                roll: { min: 71, max: 71 }
+                text: Paige
+              - _i18n: *ProperNoun
+                roll: { min: 72, max: 72 }
+                text: Phoebe
+              - _i18n: *ProperNoun
+                roll: { min: 73, max: 73 }
+                text: Qasim
+              - _i18n: *ProperNoun
+                roll: { min: 74, max: 74 }
+                text: Raihan
+              - _i18n: *ProperNoun
+                roll: { min: 75, max: 75 }
+                text: Reid
+              - _i18n: *ProperNoun
+                roll: { min: 76, max: 76 }
+                text: Rhodri
+              - _i18n: *ProperNoun
+                roll: { min: 77, max: 77 }
+                text: Ricky
+              - _i18n: *ProperNoun
+                roll: { min: 78, max: 78 }
+                text: Ronald
+              - _i18n: *ProperNoun
+                roll: { min: 79, max: 79 }
+                text: Sallie
+              - _i18n: *ProperNoun
+                roll: { min: 80, max: 80 }
+                text: Sally
+              - _i18n: *ProperNoun
+                roll: { min: 81, max: 81 }
+                text: Sam
+              - _i18n: *ProperNoun
+                roll: { min: 82, max: 82 }
+                text: Samuel
+              - _i18n: *ProperNoun
+                roll: { min: 83, max: 83 }
+                text: Shen
+              - _i18n: *ProperNoun
+                roll: { min: 84, max: 84 }
+                text: Shivam
+              - _i18n: *ProperNoun
+                roll: { min: 85, max: 85 }
+                text: Sid
+              - _i18n: *ProperNoun
+                roll: { min: 86, max: 86 }
+                text: Silas
+              - _i18n: *ProperNoun
+                roll: { min: 87, max: 87 }
+                text: Steve
+              - _i18n: *ProperNoun
+                roll: { min: 88, max: 88 }
+                text: Subhan
+              - _i18n: *ProperNoun
+                roll: { min: 89, max: 89 }
+                text: Sumaiya
+              - _i18n: *ProperNoun
+                roll: { min: 90, max: 90 }
+                text: Sydney
+              - _i18n: *ProperNoun
+                roll: { min: 91, max: 91 }
+                text: Taji
+              - _i18n: *ProperNoun
+                roll: { min: 92, max: 92 }
+                text: Thomas
+              - _i18n: *ProperNoun
+                roll: { min: 93, max: 93 }
+                text: Tyrone
+              - _i18n: *ProperNoun
+                roll: { min: 94, max: 94 }
+                text: Vera
+              - _i18n: *ProperNoun
+                roll: { min: 95, max: 95 }
+                text: Viola
+              - _i18n: *ProperNoun
+                roll: { min: 96, max: 96 }
+                text: Virgil
+              - _i18n: *ProperNoun
+                roll: { min: 97, max: 97 }
+                text: William
+              - _i18n: *ProperNoun
+                roll: { min: 98, max: 98 }
+                text: Yogi
+              - _i18n: *ProperNoun
+                roll: { min: 99, max: 99 }
+                text: Zaid
+              - _i18n: *ProperNoun
+                roll: { min: 100, max: 100 }
+                text: Zaina
+          name_array_five:
+            name: Name (5)
+            summary: |-
+              Fifth set of names.
+            oracle_type: column_text
+            type: oracle_rollable
+            _source:
+              <<: *Source
+              page: 280
+            rows:
+              - _i18n: *ProperNoun
+                roll: { min: 1, max: 1 }
+                text: Ahmad
+              - _i18n: *ProperNoun
+                roll: { min: 2, max: 2 }
+                text: Aisha
+              - _i18n: *ProperNoun
+                roll: { min: 3, max: 3 }
+                text: Alice
+              - _i18n: *ProperNoun
+                roll: { min: 4, max: 4 }
+                text: Alysha
+              - _i18n: *ProperNoun
+                roll: { min: 5, max: 5 }
+                text: Aneesa
+              - _i18n: *ProperNoun
+                roll: { min: 6, max: 6 }
+                text: Anjali
+              - _i18n: *ProperNoun
+                roll: { min: 7, max: 7 }
+                text: Annie
+              - _i18n: *ProperNoun
+                roll: { min: 8, max: 8 }
+                text: Anton
+              - _i18n: *ProperNoun
+                roll: { min: 9, max: 9 }
+                text: Asiya
+              - _i18n: *ProperNoun
+                roll: { min: 10, max: 10 }
+                text: Austin
+              - _i18n: *ProperNoun
+                roll: { min: 11, max: 11 }
+                text: Ayla
+              - _i18n: *ProperNoun
+                roll: { min: 12, max: 12 }
+                text: Aysha
+              - _i18n: *ProperNoun
+                roll: { min: 13, max: 13 }
+                text: Blake
+              - _i18n: *ProperNoun
+                roll: { min: 14, max: 14 }
+                text: Brett
+              - _i18n: *ProperNoun
+                roll: { min: 15, max: 15 }
+                text: Bronte
+              - _i18n: *ProperNoun
+                roll: { min: 16, max: 16 }
+                text: Bryony
+              - _i18n: *ProperNoun
+                roll: { min: 17, max: 17 }
+                text: Caspar
+              - _i18n: *ProperNoun
+                roll: { min: 18, max: 18 }
+                text: Cecil
+              - _i18n: *ProperNoun
+                roll: { min: 19, max: 19 }
+                text: Charlotte
+              - _i18n: *ProperNoun
+                roll: { min: 20, max: 20 }
+                text: Cheon
+              - _i18n: *ProperNoun
+                roll: { min: 21, max: 21 }
+                text: Cormac
+              - _i18n: *ProperNoun
+                roll: { min: 22, max: 22 }
+                text: Curtis
+              - _i18n: *ProperNoun
+                roll: { min: 23, max: 23 }
+                text: Daniela
+              - _i18n: *ProperNoun
+                roll: { min: 24, max: 24 }
+                text: Darius
+              - _i18n: *ProperNoun
+                roll: { min: 25, max: 25 }
+                text: Declan
+              - _i18n: *ProperNoun
+                roll: { min: 26, max: 26 }
+                text: Dillon
+              - _i18n: *ProperNoun
+                roll: { min: 27, max: 27 }
+                text: Edna
+              - _i18n: *ProperNoun
+                roll: { min: 28, max: 28 }
+                text: Ehsan
+              - _i18n: *ProperNoun
+                roll: { min: 29, max: 29 }
+                text: Elinor
+              - _i18n: *ProperNoun
+                roll: { min: 30, max: 30 }
+                text: Eugene
+              - _i18n: *ProperNoun
+                roll: { min: 31, max: 31 }
+                text: Fabian
+              - _i18n: *ProperNoun
+                roll: { min: 32, max: 32 }
+                text: Franklin
+              - _i18n: *ProperNoun
+                roll: { min: 33, max: 33 }
+                text: Harriet
+              - _i18n: *ProperNoun
+                roll: { min: 34, max: 34 }
+                text: Holden
+              - _i18n: *ProperNoun
+                roll: { min: 35, max: 35 }
+                text: Husna
+              - _i18n: *ProperNoun
+                roll: { min: 36, max: 36 }
+                text: Hussain
+              - _i18n: *ProperNoun
+                roll: { min: 37, max: 37 }
+                text: Isra
+              - _i18n: *ProperNoun
+                roll: { min: 38, max: 38 }
+                text: Issac
+              - _i18n: *ProperNoun
+                roll: { min: 39, max: 39 }
+                text: Jan
+              - _i18n: *ProperNoun
+                roll: { min: 40, max: 40 }
+                text: Jarrod
+              - _i18n: *ProperNoun
+                roll: { min: 41, max: 41 }
+                text: Jay
+              - _i18n: *ProperNoun
+                roll: { min: 42, max: 42 }
+                text: Jeremy
+              - _i18n: *ProperNoun
+                roll: { min: 43, max: 43 }
+                text: Juanita
+              - _i18n: *ProperNoun
+                roll: { min: 44, max: 44 }
+                text: Kamari
+              - _i18n: *ProperNoun
+                roll: { min: 45, max: 45 }
+                text: Karim
+              - _i18n: *ProperNoun
+                roll: { min: 46, max: 46 }
+                text: Karina
+              - _i18n: *ProperNoun
+                roll: { min: 47, max: 47 }
+                text: Karol
+              - _i18n: *ProperNoun
+                roll: { min: 48, max: 48 }
+                text: Keith
+              - _i18n: *ProperNoun
+                roll: { min: 49, max: 49 }
+                text: Kelvin
+              - _i18n: *ProperNoun
+                roll: { min: 50, max: 50 }
+                text: Kingsley
+              - _i18n: *ProperNoun
+                roll: { min: 51, max: 51 }
+                text: Kiran
+              - _i18n: *ProperNoun
+                roll: { min: 52, max: 52 }
+                text: Laura
+              - _i18n: *ProperNoun
+                roll: { min: 53, max: 53 }
+                text: Laurence
+              - _i18n: *ProperNoun
+                roll: { min: 54, max: 54 }
+                text: Leta
+              - _i18n: *ProperNoun
+                roll: { min: 55, max: 55 }
+                text: Liliana
+              - _i18n: *ProperNoun
+                roll: { min: 56, max: 56 }
+                text: Lorraine
+              - _i18n: *ProperNoun
+                roll: { min: 57, max: 57 }
+                text: Louise
+              - _i18n: *ProperNoun
+                roll: { min: 58, max: 58 }
+                text: Luke
+              - _i18n: *ProperNoun
+                roll: { min: 59, max: 59 }
+                text: Lula
+              - _i18n: *ProperNoun
+                roll: { min: 60, max: 60 }
+                text: Lynnette
+              - _i18n: *ProperNoun
+                roll: { min: 61, max: 61 }
+                text: Madison
+              - _i18n: *ProperNoun
+                roll: { min: 62, max: 62 }
+                text: Maliha
+              - _i18n: *ProperNoun
+                roll: { min: 63, max: 63 }
+                text: Marcel
+              - _i18n: *ProperNoun
+                roll: { min: 64, max: 64 }
+                text: Marco
+              - _i18n: *ProperNoun
+                roll: { min: 65, max: 65 }
+                text: Marion
+              - _i18n: *ProperNoun
+                roll: { min: 66, max: 66 }
+                text: Mark
+              - _i18n: *ProperNoun
+                roll: { min: 67, max: 67 }
+                text: Mina
+              - _i18n: *ProperNoun
+                roll: { min: 68, max: 68 }
+                text: Moses
+              - _i18n: *ProperNoun
+                roll: { min: 69, max: 69 }
+                text: Mosiya
+              - _i18n: *ProperNoun
+                roll: { min: 70, max: 70 }
+                text: Nero
+              - _i18n: *ProperNoun
+                roll: { min: 71, max: 71 }
+                text: Nikita
+              - _i18n: *ProperNoun
+                roll: { min: 72, max: 72 }
+                text: Oliwia
+              - _i18n: *ProperNoun
+                roll: { min: 73, max: 73 }
+                text: Oren
+              - _i18n: *ProperNoun
+                roll: { min: 74, max: 74 }
+                text: Pamela
+              - _i18n: *ProperNoun
+                roll: { min: 75, max: 75 }
+                text: Peggy
+              - _i18n: *ProperNoun
+                roll: { min: 76, max: 76 }
+                text: Rahim
+              - _i18n: *ProperNoun
+                roll: { min: 77, max: 77 }
+                text: Rebekah
+              - _i18n: *ProperNoun
+                roll: { min: 78, max: 78 }
+                text: Ria
+              - _i18n: *ProperNoun
+                roll: { min: 79, max: 79 }
+                text: Ridwan
+              - _i18n: *ProperNoun
+                roll: { min: 80, max: 80 }
+                text: Saarah
+              - _i18n: *ProperNoun
+                roll: { min: 81, max: 81 }
+                text: Safa
+              - _i18n: *ProperNoun
+                roll: { min: 82, max: 82 }
+                text: Santiago
+              - _i18n: *ProperNoun
+                roll: { min: 83, max: 83 }
+                text: Shelby
+              - _i18n: *ProperNoun
+                roll: { min: 84, max: 84 }
+                text: Shirushi
+              - _i18n: *ProperNoun
+                roll: { min: 85, max: 85 }
+                text: Sone
+              - _i18n: *ProperNoun
+                roll: { min: 86, max: 86 }
+                text: Sophie
+              - _i18n: *ProperNoun
+                roll: { min: 87, max: 87 }
+                text: Suzanne
+              - _i18n: *ProperNoun
+                roll: { min: 88, max: 88 }
+                text: Suzu
+              - _i18n: *ProperNoun
+                roll: { min: 89, max: 89 }
+                text: Ted
+              - _i18n: *ProperNoun
+                roll: { min: 90, max: 90 }
+                text: Toby
+              - _i18n: *ProperNoun
+                roll: { min: 91, max: 91 }
+                text: Velma
+              - _i18n: *ProperNoun
+                roll: { min: 92, max: 92 }
+                text: Veronica
+              - _i18n: *ProperNoun
+                roll: { min: 93, max: 93 }
+                text: Vinnie
+              - _i18n: *ProperNoun
+                roll: { min: 94, max: 94 }
+                text: Wen
+              - _i18n: *ProperNoun
+                roll: { min: 95, max: 95 }
+                text: Won
+              - _i18n: *ProperNoun
+                roll: { min: 96, max: 96 }
+                text: Yasir
+              - _i18n: *ProperNoun
+                roll: { min: 97, max: 97 }
+                text: Yasmine
+              - _i18n: *ProperNoun
+                roll: { min: 98, max: 98 }
+                text: Yeo
+              - _i18n: *ProperNoun
+                roll: { min: 99, max: 99 }
+                text: Yoshino
+              - _i18n: *ProperNoun
+                roll: { min: 100, max: 100 }
+                text: Zachary
+          name_array_six:
+            name: Name (6)
+            summary: |-
+              Sixth set of names.
+            oracle_type: column_text
+            type: oracle_rollable
+            _source:
+              <<: *Source
+              page: 281
+            rows:
+              - _i18n: *ProperNoun
+                roll: { min: 1, max: 1 }
+                text: Abraham
+              - _i18n: *ProperNoun
+                roll: { min: 2, max: 2 }
+                text: Adiah
+              - _i18n: *ProperNoun
+                roll: { min: 3, max: 3 }
+                text: Alannah
+              - _i18n: *ProperNoun
+                roll: { min: 4, max: 4 }
+                text: Alexandria
+              - _i18n: *ProperNoun
+                roll: { min: 5, max: 5 }
+                text: Alexandros
+              - _i18n: *ProperNoun
+                roll: { min: 6, max: 6 }
+                text: Alexia
+              - _i18n: *ProperNoun
+                roll: { min: 7, max: 7 }
+                text: Aliya
+              - _i18n: *ProperNoun
+                roll: { min: 8, max: 8 }
+                text: Ameer
+              - _i18n: *ProperNoun
+                roll: { min: 9, max: 9 }
+                text: Amelia
+              - _i18n: *ProperNoun
+                roll: { min: 10, max: 10 }
+                text: Amir
+              - _i18n: *ProperNoun
+                roll: { min: 11, max: 11 }
+                text: Anastasia
+              - _i18n: *ProperNoun
+                roll: { min: 12, max: 12 }
+                text: Andreas
+              - _i18n: *ProperNoun
+                roll: { min: 13, max: 13 }
+                text: Arjan
+              - _i18n: *ProperNoun
+                roll: { min: 14, max: 14 }
+                text: Arthur
+              - _i18n: *ProperNoun
+                roll: { min: 15, max: 15 }
+                text: Autumn
+              - _i18n: *ProperNoun
+                roll: { min: 16, max: 16 }
+                text: Ben
+              - _i18n: *ProperNoun
+                roll: { min: 17, max: 17 }
+                text: Bertha
+              - _i18n: *ProperNoun
+                roll: { min: 18, max: 18 }
+                text: Celia
+              - _i18n: *ProperNoun
+                roll: { min: 19, max: 19 }
+                text: Ciara
+              - _i18n: *ProperNoun
+                roll: { min: 20, max: 20 }
+                text: Claude
+              - _i18n: *ProperNoun
+                roll: { min: 21, max: 21 }
+                text: Clifford
+              - _i18n: *ProperNoun
+                roll: { min: 22, max: 22 }
+                text: Colin
+              - _i18n: *ProperNoun
+                roll: { min: 23, max: 23 }
+                text: Cordelia
+              - _i18n: *ProperNoun
+                roll: { min: 24, max: 24 }
+                text: Dalton
+              - _i18n: *ProperNoun
+                roll: { min: 25, max: 25 }
+                text: Dawud
+              - _i18n: *ProperNoun
+                roll: { min: 26, max: 26 }
+                text: Deanna
+              - _i18n: *ProperNoun
+                roll: { min: 27, max: 27 }
+                text: Delilah
+              - _i18n: *ProperNoun
+                roll: { min: 28, max: 28 }
+                text: Dexter
+              - _i18n: *ProperNoun
+                roll: { min: 29, max: 29 }
+                text: Dora
+              - _i18n: *ProperNoun
+                roll: { min: 30, max: 30 }
+                text: Eesa
+              - _i18n: *ProperNoun
+                roll: { min: 31, max: 31 }
+                text: Elif
+              - _i18n: *ProperNoun
+                roll: { min: 32, max: 32 }
+                text: Ellena
+              - _i18n: *ProperNoun
+                roll: { min: 33, max: 33 }
+                text: Emil
+              - _i18n: *ProperNoun
+                roll: { min: 34, max: 34 }
+                text: Eve
+              - _i18n: *ProperNoun
+                roll: { min: 35, max: 35 }
+                text: Feng
+              - _i18n: *ProperNoun
+                roll: { min: 36, max: 36 }
+                text: Fraser
+              - _i18n: *ProperNoun
+                roll: { min: 37, max: 37 }
+                text: Gene
+              - _i18n: *ProperNoun
+                roll: { min: 38, max: 38 }
+                text: Gillian
+              - _i18n: *ProperNoun
+                roll: { min: 39, max: 39 }
+                text: Gordon
+              - _i18n: *ProperNoun
+                roll: { min: 40, max: 40 }
+                text: Heather
+              - _i18n: *ProperNoun
+                roll: { min: 41, max: 41 }
+                text: Huang
+              - _i18n: *ProperNoun
+                roll: { min: 42, max: 42 }
+                text: Hugh
+              - _i18n: *ProperNoun
+                roll: { min: 43, max: 43 }
+                text: Humza
+              - _i18n: *ProperNoun
+                roll: { min: 44, max: 44 }
+                text: Isabelle
+              - _i18n: *ProperNoun
+                roll: { min: 45, max: 45 }
+                text: Jamie
+              - _i18n: *ProperNoun
+                roll: { min: 46, max: 46 }
+                text: Jayden
+              - _i18n: *ProperNoun
+                roll: { min: 47, max: 47 }
+                text: Jeom
+              - _i18n: *ProperNoun
+                roll: { min: 48, max: 48 }
+                text: Juma
+              - _i18n: *ProperNoun
+                roll: { min: 49, max: 49 }
+                text: Karl
+              - _i18n: *ProperNoun
+                roll: { min: 50, max: 50 }
+                text: Katie
+              - _i18n: *ProperNoun
+                roll: { min: 51, max: 51 }
+                text: Kimberley
+              - _i18n: *ProperNoun
+                roll: { min: 52, max: 52 }
+                text: Lena
+              - _i18n: *ProperNoun
+                roll: { min: 53, max: 53 }
+                text: Lennon
+              - _i18n: *ProperNoun
+                roll: { min: 54, max: 54 }
+                text: Liberty
+              - _i18n: *ProperNoun
+                roll: { min: 55, max: 55 }
+                text: Lorenzo
+              - _i18n: *ProperNoun
+                roll: { min: 56, max: 56 }
+                text: Lorna
+              - _i18n: *ProperNoun
+                roll: { min: 57, max: 57 }
+                text: Lucas
+              - _i18n: *ProperNoun
+                roll: { min: 58, max: 58 }
+                text: Lucy
+              - _i18n: *ProperNoun
+                roll: { min: 59, max: 59 }
+                text: Mackenzie
+              - _i18n: *ProperNoun
+                roll: { min: 60, max: 60 }
+                text: Maddie
+              - _i18n: *ProperNoun
+                roll: { min: 61, max: 61 }
+                text: Marwa
+              - _i18n: *ProperNoun
+                roll: { min: 62, max: 62 }
+                text: Maude
+              - _i18n: *ProperNoun
+                roll: { min: 63, max: 63 }
+                text: Max
+              - _i18n: *ProperNoun
+                roll: { min: 64, max: 64 }
+                text: Minnie
+              - _i18n: *ProperNoun
+                roll: { min: 65, max: 65 }
+                text: Miya
+              - _i18n: *ProperNoun
+                roll: { min: 66, max: 66 }
+                text: Monica
+              - _i18n: *ProperNoun
+                roll: { min: 67, max: 67 }
+                text: Nadia
+              - _i18n: *ProperNoun
+                roll: { min: 68, max: 68 }
+                text: Nathan
+              - _i18n: *ProperNoun
+                roll: { min: 69, max: 69 }
+                text: Niall
+              - _i18n: *ProperNoun
+                roll: { min: 70, max: 70 }
+                text: Nikodem
+              - _i18n: *ProperNoun
+                roll: { min: 71, max: 71 }
+                text: Okano
+              - _i18n: *ProperNoun
+                roll: { min: 72, max: 72 }
+                text: Oliver
+              - _i18n: *ProperNoun
+                roll: { min: 73, max: 73 }
+                text: Osian
+              - _i18n: *ProperNoun
+                roll: { min: 74, max: 74 }
+                text: Rabia
+              - _i18n: *ProperNoun
+                roll: { min: 75, max: 75 }
+                text: Rafael
+              - _i18n: *ProperNoun
+                roll: { min: 76, max: 76 }
+                text: Ray
+              - _i18n: *ProperNoun
+                roll: { min: 77, max: 77 }
+                text: Ricardo
+              - _i18n: *ProperNoun
+                roll: { min: 78, max: 78 }
+                text: Romano
+              - _i18n: *ProperNoun
+                roll: { min: 79, max: 79 }
+                text: Roy
+              - _i18n: *ProperNoun
+                roll: { min: 80, max: 80 }
+                text: Sabrina
+              - _i18n: *ProperNoun
+                roll: { min: 81, max: 81 }
+                text: Safiyaah
+              - _i18n: *ProperNoun
+                roll: { min: 82, max: 82 }
+                text: Sakuma
+              - _i18n: *ProperNoun
+                roll: { min: 83, max: 83 }
+                text: Seamus
+              - _i18n: *ProperNoun
+                roll: { min: 84, max: 84 }
+                text: Seung
+              - _i18n: *ProperNoun
+                roll: { min: 85, max: 85 }
+                text: Shreya
+              - _i18n: *ProperNoun
+                roll: { min: 86, max: 86 }
+                text: Simon
+              - _i18n: *ProperNoun
+                roll: { min: 87, max: 87 }
+                text: Sven
+              - _i18n: *ProperNoun
+                roll: { min: 88, max: 88 }
+                text: Syzmon
+              - _i18n: *ProperNoun
+                roll: { min: 89, max: 89 }
+                text: Tabia
+              - _i18n: *ProperNoun
+                roll: { min: 90, max: 90 }
+                text: Taha
+              - _i18n: *ProperNoun
+                roll: { min: 91, max: 91 }
+                text: Tatsuno
+              - _i18n: *ProperNoun
+                roll: { min: 92, max: 92 }
+                text: Tomos
+              - _i18n: *ProperNoun
+                roll: { min: 93, max: 93 }
+                text: Werther
+              - _i18n: *ProperNoun
+                roll: { min: 94, max: 94 }
+                text: Whitney
+              - _i18n: *ProperNoun
+                roll: { min: 95, max: 95 }
+                text: Wiktor
+              - _i18n: *ProperNoun
+                roll: { min: 96, max: 96 }
+                text: Zahraa
+              - _i18n: *ProperNoun
+                roll: { min: 97, max: 97 }
+                text: Zakariya
+              - _i18n: *ProperNoun
+                roll: { min: 98, max: 98 }
+                text: Zeke
+              - _i18n: *ProperNoun
+                roll: { min: 99, max: 99 }
+                text: Zohaib
+              - _i18n: *ProperNoun
+                roll: { min: 100, max: 100 }
+                text: Zubair
     contents:
-      first_look:
-        name: First Look
+      initial_disposition:
+        name: Initial Disposition
+        summary: |-
+          Use this oracle when you want to define the initial tone of an encounter with an NPC.
         oracle_type: table_text
         type: oracle_rollable
         _source:
           <<: *Source
-          page: 330
+          page: 282
+        # usage:
+        #   initial: true
+        rows:
+          - _i18n: &Adjective
+              text:
+                part_of_speech: adjective
+            roll: { min: 1, max: 6 }
+            text: Helpful
+          - _i18n: *Adjective
+            roll: { min: 7, max: 14 }
+            text: Friendly
+          - _i18n: *Adjective
+            roll: { min: 15, max: 22 }
+            text: Cooperative
+          - _i18n: *Adjective
+            roll: { min: 23, max: 30 }
+            text: Curious
+          - _i18n: *Adjective
+            roll: { min: 31, max: 40 }
+            text: Indifferent
+          - _i18n: *Adjective
+            roll: { min: 41, max: 50 }
+            text: Suspicious
+          - _i18n: *Adjective
+            roll: { min: 51, max: 60 }
+            text: Wanting
+          - _i18n: *Adjective
+            roll: { min: 61, max: 70 }
+            text: Desperate
+          - _i18n: *Adjective
+            roll: { min: 71, max: 78 }
+            text: Demanding
+          - _i18n: *Adjective
+            roll: { min: 79, max: 86 }
+            text: Unfriendly
+          - _i18n: *Adjective
+            roll: { min: 87, max: 94 }
+            text: Threatening
+          - _i18n: *Adjective
+            roll: { min: 95, max: 100 }
+            text: Hostile
+      first_look:
+        name: First Look
+        summary: |-
+          Use this oracle to determine what you perceive about a person as a first impression.
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 282
         # usage:
         #   initial: true
         recommended_rolls: { min: 1, max: 2 }
         rows:
-          - roll: { min: 1, max: 3 }
-            text: Accented
-            _i18n: &Adjective
+          - _i18n: &Adjective
               text:
                 part_of_speech: adjective
-          - roll: { min: 4, max: 6 }
+            roll: { min: 1, max: 3 }
+            text: Accented
+          - _i18n: *Adjective
+            roll: { min: 4, max: 6 }
             text: Accompanied
-            _i18n: *Adjective
-          - roll: { min: 7, max: 8 }
+          - _i18n: *Adjective
+            roll: { min: 7, max: 8 }
             text: Adorned
-            _i18n: *Adjective
-          - roll: { min: 9, max: 11 }
+          - _i18n: *Adjective
+            roll: { min: 9, max: 11 }
             text: Aged
-            _i18n: *Adjective
-          - roll: { min: 12, max: 13 }
-            text: Alluring
-            _i18n: &Gerund
+          - _i18n: &Gerund
               text:
                 part_of_speech: gerund
-          - roll: { min: 14, max: 15 }
+            roll: { min: 12, max: 13 }
+            text: Alluring
+          - _i18n: *Adjective
+            roll: { min: 14, max: 15 }
             text: Armed
-            _i18n: *Adjective
-          - roll: { min: 16, max: 17 }
-            text: Armored
-            _i18n: *Adjective
-          - roll: { min: 18, max: 20 }
+          - _i18n: *Adjective
+            roll: { min: 16, max: 17 }
+            text: Armoured
+          - _i18n: *Adjective
+            roll: { min: 18, max: 20 }
             text: Athletic
-            _i18n: *Adjective
-          - roll: { min: 21, max: 23 }
+          - _i18n: *Adjective
+            roll: { min: 21, max: 23 }
             text: Attractive
-            _i18n: *Adjective
-          - roll: { min: 24, max: 25 }
-            text: Augmented
-            _i18n: *Adjective
-          - roll: { min: 26, max: 27 }
-            text: Concealed
-            _i18n: *Adjective
-          - roll: { min: 28, max: 30 }
+          - _i18n: *Adjective
+            roll: { min: 24, max: 25 }
+            text: Brave
+          - _i18n: *Adjective
+            roll: { min: 26, max: 27 }
+            text: Contented
+          - _i18n: *Adjective
+            roll: { min: 28, max: 30 }
             text: Distracted
-            _i18n: *Adjective
-          - roll: { min: 31, max: 33 }
+          - _i18n: *Adjective
+            roll: { min: 31, max: 33 }
             text: Eccentric
-            _i18n: *Adjective
-          - roll: { min: 34, max: 35 }
+          - _i18n: *Adjective
+            roll: { min: 34, max: 35 }
             text: Energetic
-            _i18n: *Adjective
-          - roll: { min: 36, max: 37 }
+          - _i18n: *Adjective
+            roll: { min: 36, max: 37 }
             text: Flashy
-            _i18n: *Adjective
-          - roll: { min: 38, max: 40 }
+          - _i18n: *Adjective
+            roll: { min: 38, max: 40 }
             text: Graceful
-            _i18n: *Adjective
-          - roll: { min: 41, max: 43 }
+          - _i18n: *Adjective
+            roll: { min: 41, max: 43 }
             text: Grim
-            _i18n: *Adjective
-          - roll: { min: 44, max: 46 }
-            text: Haggard
-            _i18n: *Adjective
-          - roll: { min: 47, max: 49 }
+          - _i18n: *Adjective
+            roll: { min: 44, max: 46 }
+            text: Grizzled
+          - _i18n: *Adjective
+            roll: { min: 47, max: 49 }
+            text: Happy
+          - _i18n: *Adjective
+            roll: { min: 50, max: 52 }
             text: Ill-equipped
-            _i18n: *Adjective
-          - roll: { min: 50, max: 52 }
+          - _i18n: *Gerund
+            roll: { min: 53, max: 55 }
             text: Imposing
-            _i18n: *Gerund
-          - roll: { min: 53, max: 55 }
+          - _i18n: *Adjective
+            roll: { min: 56, max: 57 }
             text: Large
-            _i18n: *Adjective
-          - roll: { min: 56, max: 57 }
-            text: Mutated
-            _i18n: *Adjective
-          - roll: { min: 58, max: 60 }
+          - _i18n: *Adjective
+            roll: { min: 58, max: 60 }
             text: Plain
-            _i18n: *Adjective
-          - roll: { min: 61, max: 62 }
+          - _i18n: *Adjective
+            roll: { min: 61, max: 62 }
             text: Poised
-            _i18n: *Adjective
-          - roll: { min: 63, max: 65 }
+          - _i18n: *Adjective
+            roll: { min: 63, max: 65 }
             text: Scarred
-            _i18n: *Adjective
-          - roll: { min: 66, max: 68 }
+          - _i18n: *Adjective
+            roll: { min: 66, max: 68 }
             text: Scruffy
-            _i18n: *Adjective
-          - roll: { min: 69, max: 71 }
+          - _i18n: *Adjective
+            roll: { min: 69, max: 71 }
             text: Shifty
-            _i18n: *Adjective
-          - roll: { min: 72, max: 73 }
+          - _i18n: *Adjective
+            roll: { min: 72, max: 73 }
             text: Sickly
-            _i18n: *Adjective
-          - roll: { min: 74, max: 76 }
+          - _i18n: *Adjective
+            roll: { min: 74, max: 76 }
             text: Slight
-            _i18n: *Adjective
-          - roll: { min: 77, max: 78 }
+          - _i18n: *Gerund
+            roll: { min: 77, max: 78 }
             text: Swaggering
-            _i18n: *Gerund
-          - roll: { min: 79, max: 81 }
+          - _i18n: *Adjective
+            roll: { min: 79, max: 81 }
             text: Tattooed
-            _i18n: *Adjective
-          - roll: { min: 82, max: 83 }
-            text: Threatened
-            _i18n: *Adjective
-          - roll: { min: 84, max: 85 }
-            text: Uncanny
-            _i18n: *Adjective
-          - roll: { min: 86, max: 87 }
-            text: Visibly disabled
-            _i18n: *Adjective
-          - roll: { min: 88, max: 90 }
-            text: Weathered
-            _i18n: *Adjective
-          - roll: { min: 91, max: 92 }
-            text: Well-equipped
-            _i18n: *Adjective
-          - roll: { min: 93, max: 95 }
-            text: Wiry
-            _i18n: *Adjective
-          - roll: { min: 96, max: 97 }
-            text: Wounded
-            _i18n: *Adjective
-          - roll: { min: 98, max: 100 }
-            text: Youthful
-            _i18n: *Adjective
-      initial_disposition:
-        name: Initial Disposition
-        oracle_type: table_text
-        type: oracle_rollable
-        _source:
-          <<: *Source
-          page: 330
-        # usage:
-        #   initial: true
-        rows:
-          - roll: { min: 1, max: 6 }
-            text: Helpful
-            _i18n: *Adjective
-          - roll: { min: 7, max: 14 }
-            text: Friendly
-            _i18n: *Adjective
-          - roll: { min: 15, max: 22 }
-            text: Cooperative
-            _i18n: *Adjective
-          - roll: { min: 23, max: 30 }
-            text: Curious
-            _i18n: *Adjective
-          - roll: { min: 31, max: 40 }
-            text: Indifferent
-            _i18n: *Adjective
-          - roll: { min: 41, max: 50 }
-            text: Suspicious
-            _i18n: *Adjective
-          - roll: { min: 51, max: 60 }
-            text: Wanting
-            _i18n: *Gerund
-          - roll: { min: 61, max: 70 }
-            text: Desperate
-            _i18n: *Adjective
-          - roll: { min: 71, max: 78 }
-            text: Demanding
-            _i18n: *Gerund
-          - roll: { min: 79, max: 86 }
-            text: Unfriendly
-            _i18n: *Adjective
-          - roll: { min: 87, max: 94 }
+          - _i18n: *Gerund
+            roll: { min: 82, max: 83 }
             text: Threatening
-            _i18n: *Gerund
-          - roll: { min: 95, max: 100 }
-            text: Hostile
-            _i18n: *Adjective
-      role:
-        name: Character Role
+          - _i18n: *Adjective
+            roll: { min: 84, max: 85 }
+            text: Unaware
+          - _i18n: *Adjective
+            roll: { min: 86, max: 87 }
+            text: Visibly disabled
+          - _i18n: *Adjective
+            roll: { min: 88, max: 90 }
+            text: Weathered
+          - _i18n: *Adjective
+            roll: { min: 91, max: 92 }
+            text: Well-equipped
+          - _i18n: *Adjective
+            roll: { min: 93, max: 95 }
+            text: Wiry
+          - _i18n: *Adjective
+            roll: { min: 96, max: 97 }
+            text: Wounded
+          - _i18n: *Adjective
+            roll: { min: 98, max: 100 }
+            text: Youthful
+      additional_aspect:
+        name: Additional Aspect
         oracle_type: table_text
         type: oracle_rollable
         _source:
           <<: *Source
-          page: 331
+          page: 283
+        summary: |-
+          Use this oracle to help flesh out a character's personality or physical characteristics. You should consider rolling on this oracle when you [Make a Connection](datasworn:move:revenant/connection/make_a_connection) to show the deeper relationship you have formed. You can roll more than once to add additional details.
+        recommended_rolls: { min: 1, max: 3 }
         rows:
-          - roll: { min: 1, max: 2 }
-            text: Agent
-            _i18n: &CommonNoun
+          - _i18n: *Adjective
+            roll: { min: 1, max: 1 }
+            text: Addicted
+          - _i18n: *Adjective
+            roll: { min: 2, max: 2 }
+            text: Adventurous
+          - _i18n: *Adjective
+            roll: { min: 3, max: 3 }
+            text: Affectionate
+          - _i18n: *Adjective
+            roll: { min: 4, max: 4 }
+            text: Aggressive
+          - _i18n: *Adjective
+            roll: { min: 5, max: 5 }
+            text: Ambitious
+          - _i18n: *Adjective
+            roll: { min: 6, max: 6 }
+            text: Angry
+          - _i18n: *Adjective
+            roll: { min: 7, max: 7 }
+            text: Anxious
+          - _i18n: *Adjective
+            roll: { min: 8, max: 8 }
+            text: Apathetic
+          - _i18n: *Adjective
+            roll: { min: 9, max: 9 }
+            text: Bitter
+          - _i18n: *Adjective
+            roll: { min: 10, max: 10 }
+            text: Boastful
+          - _i18n: *Adjective
+            roll: { min: 11, max: 11 }
+            text: Boisterous
+          - _i18n: *Adjective
+            roll: { min: 12, max: 12 }
+            text: Bold
+          - _i18n: *Adjective
+            roll: { min: 13, max: 13 }
+            text: Brave
+          - _i18n: *Adjective
+            roll: { min: 14, max: 14 }
+            text: Careless
+          - _i18n: *Adjective
+            roll: { min: 15, max: 15 }
+            text: Cautious
+          - _i18n: *Adjective
+            roll: { min: 16, max: 16 }
+            text: Charismatic
+          - _i18n: *Adjective
+            roll: { min: 17, max: 17 }
+            text: Clever
+          - _i18n: *Adjective
+            roll: { min: 18, max: 18 }
+            text: Conceited
+          - _i18n: *Adjective
+            roll: { min: 19, max: 19 }
+            text: Confident
+          - _i18n: *Adjective
+            roll: { min: 20, max: 20 }
+            text: Confused
+          - _i18n: *Adjective
+            roll: { min: 21, max: 21 }
+            text: Connected
+          - _i18n: *Adjective
+            roll: { min: 22, max: 22 }
+            text: Corrupted
+          - _i18n: *Adjective
+            roll: { min: 23, max: 23 }
+            text: Cowardly
+          - _i18n: *Adjective
+            roll: { min: 24, max: 24 }
+            text: Creative
+          - _i18n: *Adjective
+            roll: { min: 25, max: 25 }
+            text: Critical
+          - _i18n: *Adjective
+            roll: { min: 26, max: 26 }
+            text: Cruel
+          - _i18n: *Adjective
+            roll: { min: 27, max: 27 }
+            text: Cunning
+          - _i18n: *Adjective
+            roll: { min: 28, max: 28 }
+            text: Dangerous
+          - _i18n: *Adjective
+            roll: { min: 29, max: 29 }
+            text: Deceitful
+          - _i18n: *Adjective
+            roll: { min: 30, max: 30 }
+            text: Defiant
+          - _i18n: *Adjective
+            roll: { min: 31, max: 31 }
+            text: Determined
+          - _i18n: *Adjective
+            roll: { min: 32, max: 32 }
+            text: Disabled
+          - _i18n: *Adjective
+            roll: { min: 33, max: 33 }
+            text: Dominant
+          - _i18n: *Adjective
+            roll: { min: 34, max: 34 }
+            text: Driven
+          - _i18n: *Gerund
+            roll: { min: 35, max: 35 }
+            text: Dying
+          - _i18n: *Adjective
+            roll: { min: 36, max: 36 }
+            text: Envious
+          - _i18n: *Adjective
+            roll: { min: 37, max: 37 }
+            text: Experienced
+          - _i18n: *Adjective
+            roll: { min: 38, max: 38 }
+            text: Faithful
+          - _i18n: *Adjective
+            roll: { min: 39, max: 39 }
+            text: Generous
+          - _i18n: *Adjective
+            roll: { min: 40, max: 40 }
+            text: Gifted
+          - _i18n: *Adjective
+            roll: { min: 41, max: 41 }
+            text: Greedy
+          - _i18n: *Gerund
+            roll: { min: 42, max: 42 }
+            text: Grieving
+          - _i18n: *Adjective
+            roll: { min: 43, max: 43 }
+            text: Handy
+          - _i18n: *Adjective
+            roll: { min: 44, max: 44 }
+            text: Hard-hearted
+          - _i18n: *Adjective
+            roll: { min: 45, max: 45 }
+            text: Haunted
+          - _i18n: *Adjective
+            roll: { min: 46, max: 46 }
+            text: Honourable
+          - _i18n: *Adjective
+            roll: { min: 47, max: 47 }
+            text: Hot-headed
+          - _i18n: *Adjective
+            roll: { min: 48, max: 48 }
+            text: Impulsive
+          - _i18n: *Adjective
+            roll: { min: 49, max: 49 }
+            text: Incompetent
+          - _i18n: *Adjective
+            roll: { min: 50, max: 50 }
+            text: Independent
+          - _i18n: *Adjective
+            roll: { min: 51, max: 51 }
+            text: Infamous
+          - _i18n: *Adjective
+            roll: { min: 52, max: 52 }
+            text: Influential
+          - _i18n: *Adjective
+            roll: { min: 53, max: 53 }
+            text: Insensitive
+          - _i18n: *Adjective
+            roll: { min: 54, max: 54 }
+            text: Insightful
+          - _i18n: *Adjective
+            roll: { min: 55, max: 55 }
+            text: Intelligent
+          - _i18n: *Adjective
+            roll: { min: 56, max: 56 }
+            text: Intolerant
+          - _i18n: *Adjective
+            roll: { min: 57, max: 57 }
+            text: Kind
+          - _i18n: *Gerund
+            roll: { min: 58, max: 58 }
+            text: Law-abiding
+          - _i18n: *Adjective
+            roll: { min: 59, max: 59 }
+            text: Lonely
+          - _i18n: *Gerund
+            roll: { min: 60, max: 60 }
+            text: Loving
+          - _i18n: *Adjective
+            roll: { min: 61, max: 61 }
+            text: Loyal
+          - _i18n: *Adjective
+            roll: { min: 62, max: 62 }
+            text: Mad
+          - _i18n: *Adjective
+            roll: { min: 63, max: 63 }
+            text: Manipulative
+          - _i18n: *Adjective
+            roll: { min: 64, max: 64 }
+            text: Oblivious
+          - _i18n: *Adjective
+            roll: { min: 65, max: 65 }
+            text: Obsessed
+          - _i18n: *Adjective
+            roll: { min: 66, max: 66 }
+            text: Oppressed
+          - _i18n: *Adjective
+            roll: { min: 67, max: 67 }
+            text: Passive
+          - _i18n: *Adjective
+            roll: { min: 68, max: 68 }
+            text: Powerful
+          - _i18n: *Adjective
+            roll: { min: 69, max: 69 }
+            text: Proud
+          - _i18n: *Adjective
+            roll: { min: 70, max: 70 }
+            text: Quiet
+          - _i18n: *Adjective
+            roll: { min: 71, max: 71 }
+            text: Quirky
+          - _i18n: *Adjective
+            roll: { min: 72, max: 72 }
+            text: Rebellious
+          - _i18n: *Adjective
+            roll: { min: 73, max: 73 }
+            text: Reclusive
+          - _i18n: *Adjective
+            roll: { min: 74, max: 74 }
+            text: Relaxed
+          - _i18n: *Adjective
+            roll: { min: 75, max: 75 }
+            text: Remorseful
+          - _i18n: *Adjective
+            roll: { min: 76, max: 76 }
+            text: Resourceful
+          - _i18n: *Adjective
+            roll: { min: 77, max: 77 }
+            text: Secretive
+          - _i18n: *Adjective
+            roll: { min: 78, max: 78 }
+            text: Selfish
+          - _i18n: *Adjective
+            roll: { min: 79, max: 79 }
+            text: Sociable
+          - _i18n: *Adjective
+            roll: { min: 80, max: 80 }
+            text: Stealthy
+          - _i18n: *Adjective
+            roll: { min: 81, max: 81 }
+            text: Stern
+          - _i18n: *Adjective
+            roll: { min: 82, max: 82 }
+            text: Stingy
+          - _i18n: *Adjective
+            roll: { min: 83, max: 83 }
+            text: Stoic
+          - _i18n: *Adjective
+            roll: { min: 84, max: 84 }
+            text: Strong
+          - _i18n: *Adjective
+            roll: { min: 85, max: 85 }
+            text: Stubborn
+          - _i18n: *Adjective
+            roll: { min: 86, max: 86 }
+            text: Successful
+          - _i18n: *Adjective
+            roll: { min: 87, max: 87 }
+            text: Suspicious
+          - _i18n: *Adjective
+            roll: { min: 88, max: 88 }
+            text: Talented
+          - _i18n: *Adjective
+            roll: { min: 89, max: 89 }
+            text: Technical
+          - _i18n: *Adjective
+            roll: { min: 90, max: 90 }
+            text: Timid
+          - _i18n: *Adjective
+            roll: { min: 91, max: 91 }
+            text: Tolerant
+          - _i18n: *Adjective
+            roll: { min: 92, max: 92 }
+            text: Tough
+          - _i18n: *Adjective
+            roll: { min: 93, max: 93 }
+            text: Vengeful
+          - _i18n: *Adjective
+            roll: { min: 94, max: 94 }
+            text: Violent
+          - _i18n: *Adjective
+            roll: { min: 95, max: 95 }
+            text: Wary
+          - _i18n: *Adjective
+            roll: { min: 96, max: 96 }
+            text: Watchful
+          - _i18n: *Adjective
+            roll: { min: 97, max: 97 }
+            text: Weak
+          - _i18n: *Adjective
+            roll: { min: 98, max: 98 }
+            text: Weary
+          - _i18n: *Adjective
+            roll: { min: 99, max: 99 }
+            text: Wild
+          - _i18n: *Adjective
+            roll: { min: 100, max: 100 }
+            text: Wise
+      role:
+        name: Role
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 283
+        summary: |-
+          Use this oracle to define the part a character plays or to generate a random encounter with a new NPC.
+        rows:
+          - _i18n: &CommonNoun
               text:
                 part_of_speech: common_noun
-          - roll: { min: 3, max: 4 }
-            text: AI
-            _i18n: *CommonNoun
-          - roll: { min: 5, max: 6 }
-            text: Artisan
-            _i18n: *CommonNoun
-          - roll: { min: 7, max: 8 }
-            text: Assassin
-            _i18n: *CommonNoun
-          - roll: { min: 9, max: 10 }
-            text: Bounty Hunter
-            _i18n: *CommonNoun
-          - roll: { min: 11, max: 12 }
+            roll: { min: 1, max: 2 }
+            text: Addict
+          - _i18n: *CommonNoun
+            roll: { min: 3, max: 4 }
+            text: Artist
+          - _i18n: *CommonNoun
+            roll: { min: 5, max: 6 }
+            text: Biker
+          - _i18n: *CommonNoun
+            roll: { min: 7, max: 8 }
+            text: Bounty hunter
+          - _i18n: *CommonNoun
+            roll: { min: 9, max: 10 }
+            text: Celebrity
+          - _i18n: *CommonNoun
+            roll: { min: 11, max: 12 }
             text: Courier
-            _i18n: *CommonNoun
-          - roll: { min: 13, max: 14 }
+          - _i18n: *CommonNoun
+            roll: { min: 13, max: 14 }
             text: Crew
-            _i18n: *CommonNoun
-          - roll: { min: 15, max: 16 }
+          - _i18n: *CommonNoun
+            roll: { min: 15, max: 16 }
             text: Criminal
-            _i18n: *CommonNoun
-          - roll: { min: 17, max: 18 }
-            text: Cultist
-            _i18n: *CommonNoun
-          - roll: { min: 19, max: 20 }
+          - _i18n: *CommonNoun
+            roll: { min: 17, max: 18 }
             text: Diplomat
-            _i18n: *CommonNoun
-          - roll: { min: 21, max: 22 }
+          - _i18n: *CommonNoun
+            roll: { min: 19, max: 20 }
+            text: Drifter
+          - _i18n: *CommonNoun
+            roll: { min: 21, max: 22 }
+            text: Driver
+          - _i18n: *CommonNoun
+            roll: { min: 23, max: 24 }
             text: Engineer
-            _i18n: *CommonNoun
-          - roll: { min: 23, max: 24 }
-            text: Entertainer
-            _i18n: *CommonNoun
-          - roll: { min: 25, max: 26 }
+          - _i18n: *CommonNoun
+            roll: { min: 25, max: 26 }
             text: Explorer
-            _i18n: *CommonNoun
-          - roll: { min: 27, max: 28 }
+          - _i18n: *CommonNoun
+            roll: { min: 27, max: 28 }
             text: Farmer
-            _i18n: *CommonNoun
-          - roll: { min: 29, max: 30 }
+          - _i18n: *CommonNoun
+            roll: { min: 29, max: 30 }
             text: Fugitive
-            _i18n: *CommonNoun
-          - roll: { min: 31, max: 32 }
+          - _i18n: *CommonNoun
+            roll: { min: 31, max: 32 }
             text: Guard
-            _i18n: *CommonNoun
-          - roll: { min: 33, max: 34 }
-            text: Guide
-            _i18n: *CommonNoun
-          - roll: { min: 35, max: 36 }
+          - _i18n: *CommonNoun
+            roll: { min: 33, max: 34 }
             text: Healer
-            _i18n: *CommonNoun
-          - roll: { min: 37, max: 38 }
+          - _i18n: *CommonNoun
+            roll: { min: 35, max: 36 }
             text: Historian
-            _i18n: *CommonNoun
-          - roll: { min: 39, max: 40 }
+          - _i18n: *CommonNoun
+            roll: { min: 37, max: 38 }
             text: Hunter
-            _i18n: *CommonNoun
-          - roll: { min: 41, max: 42 }
+          - _i18n: *CommonNoun
+            roll: { min: 39, max: 40 }
             text: Investigator
-            _i18n: *CommonNoun
-          - roll: { min: 43, max: 44 }
-            text: Laborer
-            _i18n: *CommonNoun
-          - roll: { min: 45, max: 46 }
+          - _i18n: *CommonNoun
+            roll: { min: 41, max: 42 }
+            text: Labourer
+          - _i18n: *CommonNoun
+            roll: { min: 43, max: 44 }
             text: Lawkeeper
-            _i18n: *CommonNoun
-          - roll: { min: 47, max: 48 }
+          - _i18n: *CommonNoun
+            roll: { min: 45, max: 46 }
             text: Leader
-            _i18n: *CommonNoun
-          - roll: { min: 49, max: 50 }
+          - _i18n: *CommonNoun
+            roll: { min: 47, max: 48 }
             text: Mercenary
-            _i18n: *CommonNoun
-          - roll: { min: 51, max: 52 }
-            text: Merchant
-            _i18n: *CommonNoun
-          - roll: { min: 53, max: 54 }
+          - _i18n: *CommonNoun
+            roll: { min: 49, max: 50 }
             text: Miner
-            _i18n: *CommonNoun
-          - roll: { min: 55, max: 56 }
-            text: Mystic
-            _i18n: *CommonNoun
-          - roll: { min: 57, max: 58 }
+          - _i18n: *CommonNoun
+            roll: { min: 51, max: 52 }
+            text: Musician
+          - _i18n: *CommonNoun
+            roll: { min: 53, max: 54 }
             text: Navigator
-            _i18n: *CommonNoun
-          - roll: { min: 59, max: 60 }
+          - _i18n: *CommonNoun
+            roll: { min: 55, max: 56 }
             text: Outcast
-            _i18n: *CommonNoun
-          - roll: { min: 61, max: 62 }
-            text: Pilgrim
-            _i18n: *CommonNoun
-          - roll: { min: 63, max: 64 }
+          - _i18n: *CommonNoun
+            roll: { min: 57, max: 58 }
             text: Pilot
-            _i18n: *CommonNoun
-          - roll: { min: 65, max: 66 }
-            text: Pirate
-            _i18n: *CommonNoun
-          - roll: { min: 67, max: 68 }
+          - _i18n: *CommonNoun
+            roll: { min: 59, max: 60 }
             text: Preacher
-            _i18n: *CommonNoun
-          - roll: { min: 69, max: 70 }
-            text: Prophet
-            _i18n: *CommonNoun
-          - roll: { min: 71, max: 72 }
+          - _i18n: *CommonNoun
+            roll: { min: 61, max: 62 }
+            text: Prisoner
+          - _i18n: *CommonNoun
+            roll: { min: 63, max: 64 }
             text: Raider
-            _i18n: *CommonNoun
-          - roll: { min: 73, max: 74 }
+          - _i18n: *CommonNoun
+            roll: { min: 65, max: 66 }
+            text: Ranger
+          - _i18n: *CommonNoun
+            roll: { min: 67, max: 68 }
             text: Researcher
-            _i18n: *CommonNoun
-          - roll: { min: 75, max: 76 }
+          - _i18n: *CommonNoun
+            roll: { min: 69, max: 70 }
+            text: Runaway
+          - _i18n: *CommonNoun
+            roll: { min: 71, max: 72 }
             text: Scavenger
-            _i18n: *CommonNoun
-          - roll: { min: 77, max: 78 }
+          - _i18n: *CommonNoun
+            roll: { min: 73, max: 74 }
             text: Scholar
-            _i18n: *CommonNoun
-          - roll: { min: 79, max: 80 }
+          - _i18n: *CommonNoun
+            roll: { min: 75, max: 76 }
             text: Scout
-            _i18n: *CommonNoun
-          - roll: { min: 81, max: 82 }
-            text: Shipwright
-            _i18n: *CommonNoun
-          - roll: { min: 83, max: 84 }
+          - _i18n: *CommonNoun
+            roll: { min: 77, max: 78 }
             text: Smuggler
-            _i18n: *CommonNoun
-          - roll: { min: 85, max: 86 }
+          - _i18n: *CommonNoun
+            roll: { min: 79, max: 80 }
             text: Soldier
-            _i18n: *CommonNoun
-          - roll: { min: 87, max: 88 }
-            text: Spacer
-            _i18n: *CommonNoun
-          - roll: { min: 89, max: 90 }
+          - _i18n: *CommonNoun
+            roll: { min: 81, max: 82 }
+            text: Teacher
+          - _i18n: *CommonNoun
+            roll: { min: 83, max: 84 }
             text: Technician
-            _i18n: *CommonNoun
-          - roll: { min: 91, max: 92 }
+          - _i18n: *CommonNoun
+            roll: { min: 85, max: 86 }
             text: Thief
-            _i18n: *CommonNoun
+          - _i18n: *CommonNoun
+            roll: { min: 87, max: 88 }
+            text: Undertaker
+          - _i18n: *CommonNoun
+            roll: { min: 89, max: 90 }
+            text: Victim
+          - _i18n: *CommonNoun
+            roll: { min: 91, max: 92 }
+            text: Warden
           - roll: { min: 93, max: 95 }
             <<: &ActionTheme
-              text: '[Action](datasworn:oracle_rollable:starforged/core/action) + [Theme](datasworn:oracle_rollable:starforged/core/theme)'
+              text: '[Action](datasworn:oracle_rollable:revenant/core/action) + [Theme](datasworn:oracle_rollable:revenant/core/theme)'
               oracle_rolls:
-                - oracle: oracle_rollable:starforged/core/action
+                - oracle: oracle_rollable:revenant/core/action
                   auto: true
-                - oracle: oracle_rollable:starforged/core/theme
+                - oracle: oracle_rollable:revenant/core/theme
                   auto: true
           - roll: { min: 96, max: 100 }
             <<: &RollTwice
@@ -1311,427 +2558,451 @@ oracles:
         type: oracle_rollable
         _source:
           <<: *Source
-          page: 331
-        # content:
-        #   part_of_speech: [fragment]
-        #   tags: [objective]
+          page: 285
+        summary: |-
+          Use this oracle to find out about what motivates a character. It can also be used when you [Make a Plan](datasworn:move:revenant/plan/make_a_plan) for a person goal.
         rows:
           - roll: { min: 1, max: 2 }
             text: Avenge a wrong
-            # suggestions: [*roll:Event]
           - roll: { min: 3, max: 4 }
             text: Build a home
           - roll: { min: 5, max: 7 }
             text: Build a relationship
-            # suggestions: [*obj:Npc]
           - roll: { min: 8, max: 10 }
             text: Claim a resource
-            # suggestions: [*roll:Object]
           - roll: { min: 11, max: 12 }
             text: Collect a debt
           - roll: { min: 13, max: 14 }
-            text: Craft an object
-            # suggestions: [*roll:Object]
+            text: Craft an item
           - roll: { min: 15, max: 16 }
             text: Cure an ill
           - roll: { min: 17, max: 18 }
             text: Defeat a rival
-            # suggestions: [*obj:Npc]
           - roll: { min: 19, max: 20 }
             text: Defend a person
-            # suggestions: [*obj:Npc]
           - roll: { min: 21, max: 23 }
             text: Defend a place
-            # suggestions: [*roll:Place]
           - roll: { min: 24, max: 25 }
             text: Discover a truth
-            # suggestions: [*roll:Event]
           - roll: { min: 26, max: 27 }
             text: End a conflict
-            # suggestions: [*roll:Event]
           - roll: { min: 28, max: 29 }
             text: Escape a captor
           - roll: { min: 30, max: 31 }
             text: Fight injustice
           - roll: { min: 32, max: 33 }
             text: Find a person
-            # suggestions: [*obj:Npc]
           - roll: { min: 34, max: 35 }
             text: Forge an alliance
-            # suggestions: [*obj:Faction]
           - roll: { min: 36, max: 37 }
             text: Gain knowledge
-            # suggestions: [*roll:Event]
           - roll: { min: 38, max: 39 }
-            text: Gain riches
+            text: Gain power
           - roll: { min: 40, max: 41 }
             text: Maintain order
           - roll: { min: 42, max: 43 }
             text: Make an agreement
-            # suggestions: [*roll:Event]
           - roll: { min: 44, max: 45 }
             text: Obtain an object
-            # suggestions: [*roll:Object]
           - roll: { min: 46, max: 47 }
             text: Pay a debt
           - roll: { min: 48, max: 49 }
-            text: Protect a lifeform
-            # suggestions: [*obj:Creature]
-          - roll: { min: 50, max: 51 }
             text: Protect a secret
-            # suggestions: [*roll:Event]
+          - roll: { min: 50, max: 51 }
+            text: Protect someone
           - roll: { min: 52, max: 53 }
-            text: Prove worthiness
-            # suggestions: [*roll:Event]
+            text: Prove worth
           - roll: { min: 54, max: 55 }
             text: Rebel against power
           - roll: { min: 56, max: 57 }
             text: Refute a falsehood
           - roll: { min: 58, max: 59 }
-            text: Repair a technology
-            # suggestions: [*roll:Object]
+            text: Repair an item
           - roll: { min: 60, max: 61 }
             text: Resolve a dispute
-            # suggestions: [*roll:Event]
           - roll: { min: 62, max: 63 }
             text: Restore a relationship
-            # suggestions: [*obj:Npc]
           - roll: { min: 64, max: 65 }
-            text: Sabotage a technology
-            # suggestions: [*roll:Object]
+            text: Sabotage an object
           - roll: { min: 66, max: 68 }
             text: Secure a resource
-            # suggestions: [*roll:Object]
           - roll: { min: 69, max: 70 }
             text: Seek redemption
-            # suggestions: [*roll:Event]
           - roll: { min: 71, max: 72 }
             text: Seize power
-            # suggestions: [*roll:Event]
           - roll: { min: 73, max: 74 }
             text: Solve a mystery
-            # suggestions: [*roll:Event]
           - roll: { min: 75, max: 76 }
-            text: Spread faith
+            text: Spread an idea
           - roll: { min: 77, max: 78 }
             text: Travel to a place
-            # suggestions: [*roll:Place]
           - roll: { min: 79, max: 80 }
             text: Undermine a relationship
-            # suggestions: [*obj:Npc]
           - roll: { min: 81, max: 90 }
             <<: *ActionTheme
           - roll: { min: 91, max: 100 }
             <<: *RollTwice
-      revealed_aspect:
-        name: Revealed Character Aspect
+      combat_action:
+        name: Combat Action
         oracle_type: table_text
         type: oracle_rollable
         _source:
           <<: *Source
-          page: 332
+          page: 286
         summary: |-
-          As you interact with a person to gain a deeper understanding of their nature and personality, roll on the this table to reveal new characteristics. You may ignore, reroll, or adjust contradictions. Or envision how those contradictions add interesting complexity to the character.
-        # usage:
-        recommended_rolls: { min: 1, max: 3 }
+          Use this oracle to help inspire an action for an NPC in combat. When you're not sure what your foe does next, particularly when you are in a bad spot, roll on this table and interpret the result as appropriate to the situation. If this oracle isn't appropriate for a character, consider using the [Combat Method](datasworn:oracle_rollable:revenant/character/combat_method) and [Combat Target](datasworn:oracle_rollable:revenant/character/combat_target) oracles.
         rows:
-          - roll: { min: 1, max: 1 }
-            text: Addicted
-            _i18n: *Adjective
-          - roll: { min: 2, max: 2 }
-            text: Adventurous
-            _i18n: *Adjective
-          - roll: { min: 3, max: 3 }
-            text: Afflicted
-            _i18n: *Adjective
-          - roll: { min: 4, max: 4 }
-            text: Aggressive
-            _i18n: *Adjective
-          - roll: { min: 5, max: 5 }
-            text: Ambitious
-            _i18n: *Adjective
-          - roll: { min: 6, max: 6 }
-            text: Angry
-            _i18n: *Adjective
-          - roll: { min: 7, max: 7 }
-            text: Anxious
-            _i18n: *Adjective
-          - roll: { min: 8, max: 8 }
-            text: Apathetic
-            _i18n: *Adjective
-          - roll: { min: 9, max: 9 }
-            text: Bitter
-            _i18n: *Adjective
-          - roll: { min: 10, max: 10 }
-            text: Boastful
-            _i18n: *Adjective
-          - roll: { min: 11, max: 11 }
-            text: Boisterous
-            _i18n: *Adjective
-          - roll: { min: 12, max: 12 }
-            text: Bold
-            _i18n: *Adjective
-          - roll: { min: 13, max: 13 }
-            text: Brave
-            _i18n: *Adjective
-          - roll: { min: 14, max: 14 }
-            text: Careless
-            _i18n: *Adjective
-          - roll: { min: 15, max: 15 }
-            text: Cautious
-            _i18n: *Adjective
-          - roll: { min: 16, max: 16 }
-            text: Charismatic
-            _i18n: *Adjective
-          - roll: { min: 17, max: 17 }
-            text: Clever
-            _i18n: *Adjective
-          - roll: { min: 18, max: 18 }
-            text: Conceited
-            _i18n: *Adjective
-          - roll: { min: 19, max: 19 }
-            text: Confident
-            _i18n: *Adjective
-          - roll: { min: 20, max: 20 }
-            text: Confused
-            _i18n: *Adjective
-          - roll: { min: 21, max: 21 }
-            text: Connected
-            _i18n: *Adjective
-          - roll: { min: 22, max: 22 }
-            text: Corrupted
-            _i18n: *Adjective
-          - roll: { min: 23, max: 23 }
-            text: Cowardly
-            _i18n: *Adjective
-          - roll: { min: 24, max: 24 }
-            text: Creative
-            _i18n: *Adjective
-          - roll: { min: 25, max: 25 }
-            text: Critical
-            _i18n: *Adjective
-          - roll: { min: 26, max: 26 }
-            text: Cruel
-            _i18n: *Adjective
-          - roll: { min: 27, max: 27 }
-            text: Cunning
-            _i18n: *Adjective
-          - roll: { min: 28, max: 28 }
-            text: Dangerous
-            _i18n: *Adjective
-          - roll: { min: 29, max: 29 }
-            text: Deceitful
-            _i18n: *Adjective
-          - roll: { min: 30, max: 30 }
-            text: Defiant
-            _i18n: *Adjective
-          - roll: { min: 31, max: 31 }
-            text: Determined
-            _i18n: *Adjective
-          - roll: { min: 32, max: 32 }
-            text: Disabled
-            _i18n: *Adjective
-          - roll: { min: 33, max: 33 }
-            text: Doomed
-            _i18n: *Adjective
-          - roll: { min: 34, max: 34 }
-            text: Driven
-            _i18n: *Adjective
-          - roll: { min: 35, max: 35 }
-            text: Dying
-            _i18n: *Adjective
-          - roll: { min: 36, max: 36 }
-            text: Envious
-            _i18n: *Adjective
-          - roll: { min: 37, max: 37 }
-            text: Experienced
-            _i18n: *Adjective
-          - roll: { min: 38, max: 38 }
-            text: Faithful
-            _i18n: *Adjective
-          - roll: { min: 39, max: 39 }
-            text: Generous
-            _i18n: *Adjective
-          - roll: { min: 40, max: 40 }
-            text: Gifted
-            _i18n: *Adjective
-          - roll: { min: 41, max: 41 }
-            text: Greedy
-            _i18n: *Adjective
-          - roll: { min: 42, max: 42 }
-            text: Grief-stricken
-            _i18n: *Adjective
-          - roll: { min: 43, max: 43 }
-            text: Handy
-            _i18n: *Adjective
-          - roll: { min: 44, max: 44 }
-            text: Hardhearted
-            _i18n: *Adjective
-          - roll: { min: 45, max: 45 }
-            text: Haunted
-            _i18n: *Adjective
-          - roll: { min: 46, max: 46 }
-            text: Honorable
-            _i18n: *Adjective
-          - roll: { min: 47, max: 47 }
-            text: Hot-tempered
-            _i18n: *Adjective
-          - roll: { min: 48, max: 48 }
-            text: Impulsive
-            _i18n: *Adjective
-          - roll: { min: 49, max: 49 }
-            text: Incompetent
-            _i18n: *Adjective
-          - roll: { min: 50, max: 50 }
-            text: Independent
-            _i18n: *Adjective
-          - roll: { min: 51, max: 51 }
-            text: Infamous
-            _i18n: *Adjective
-          - roll: { min: 52, max: 52 }
-            text: Influential
-            _i18n: *Adjective
-          - roll: { min: 53, max: 53 }
-            text: Insensitive
-            _i18n: *Adjective
-          - roll: { min: 54, max: 54 }
-            text: Insightful
-            _i18n: *Adjective
-          - roll: { min: 55, max: 55 }
-            text: Intelligent
-            _i18n: *Adjective
-          - roll: { min: 56, max: 56 }
-            text: Intolerant
-            _i18n: *Adjective
-          - roll: { min: 57, max: 57 }
-            text: Ironsworn
-            _i18n: *Adjective
-          - roll: { min: 58, max: 58 }
-            text: Kind
-            _i18n: *Adjective
-          - roll: { min: 59, max: 59 }
-            text: Law-abiding
-            _i18n: *Adjective
-          - roll: { min: 60, max: 60 }
-            text: Lonely
-            _i18n: *Adjective
-          - roll: { min: 61, max: 61 }
-            text: Loving
-            _i18n: *Adjective
-          - roll: { min: 62, max: 62 }
-            text: Loyal
-            _i18n: *Adjective
-          - roll: { min: 63, max: 63 }
-            text: Manipulative
-            _i18n: *Adjective
-          - roll: { min: 64, max: 64 }
-            text: Oblivious
-            _i18n: *Adjective
-          - roll: { min: 65, max: 65 }
-            text: Obsessed
-            _i18n: *Adjective
-          - roll: { min: 66, max: 66 }
-            text: Oppressed
-            _i18n: *Adjective
-          - roll: { min: 67, max: 67 }
-            text: Passive
-            _i18n: *Adjective
-          - roll: { min: 68, max: 68 }
-            text: Powerful
-            _i18n: *Adjective
-          - roll: { min: 69, max: 69 }
-            text: Proud
-            _i18n: *Adjective
-          - roll: { min: 70, max: 70 }
-            text: Quiet
-            _i18n: *Adjective
-          - roll: { min: 71, max: 71 }
-            text: Quirky
-            _i18n: *Adjective
-          - roll: { min: 72, max: 72 }
-            text: Rebellious
-            _i18n: *Adjective
-          - roll: { min: 73, max: 73 }
-            text: Reclusive
-            _i18n: *Adjective
-          - roll: { min: 74, max: 74 }
-            text: Relaxed
-            _i18n: *Adjective
-          - roll: { min: 75, max: 75 }
-            text: Remorseful
-            _i18n: *Adjective
-          - roll: { min: 76, max: 76 }
-            text: Resourceful
-            _i18n: *Adjective
-          - roll: { min: 77, max: 77 }
-            text: Secretive
-            _i18n: *Adjective
-          - roll: { min: 78, max: 78 }
-            text: Selfish
-            _i18n: *Adjective
-          - roll: { min: 79, max: 79 }
-            text: Sociable
-            _i18n: *Adjective
-          - roll: { min: 80, max: 80 }
-            text: Stealthy
-            _i18n: *Adjective
-          - roll: { min: 81, max: 81 }
-            text: Stern
-            _i18n: *Adjective
-          - roll: { min: 82, max: 82 }
-            text: Stingy
-            _i18n: *Adjective
-          - roll: { min: 83, max: 83 }
-            text: Stoic
-            _i18n: *Adjective
-          - roll: { min: 84, max: 84 }
-            text: Strong
-            _i18n: *Adjective
-          - roll: { min: 85, max: 85 }
-            text: Stubborn
-            _i18n: *Adjective
-          - roll: { min: 86, max: 86 }
-            text: Successful
-            _i18n: *Adjective
-          - roll: { min: 87, max: 87 }
-            text: Suspicious
-            _i18n: *Adjective
-          - roll: { min: 88, max: 88 }
-            text: Talented
-            _i18n: *Adjective
-          - roll: { min: 89, max: 89 }
-            text: Technical
-            _i18n: *Adjective
-          - roll: { min: 90, max: 90 }
-            text: Timid
-            _i18n: *Adjective
-          - roll: { min: 91, max: 91 }
-            text: Tolerant
-            _i18n: *Adjective
-          - roll: { min: 92, max: 92 }
-            text: Tough
-            _i18n: *Adjective
-          - roll: { min: 93, max: 93 }
-            text: Vengeful
-            _i18n: *Adjective
-          - roll: { min: 94, max: 94 }
-            text: Violent
-            _i18n: *Adjective
-          - roll: { min: 95, max: 95 }
-            text: Wary
-            _i18n: *Adjective
-          - roll: { min: 96, max: 96 }
-            text: Watchful
-            _i18n: *Adjective
-          - roll: { min: 97, max: 97 }
-            text: Weak
-            _i18n: *Adjective
-          - roll: { min: 98, max: 98 }
-            text: Weary
-            _i18n: *Adjective
-          - roll: { min: 99, max: 99 }
-            text: Wild
-            _i18n: *Adjective
-          - roll: { min: 100, max: 100 }
-            text: Wise
-            _i18n: *Adjective
+          - roll: { min: 1, max: 3 }
+            text: Block off a path
+          - roll: { min: 4, max: 6 }
+            text: Cause reckless damage
+          - roll: { min: 7, max: 9 }
+            text: Change weapons or tactics
+          - roll: { min: 10, max: 12 }
+            text: Compel to surrender
+          - roll: { min: 13, max: 15 }
+            text: Coordinate with allies
+          - roll: { min: 16, max: 18 }
+            text: Corner, trap, or entangle
+          - roll: { min: 19, max: 21 }
+            text: Counter an attack
+          - roll: { min: 22, max: 24 }
+            text: Create a distraction
+          - roll: { min: 25, max: 27 }
+            text: Destroy a valuable item
+          - roll: { min: 28, max: 30 }
+            text: Fall back or stand down
+          - roll: { min: 31, max: 33 }
+            text: Hide or sneak
+          - roll: { min: 34, max: 36 }
+            text: Intimidate or taunt
+          - roll: { min: 37, max: 39 }
+            text: Leverage an ability
+          - roll: { min: 40, max: 42 }
+            text: Leverage the terrain
+          - roll: { min: 43, max: 45 }
+            text: Lure into a vulnerable spot
+          - roll: { min: 46, max: 48 }
+            text: Make a cautious attack
+          - roll: { min: 49, max: 50 }
+            text: Make a ferocious attack
+          - roll: { min: 51, max: 52 }
+            text: Make a precise attack
+          - roll: { min: 53, max: 54 }
+            text: Make a sacrificial attack
+          - roll: { min: 55, max: 57 }
+            text: Make an indirect attack
+          - roll: { min: 58, max: 60 }
+            text: Move in close or grapple
+          - roll: { min: 61, max: 63 }
+            text: Negotiate a truce
+          - roll: { min: 64, max: 66 }
+            text: Overrun a position
+          - roll: { min: 67, max: 69 }
+            text: Preform a feint or trick
+          - roll: { min: 70, max: 72 }
+            text: Prepare for an attack
+          - roll: { min: 73, max: 75 }
+            text: Press an advantage
+          - roll: { min: 76, max: 78 }
+            text: Provoke a careless response
+          - roll: { min: 79, max: 81 }
+            text: Ready a decisive action
+          - roll: { min: 82, max: 84 }
+            text: Shift the fight to a new area
+          - roll: { min: 85, max: 87 }
+            text: Summon aid
+          - roll: { min: 88, max: 90 }
+            text: Take cover or gain a defense
+          - roll: { min: 91, max: 93 }
+            text: Use an unexpected weapon
+          - roll: { min: 94, max: 96 }
+            text: Weaken defenses
+          - roll: { min: 97, max: 100 }
+            <<: *RollTwice
+      combat_method:
+        name: Combat Method
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 287
+        summary: |-
+          Use this table to answer questions about the actions of of a foe or enemy force. You can use these oracles instead of, or in addition to, the [Combat Action](datasworn:oracle_rollable:revenant/character/combat_action) oracle. Roll once each on the [Method](datasworn:oracle_rollable:revenant/character/combat_method) and Target oracles. Then, interpret the response as appropriate to the current situation and the nature of your foe.
+        rows:
+          - _i18n: &Verb
+              text:
+                part_of_speech: verb
+            roll: { min: 1, max: 3 }
+            text: Advance
+          - _i18n: *Verb
+            roll: { min: 4, max: 6 }
+            text: Affect
+          - _i18n: *Verb
+            roll: { min: 7, max: 9 }
+            text: Aim
+          - _i18n: *Verb
+            roll: { min: 10, max: 12 }
+            text: Assist
+          - _i18n: *Verb
+            roll: { min: 13, max: 15 }
+            text: Await
+          - _i18n: *Verb
+            roll: { min: 16, max: 18 }
+            text: Block
+          - _i18n: *Verb
+            roll: { min: 19, max: 21 }
+            text: Breach
+          - _i18n: *Verb
+            roll: { min: 22, max: 24 }
+            text: Break
+          - _i18n: *Verb
+            roll: { min: 25, max: 27 }
+            text: Challenge
+          - _i18n: *Verb
+            roll: { min: 28, max: 30 }
+            text: Charge
+          - _i18n: *Verb
+            roll: { min: 31, max: 33 }
+            text: Compel
+          - _i18n: *Verb
+            roll: { min: 34, max: 36 }
+            text: Control
+          - _i18n: *Verb
+            roll: { min: 37, max: 39 }
+            text: Counter
+          - _i18n: *Verb
+            roll: { min: 40, max: 42 }
+            text: Cover
+          - _i18n: *Verb
+            roll: { min: 43, max: 45 }
+            text: Defy
+          - _i18n: *Verb
+            roll: { min: 46, max: 48 }
+            text: Distract
+          - _i18n: *Verb
+            roll: { min: 49, max: 51 }
+            text: Drop
+          - _i18n: *Verb
+            roll: { min: 52, max: 54 }
+            text: Endure
+          - _i18n: *Verb
+            roll: { min: 55, max: 57 }
+            text: Entangle
+          - _i18n: *Verb
+            roll: { min: 58, max: 60 }
+            text: Evade
+          - _i18n: *Verb
+            roll: { min: 61, max: 63 }
+            text: Feint
+          - _i18n: *Verb
+            roll: { min: 64, max: 66 }
+            text: Force
+          - _i18n: *Verb
+            roll: { min: 67, max: 69 }
+            text: Gain
+          - _i18n: *Verb
+            roll: { min: 70, max: 72 }
+            text: Hold
+          - _i18n: *Verb
+            roll: { min: 73, max: 75 }
+            text: Impair
+          - _i18n: *Verb
+            roll: { min: 76, max: 78 }
+            text: Intensify
+          - _i18n: *Verb
+            roll: { min: 79, max: 81 }
+            text: Lose
+          - _i18n: *Verb
+            roll: { min: 82, max: 84 }
+            text: Overwhelm
+          - _i18n: *Verb
+            roll: { min: 85, max: 87 }
+            text: Protect
+          - _i18n: *Verb
+            roll: { min: 88, max: 90 }
+            text: Revive
+          - _i18n: *Verb
+            roll: { min: 91, max: 93 }
+            text: Secure
+          - _i18n: *Verb
+            roll: { min: 94, max: 96 }
+            text: Stagger
+          - _i18n: *Verb
+            roll: { min: 97, max: 100 }
+            text: Withdraw
+      combat_target:
+        name: Combat Target
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 287
+        summary: |-
+          Use this table in conjunction with the [Combat Method](datasworn:oracle_rollable:revenant/character/combat_method) table to create an abstract action a foe could take in combat
+        rows:
+          - _i18n: *CommonNoun
+            roll: { min: 1, max: 3 }
+            text: Ally
+          - _i18n: *CommonNoun
+            roll: { min: 4, max: 6 }
+            text: Ammo
+          - _i18n: *CommonNoun
+            roll: { min: 7, max: 9 }
+            text: Asset
+          - _i18n: *CommonNoun
+            roll: { min: 10, max: 12 }
+            text: Balance
+          - _i18n: *CommonNoun
+            roll: { min: 13, max: 15 }
+            text: Barrier
+          - _i18n: *CommonNoun
+            roll: { min: 16, max: 18 }
+            text: Company
+          - _i18n: *CommonNoun
+            roll: { min: 19, max: 21 }
+            text: Courage
+          - _i18n: *CommonNoun
+            roll: { min: 22, max: 24 }
+            text: Defense
+          - _i18n: *CommonNoun
+            roll: { min: 25, max: 27 }
+            text: Domain
+          - _i18n: *CommonNoun
+            roll: { min: 28, max: 30 }
+            text: Ground
+          - _i18n: *CommonNoun
+            roll: { min: 31, max: 33 }
+            text: Harm
+          - _i18n: *CommonNoun
+            roll: { min: 34, max: 36 }
+            text: Item
+          - _i18n: *CommonNoun
+            roll: { min: 37, max: 39 }
+            text: Maneuver
+          - _i18n: *CommonNoun
+            roll: { min: 40, max: 42 }
+            text: Objective
+          - _i18n: *CommonNoun
+            roll: { min: 43, max: 45 }
+            text: Occasion
+          - _i18n: *CommonNoun
+            roll: { min: 46, max: 48 }
+            text: Opening
+          - _i18n: *CommonNoun
+            roll: { min: 49, max: 51 }
+            text: Problem
+          - _i18n: *CommonNoun
+            roll: { min: 52, max: 54 }
+            text: Position
+          - _i18n: *CommonNoun
+            roll: { min: 55, max: 57 }
+            text: Power
+          - _i18n: *CommonNoun
+            roll: { min: 58, max: 60 }
+            text: Precision
+          - _i18n: *CommonNoun
+            roll: { min: 61, max: 63 }
+            text: Protection
+          - _i18n: *CommonNoun
+            roll: { min: 64, max: 66 }
+            text: Range
+          - _i18n: *CommonNoun
+            roll: { min: 67, max: 69 }
+            text: Resolve
+          - _i18n: *CommonNoun
+            roll: { min: 70, max: 72 }
+            text: Sense
+          - _i18n: *CommonNoun
+            roll: { min: 73, max: 75 }
+            text: Skill
+          - _i18n: *CommonNoun
+            roll: { min: 76, max: 78 }
+            text: Speed
+          - _i18n: *CommonNoun
+            roll: { min: 79, max: 81 }
+            text: Strength
+          - _i18n: *CommonNoun
+            roll: { min: 82, max: 84 }
+            text: Stress
+          - _i18n: *CommonNoun
+            roll: { min: 85, max: 87 }
+            text: Surprise
+          - _i18n: *CommonNoun
+            roll: { min: 88, max: 90 }
+            text: Technique
+          - _i18n: *CommonNoun
+            roll: { min: 91, max: 93 }
+            text: Terrain
+          - _i18n: *CommonNoun
+            roll: { min: 94, max: 96 }
+            text: Weakness
+          - _i18n: *CommonNoun
+            roll: { min: 97, max: 100 }
+            text: Weapon
+      relationship:
+        name: Relationship
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 288
+        summary: |-
+          Use this oracle to find out about the relationship between one character and another. You can also use this oracle to determine the relationship between one enclave and another.
+        rows:
+          - roll: { min: 1, max: 4 }
+            text: Antagonistic towards
+          - roll: { min: 5, max: 8 }
+            text: Apathetic or unaware of
+          - roll: { min: 9, max: 11 }
+            text: Betrayed by
+          - roll: { min: 12, max: 14 }
+            text: Broke a promise to
+          - roll: { min: 15, max: 18 }
+            text: Distrustful of
+          - roll: { min: 19, max: 22 }
+            text: Does business with
+          - roll: { min: 23, max: 25 }
+            text: Extorted by
+          - roll: { min: 26, max: 29 }
+            text: Hides a secret from
+          - roll: { min: 30, max: 33 }
+            text: Holds leverage over
+          - roll: { min: 34, max: 36 }
+            text: In control of
+          - roll: { min: 37, max: 40 }
+            text: Maneuvering against
+          - roll: { min: 41, max: 44 }
+            text: Needs aid from
+          - roll: { min: 45, max: 47 }
+            text: Negotiating with
+          - roll: { min: 48, max: 51 }
+            text: Open alliance with
+          - roll: { min: 52, max: 54 }
+            text: Owes a debt to
+          - roll: { min: 55, max: 58 }
+            text: Shares rivalry with
+          - roll: { min: 59, max: 61 }
+            text: Share power with
+          - roll: { min: 62, max: 64 }
+            text: Shows contempt for
+          - roll: { min: 65, max: 67 }
+            text: Shows respect for
+          - roll: { min: 68, max: 70 }
+            text: Subordinate to
+          - roll: { min: 71, max: 74 }
+            text: Supplied with resources by
+          - roll: { min: 75, max: 78 }
+            text: Supplies resources to
+          - roll: { min: 79, max: 81 }
+            text: Temporary alliance with
+          - roll: { min: 82, max: 85 }
+            text: Tolerates
+          - roll: { min: 86, max: 89 }
+            text: Trades favours with
+          - roll: { min: 90, max: 92 }
+            text: Unjustly accused by
+          - roll: { min: 93, max: 96 }
+            text: Warring with
+          - roll: { min: 97, max: 100 }
+            <<: *RollTwice
