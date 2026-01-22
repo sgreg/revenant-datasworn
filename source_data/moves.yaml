@@ -313,8 +313,6 @@ moves:
           page: 87
       gather_information:
         name: Gather Information
-        suggestions:
-          - oracle_rollable:revenant/misc/story_clue
         roll_type: action_roll
         type: move
         trigger:
@@ -2310,7 +2308,7 @@ moves:
         trigger:
           text: When you suffer the outcome of an action...
         suggestions:
-          - oracle_rollable:revenant/misc/story_complication
+          - oracle_rollable:revenant/story/complication
           - oracle_rollable:*/**/peril
           - oracle_rollable:*/**/peril/**
         oracles:
