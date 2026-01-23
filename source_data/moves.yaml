@@ -2309,8 +2309,7 @@ moves:
           text: When you suffer the outcome of an action...
         suggestions:
           - oracle_rollable:revenant/story/complication
-          - oracle_rollable:*/**/peril
-          - oracle_rollable:*/**/peril/**
+          - oracle_rollable:*/**/hazard
         oracles:
           meet_with_disaster:
             name: Meet with Disaster
