@@ -446,7 +446,7 @@ moves:
         roll_type: progress_roll
         type: move
         tracks:
-          category: Vow
+          category: Plan
         trigger:
           text: When you reach the end of your plan...
           conditions:
