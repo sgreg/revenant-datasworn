@@ -78,21 +78,12 @@ rules:
     plans_legacy:
       label: plans
       description: Make plans and do what you must to see them fulfilled.
-#      tags:
-#        starforged:
-#          legacy_track_xp: true
     bonds_legacy:
       label: bonds
       description: Create connections and build relationships.
-#      tags:
-#        starforged:
-#          legacy_track_xp: true
     discoveries_legacy:
       label: discoveries
       description: Explore the Forge and unlock its mysteries.
-#      tags:
-#        starforged:
-#          legacy_track_xp: true
   stats:
     edge:
       label: edge
@@ -109,50 +100,3 @@ rules:
     wits:
       label: wits
       description: Expertise, knowledge, and observation.
-#  tags:
-#    legacy_track_xp:
-#      node_types: [special_track]
-#      $schema:
-#        description: This special track uses Starforged-style legacy track XP.
-#        type: boolean
-#    region:
-#      node_types: [oracle_rollable, row]
-#      $schema:
-#        description: This content applies to a specific region of the Forge.
-#        enum:
-#        - terminus
-#        - outlands
-#        - expanse
-#    location:
-#      node_types: [oracle_rollable, row]
-#      $schema:
-#        description: This content applies specifically to planetside, orbital, or deep space environments.
-#        enum:
-#        - planetside
-#        - orbital
-#        - deep_space
-#    environment:
-#      node_types: [oracle_rollable,row]
-#      $schema:
-#        description: This content applies to a specific creature environment.
-#        enum:
-#        - space
-#        - interior
-#        - land
-#        - liquid
-#        - air
-#    faction_type:
-#      node_types: [oracle_rollable,row]
-#      $schema:
-#        description: This content applies to a specific type of faction.
-#        enum:
-#        - dominion
-#        - guild
-#        - fringe_group
-#    life:
-#      node_types: [oracle_rollable,row]
-#      $schema:
-#        description: This content applies specifically to life-bearing or lifeless worlds.
-#        enum:
-#        - lifebearing
-#        - lifeless
