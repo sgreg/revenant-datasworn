@@ -15,200 +15,230 @@ oracles:
         date: 2025-06-23
         authors:
           - name: Killian Gillespie
-      page: 274
+      page: 290
     summary: |-
       An enclave is any location that people inhabit the wasteland. There are no specific entries in the Location oracles to tell you if you have come across an enclave. This is to ensure that the population level in Revenant is left up to you.
     collections:
       name:
         name: Enclave Name
-        oracle_type: table_shared_rolls
+        summary: |-
+          Use this oracle to generate a name for a place you have discovered or a location to which you need to travel. Roll your array dice once for the category and then roll your oracle dice for the name. Alternatively, you could come up with a name that fits the theme.
+        oracle_type: tables
         type: oracle_collection
         _source:
           <<: *Source
-          page: 275
-        summary: |-
-          Use this oracle to generate a name for a place you have discovered or a location to which you need to travel. Roll your array dice once for the category and then roll your oracle dice for the name. Alternatively, you could come up with a name that fits the theme.
+          page: 292
         contents:
-          name_array_one:
-            name: Name (1) Feature of the landscape
-            summary: |-
-              A feature of the landscape. Envision what it is. What makes it unusual or distictive?
-            oracle_type: column_text
+          category:
+            name: Enclave Name Category
+            oracle_type: table_text
             type: oracle_rollable
+            dice: 1d6
             _source:
               <<: *Source
               page: 292
             rows:
-              - roll: { min: 1, max: 10 }
-                text: Clearwater
-              - roll: { min: 11, max: 20 }
-                text: Darkwood
-              - roll: { min: 21, max: 30 }
-                text: Edgedrop
-              - roll: { min: 31, max: 40 }
-                text: Grassfields
-              - roll: { min: 41, max: 50 }
-                text: Highway
-              - roll: { min: 51, max: 60 }
-                text: Limestone
-              - roll: { min: 61, max: 70 }
-                text: Marshlands
-              - roll: { min: 71, max: 80 }
-                text: Rock Hall
-              - roll: { min: 81, max: 90 }
-                text: Snowy Peak
-              - roll: { min: 91, max: 100 }
-                text: Trainstop
-          name_array_two:
-            name: Name (2) Manmade creation
-            summary: |-
-              A manmade creation. What is is? Why is it important to this enclave's history?
-            oracle_type: column_text
-            type: oracle_rollable
+              - roll: { min: 1, max: 1 }
+                text: "[Landscape](datasworn:oracle_rollable:revenant/enclave/name/category/landscape)"
+              - roll: { min: 2, max: 2 }
+                text: "[Manmade creation](datasworn:oracle_rollable:revenant/enclave/name/category/manmade)"
+              - roll: { min: 3, max: 3 }
+                text: "[Animal](datasworn:oracle_rollable:revenant/enclave/name/category/animal)"
+              - roll: { min: 4, max: 4 }
+                text: "[Historical event](datasworn:oracle_rollable:revenant/enclave/name/category/historical)"
+              - roll: { min: 5, max: 5 }
+                text: "[Ominous or inspirational name](datasworn:oracle_rollable:revenant/enclave/name/category/ominous)"
+              - roll: { min: 6, max: 6 }
+                text: "[Seasonal or environmental aspect](datasworn:oracle_rollable:revenant/enclave/name/category/seasonal)"
+        collections:
+          category:
+            name: Category
+            type: oracle_collection
+            oracle_type: table_shared_rolls
             _source:
               <<: *Source
               page: 292
-            rows:
-              - roll: { min: 1, max: 10 }
-                text: Artillery Skies
-              - roll: { min: 11, max: 20 }
-                text: Bullet town
-              - roll: { min: 21, max: 30 }
-                text: Forge
-              - roll: { min: 31, max: 40 }
-                text: Junkyard
-              - roll: { min: 41, max: 50 }
-                text: Lighthouse
-              - roll: { min: 51, max: 60 }
-                text: Lonetower
-              - roll: { min: 61, max: 70 }
-                text: Stonewall
-              - roll: { min: 71, max: 80 }
-                text: The Underground
-              - roll: { min: 81, max: 90 }
-                text: Timbermill
-              - roll: { min: 91, max: 100 }
-                text: Trenchwatch
-          name_array_three:
-            name: Name (3) Animal
-            summary: |-
-              An animal. Why have the people of this enclave chosen this animal?
-            oracle_type: column_text
-            type: oracle_rollable
-            _source:
-              <<: *Source
-              page: 292
-            rows:
-              - roll: { min: 1, max: 10 }
-                text: Anaconda Falls
-              - roll: { min: 11, max: 20 }
-                text: "'Gator"
-              - roll: { min: 21, max: 30 }
-                text: Bearskin
-              - roll: { min: 31, max: 40 }
-                text: "Cougar' Caverns"
-              - roll: { min: 41, max: 50 }
-                text: Staghorn
-              - roll: { min: 51, max: 60 }
-                text: Lionfield
-              - roll: { min: 61, max: 70 }
-                text: Piranhas
-              - roll: { min: 71, max: 80 }
-                text: "The Rat's Nest"
-              - roll: { min: 81, max: 90 }
-                text: Wolfpack
-              - roll: { min: 91, max: 100 }
-                text: "Wild Dog's Run"
-          name_array_four:
-            name: Name (4) Historical event
-            summary: |-
-              A historical event. What happened here? What commemorates this event?
-            oracle_type: column_text
-            type: oracle_rollable
-            _source:
-              <<: *Source
-              page: 293
-            rows:
-              - roll: { min: 1, max: 10 }
-                text: Betrayal
-              - roll: { min: 11, max: 20 }
-                text: Bitten Hand
-              - roll: { min: 21, max: 30 }
-                text: Freedom
-              - roll: { min: 31, max: 40 }
-                text: Great Escape
-              - roll: { min: 41, max: 50 }
-                text: Grounded
-              - roll: { min: 51, max: 60 }
-                text: Minefield
-              - roll: { min: 61, max: 70 }
-                text: Shellshock
-              - roll: { min: 71, max: 80 }
-                text: The Battlefield
-              - roll: { min: 81, max: 90 }
-                text: The Stand
-              - roll: { min: 91, max: 100 }
-                text: Victory
-          name_array_five:
-            name: Name (5) Ominous or inspirational name
-            summary: |-
-              An ominous or inspirational name. What grim event inspired this name or what motivation was required to overcome adversity here?
-            oracle_type: column_text
-            type: oracle_rollable
-            _source:
-              <<: *Source
-              page: 293
-            rows:
-              - roll: { min: 1, max: 10 }
-                text: Brave
-              - roll: { min: 11, max: 20 }
-                text: Broken
-              - roll: { min: 21, max: 30 }
-                text: Haven
-              - roll: { min: 31, max: 40 }
-                text: Ghosts
-              - roll: { min: 41, max: 50 }
-                text: Independence
-              - roll: { min: 51, max: 60 }
-                text: Murder
-              - roll: { min: 61, max: 70 }
-                text: Nowhere
-              - roll: { min: 71, max: 80 }
-                text: Oasis
-              - roll: { min: 81, max: 90 }
-                text: Purged
-              - roll: { min: 91, max: 100 }
-                text: Solace
-          name_array_six:
-            name: Name (6) Seasonal or environmental aspect
-            summary: |-
-              A seasonal or environmental aspect. What influence does the weather have here?
-            oracle_type: column_text
-            type: oracle_rollable
-            _source:
-              <<: *Source
-              page: 293
-            rows:
-              - roll: { min: 1, max: 10 }
-                text: Dawndale
-              - roll: { min: 11, max: 20 }
-                text: Dusty
-              - roll: { min: 21, max: 30 }
-                text: Fort Frozenriver
-              - roll: { min: 31, max: 40 }
-                text: Good Hunting
-              - roll: { min: 41, max: 50 }
-                text: Hightide
-              - roll: { min: 51, max: 60 }
-                text: "Spring's Scent"
-              - roll: { min: 61, max: 70 }
-                text: Summerstead
-              - roll: { min: 71, max: 80 }
-                text: The Evergreens
-              - roll: { min: 81, max: 90 }
-                text: Windchime
-              - roll: { min: 91, max: 100 }
-                text: "Winter's End"
+            contents:
+              landscape:
+                name: Feature of the landscape
+                summary: |-
+                  A feature of the landscape. Envision what it is. What makes it unusual or distinctive?
+                oracle_type: column_text
+                type: oracle_rollable
+                _source:
+                  <<: *Source
+                  page: 292
+                rows:
+                  - roll: { min: 1, max: 10 }
+                    text: Clearwater
+                  - roll: { min: 11, max: 20 }
+                    text: Darkwood
+                  - roll: { min: 21, max: 30 }
+                    text: Edgedrop
+                  - roll: { min: 31, max: 40 }
+                    text: Grassfields
+                  - roll: { min: 41, max: 50 }
+                    text: Highway
+                  - roll: { min: 51, max: 60 }
+                    text: Limestone
+                  - roll: { min: 61, max: 70 }
+                    text: Marshlands
+                  - roll: { min: 71, max: 80 }
+                    text: Rock Hall
+                  - roll: { min: 81, max: 90 }
+                    text: Snowy Peak
+                  - roll: { min: 91, max: 100 }
+                    text: Trainstop
+              manmade:
+                name: Manmade creation
+                summary: |-
+                  A manmade creation. What is is? Why is it important to this enclave's history?
+                oracle_type: column_text
+                type: oracle_rollable
+                _source:
+                  <<: *Source
+                  page: 292
+                rows:
+                  - roll: { min: 1, max: 10 }
+                    text: Artillery Skies
+                  - roll: { min: 11, max: 20 }
+                    text: Bullet town
+                  - roll: { min: 21, max: 30 }
+                    text: Forge
+                  - roll: { min: 31, max: 40 }
+                    text: Junkyard
+                  - roll: { min: 41, max: 50 }
+                    text: Lighthouse
+                  - roll: { min: 51, max: 60 }
+                    text: Lonetower
+                  - roll: { min: 61, max: 70 }
+                    text: Stonewall
+                  - roll: { min: 71, max: 80 }
+                    text: The Underground
+                  - roll: { min: 81, max: 90 }
+                    text: Timbermill
+                  - roll: { min: 91, max: 100 }
+                    text: Trenchwatch
+              animal:
+                name: Animal
+                summary: |-
+                  An animal. Why have the people of this enclave chosen this animal?
+                oracle_type: column_text
+                type: oracle_rollable
+                _source:
+                  <<: *Source
+                  page: 292
+                rows:
+                  - roll: { min: 1, max: 10 }
+                    text: Anaconda Falls
+                  - roll: { min: 11, max: 20 }
+                    text: "'Gator"
+                  - roll: { min: 21, max: 30 }
+                    text: Bearskin
+                  - roll: { min: 31, max: 40 }
+                    text: "Cougar' Caverns"
+                  - roll: { min: 41, max: 50 }
+                    text: Staghorn
+                  - roll: { min: 51, max: 60 }
+                    text: Lionfield
+                  - roll: { min: 61, max: 70 }
+                    text: Piranhas
+                  - roll: { min: 71, max: 80 }
+                    text: "The Rat's Nest"
+                  - roll: { min: 81, max: 90 }
+                    text: Wolfpack
+                  - roll: { min: 91, max: 100 }
+                    text: "Wild Dog's Run"
+              historical:
+                name: Historical event
+                summary: |-
+                  A historical event. What happened here? What commemorates this event?
+                oracle_type: column_text
+                type: oracle_rollable
+                _source:
+                  <<: *Source
+                  page: 293
+                rows:
+                  - roll: { min: 1, max: 10 }
+                    text: Betrayal
+                  - roll: { min: 11, max: 20 }
+                    text: Bitten Hand
+                  - roll: { min: 21, max: 30 }
+                    text: Freedom
+                  - roll: { min: 31, max: 40 }
+                    text: Great Escape
+                  - roll: { min: 41, max: 50 }
+                    text: Grounded
+                  - roll: { min: 51, max: 60 }
+                    text: Minefield
+                  - roll: { min: 61, max: 70 }
+                    text: Shellshock
+                  - roll: { min: 71, max: 80 }
+                    text: The Battlefield
+                  - roll: { min: 81, max: 90 }
+                    text: The Stand
+                  - roll: { min: 91, max: 100 }
+                    text: Victory
+              ominous:
+                name: Ominous or inspirational name
+                summary: |-
+                  An ominous or inspirational name. What grim event inspired this name or what motivation was required to overcome adversity here?
+                oracle_type: column_text
+                type: oracle_rollable
+                _source:
+                  <<: *Source
+                  page: 293
+                rows:
+                  - roll: { min: 1, max: 10 }
+                    text: Brave
+                  - roll: { min: 11, max: 20 }
+                    text: Broken
+                  - roll: { min: 21, max: 30 }
+                    text: Haven
+                  - roll: { min: 31, max: 40 }
+                    text: Ghosts
+                  - roll: { min: 41, max: 50 }
+                    text: Independence
+                  - roll: { min: 51, max: 60 }
+                    text: Murder
+                  - roll: { min: 61, max: 70 }
+                    text: Nowhere
+                  - roll: { min: 71, max: 80 }
+                    text: Oasis
+                  - roll: { min: 81, max: 90 }
+                    text: Purged
+                  - roll: { min: 91, max: 100 }
+                    text: Solace
+              seasonal:
+                name: Seasonal or environmental aspect
+                summary: |-
+                  A seasonal or environmental aspect. What influence does the weather have here?
+                oracle_type: column_text
+                type: oracle_rollable
+                _source:
+                  <<: *Source
+                  page: 293
+                rows:
+                  - roll: { min: 1, max: 10 }
+                    text: Dawndale
+                  - roll: { min: 11, max: 20 }
+                    text: Dusty
+                  - roll: { min: 21, max: 30 }
+                    text: Fort Frozenriver
+                  - roll: { min: 31, max: 40 }
+                    text: Good Hunting
+                  - roll: { min: 41, max: 50 }
+                    text: Hightide
+                  - roll: { min: 51, max: 60 }
+                    text: "Spring's Scent"
+                  - roll: { min: 61, max: 70 }
+                    text: Summerstead
+                  - roll: { min: 71, max: 80 }
+                    text: The Evergreens
+                  - roll: { min: 81, max: 90 }
+                    text: Windchime
+                  - roll: { min: 91, max: 100 }
+                    text: "Winter's End"
     contents:
       first_look:
         name: First Look
