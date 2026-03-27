@@ -198,7 +198,7 @@ moves:
         roll_type: action_roll
         type: move
         trigger:
-          text: When you attempt something risky or react to an imminent threat...
+          text: When you assess a situation, make preparations, or attempt to gain leverage...
           conditions:
             - method: player_choice
               text: With finesse, mobility, or agility
@@ -490,7 +490,7 @@ moves:
 
           Then, envision the impact of this failure and choose one or more as appropriate to the nature of the plan. Any allies who shared this plan may also envision a cost.
 
-            * You are demoralized or dimoraleed: [Endure Stress](datasworn:move:revenant/suffer/endure_stress).
+            * You are demoralized: [Endure Stress](datasworn:move:revenant/suffer/endure_stress).
             * A connection loses faith: [Test Your Relationship](datasworn:move:revenant/connection/test_your_relationship) when you next interact.
             * You must abandon a resource: Clear a previously completed plan.
             * Someone else pays a price: Envision how a person, being, or community bears the cost of the failure.
@@ -1485,7 +1485,7 @@ moves:
               - roll: { min: 41, max: 52 }
                 text: 'Victory is short-lived: A new hazard or foe appears'
               - roll: { min: 53, max: 64 }
-                text: 'You face collateral damage: Something ofa value is lost'
+                text: 'You face collateral damage: Something of value is lost'
               - roll: { min: 65, max: 76 }
                 text: 'Others pay the price: Someone else meets with disaster'
               - roll: { min: 77, max: 88 }

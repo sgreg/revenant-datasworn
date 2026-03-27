@@ -83,7 +83,7 @@ rules:
       description: Create connections and build relationships.
     discoveries_legacy:
       label: discoveries
-      description: Explore the Forge and unlock its mysteries.
+      description: Explore the savage lands you inhabit and overcome their chaos.
   stats:
     edge:
       label: edge
