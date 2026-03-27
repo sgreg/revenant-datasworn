@@ -55,6 +55,9 @@ rules:
         encumbered:
           label: encumbered
           description: Encumbered is marked as appropriate to the circumstances when you are carrying excessive or cumbersome weight.
+        irradiated:
+          label: irradiated
+          description: Irradiated is marked when you are at 0 radiation and fail to [Endure Radiation](datasworn:move:revenant/suffer/endure_radiation). You suffer acute radiation syndrome, and need comfort to recover.
     vehicle_troubles:
       label: vehicle troubles
       description: Vehicle troubles are linked to a specific vehicle. These impacts are only a factor when you are piloting or aboard that vehicle. Otherwise, they do not count as an impact and do not affect your maximum momentum and momentum reset values.

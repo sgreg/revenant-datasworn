@@ -557,7 +557,7 @@ moves:
           When __you spend an extended time recovering in a safe place while a Nemesis is active__, do any of the following.
 
             * Clear any marked impacts.
-            * Set your endurance, morale, and supply to +5.
+            * Set your endurance, morale, supply, and radiation (if used) to +5.
             * Set your companion's endurance to +5.
             * Set your momentum to its reset value.
 
@@ -874,6 +874,8 @@ moves:
             * Focus: Take +1 momentum.
             * Tinker: Add +1 if you [Repair](datasworn:move:revenant/recover/repair) or [Check Your Gear](datasworn:move:revenant/basic/check_your_gear)
 
+          In addition, on a __strong hit__, if you use the __Radiation__ meter, take +1 radiation.
+
           On a __miss__, you take no comfort. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
         outcomes:
           strong_hit:
@@ -884,6 +886,8 @@ moves:
                 * Rest: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1) to take +1 endurance for you and any companions.
                 * Focus: Take +1 momentum.
                 * Tinker: Add +1 if you [Repair](datasworn:move:revenant/recover/repair) or [Check Your Gear](datasworn:move:revenant/basic/check_your_gear)
+
+              In addition, if you use the __Radiation__ meter, take +1 radiation.
           weak_hit:
             text: |-
               On a __weak hit__, you and your allies may each choose one.
@@ -1910,7 +1914,7 @@ moves:
         text: |-
           __When you spend time recovering within a community__, roll +heart.
 
-          On a __strong hit__, this is a safe refuge. You and your allies may each choose two recover contents: [Heal](datasworn:move:revenant/recover/heal), [Hearten](datasworn:move:revenant/recover/hearten), [Repair](datasworn:move:revenant/recover/repair), or [Resupply](datasworn:move:revenant/recover/resupply). Instead of rolling, assume an automatic strong hit for each. An individual move can be taken more than once.
+          On a __strong hit__, this is a safe refuge. You and your allies may each choose two recover moves: [Heal](datasworn:move:revenant/recover/heal), [Hearten](datasworn:move:revenant/recover/hearten), [Repair](datasworn:move:revenant/recover/repair), or [Resupply](datasworn:move:revenant/recover/resupply). Instead of rolling, assume an automatic strong hit for each. An individual move can be taken more than once. If you use the __Radiation__ meter, take +1 radiation additionally.
 
           On a __weak hit__, as above, but time is short or resources are strained. You and your allies each make one recover move instead of two, with no more than three moves total among the group.
 
@@ -1921,7 +1925,7 @@ moves:
         outcomes:
           strong_hit:
             text: |-
-              On a __strong hit__, this is a safe refuge. You and your allies may each choose two recover contents: [Heal](datasworn:move:revenant/recover/heal), [Hearten](datasworn:move:revenant/recover/hearten), [Repair](datasworn:move:revenant/recover/repair), or [Resupply](datasworn:move:revenant/recover/resupply). Instead of rolling, assume an automatic strong hit for each. An individual move can be taken more than once.
+              On a __strong hit__, this is a safe refuge. You and your allies may each choose two recover moves: [Heal](datasworn:move:revenant/recover/heal), [Hearten](datasworn:move:revenant/recover/hearten), [Repair](datasworn:move:revenant/recover/repair), or [Resupply](datasworn:move:revenant/recover/resupply). Instead of rolling, assume an automatic strong hit for each. An individual move can be taken more than once. If you use the __Radiation__ meter, take +1 radiation additionally.
           weak_hit:
             text: |-
               On a __weak hit__, this is a safe refuge, but time is short or resources are strained. You and your allies may each make one recover move (with no more than three moves total among the group): [Heal](datasworn:move:revenant/recover/heal), [Hearten](datasworn:move:revenant/recover/hearten), [Repair](datasworn:move:revenant/recover/repair), or [Resupply](datasworn:move:revenant/recover/resupply). Instead of rolling, assume an automatic strong hit for each. An individual move can be taken more than once.
