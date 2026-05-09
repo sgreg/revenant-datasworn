@@ -5,6 +5,7 @@ moves:
   session:
     name: Session Moves
     type: move_category
+    color: '#3F8C8A'
     _source:
       <<: &Source
         title: 'Revenant'
@@ -129,6 +130,7 @@ moves:
   basic:
     name: Basic Moves
     type: move_category
+    color: '#206087'
     _source:
       <<: *Source
       page: 146
@@ -379,6 +381,7 @@ moves:
   plan:
     name: Plan Moves
     type: move_category
+    color: '#805A90'
     summary: __Plan moves__ encompass making plans, including making progress in a plan and resolving the outcome of a plan. It also includes the rules for when a Nemesis arises and their effect on your character.
     description: |-
       In *Revenant*, the people with the plans are the ones who change the world. Plans can be made to yourself, as a representation of your personal commitment, or they can be made in service to someone else. Some plans might be made grudgingly - out of duty or necessity. Others will be made with your entire conviction.
@@ -568,6 +571,7 @@ moves:
   connection:
     name: Connection Moves
     type: move_category
+    color: '#4A5791'
     _source:
       <<: *Source
       page: 110
@@ -772,6 +776,7 @@ moves:
   exploration:
     name: Exploration Moves
     type: move_category
+    color: '#427FAA'
     summary: |-
       __Exploration moves__ form the majority of the structure when travelling or exploring within the ruins of the old world.
     description: |-
@@ -1138,6 +1143,7 @@ moves:
   combat:
     name: Combat Moves
     type: move_category
+    color: '#818992'
     _source:
       <<: *Source
       page: 138
@@ -1538,6 +1544,7 @@ moves:
   suffer:
     name: Suffer Moves
     type: move_category
+    color: '#883529'
     summary: |-
       __Suffer moves__ occur when you endure hardship, such as suffering physical harm or facing a demoralising event. It also covers character death and desolation.
     description: |-
@@ -1891,6 +1898,7 @@ moves:
   recover:
     name: Recover Moves
     type: move_category
+    color: '#488B44'
     summary: __Recover moves__ are for resting and recuperating.
     description: |-
       When your resources are strained, your endurance and morale are ebbing, and your equipment and vehicles in disrepair, you'll need to find relief from the constant hardships of the world.
@@ -2181,6 +2189,7 @@ moves:
   legacy:
     name: Legacy Moves
     type: move_category
+    color: '#4F5A69'
     _source:
       <<: *Source
       page: 194
@@ -2297,6 +2306,7 @@ moves:
   fate:
     name: Fate Moves
     type: move_category
+    color: '#8F477B'
     summary: |-
       __Fate moves__ help you decide what happens in solo and co-op play, or support the GM's decisions and brainstorming in guided play
     description: |-
@@ -2400,6 +2410,7 @@ moves:
   scene_challenge:
     name: Scene Challenges
     type: move_category
+    color: '#206087'
     summary: |-
       __Scene moves__ are for extended non-combat situations.
     description: |-
