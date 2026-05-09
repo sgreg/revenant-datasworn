@@ -110,7 +110,7 @@ npcs:
           - Destroy something physical
           - Tear off a limb
         description: |-
-          The Hulk is a zombie that has been supersized. The Revenant pathogen is known to regenerate tissue. Not perfectly, but it keeps the dead walking. Muscle regrowth is acheived through hypertrophy. This happens when muscles sustain damage or injury and the body repairs them by fusing them. This creates larger and stronger muscles. In a Hulk, the pathogen has focused on rebuilding muscle tissue too well.
+          The Hulk is a zombie that has been supersized. The Revenant pathogen is known to regenerate tissue. Not perfectly, but it keeps the dead walking. Muscle regrowth is achieved through hypertrophy. This happens when muscles sustain damage or injury and the body repairs them by fusing them. This creates larger and stronger muscles. In a Hulk, the pathogen has focused on rebuilding muscle tissue too well.
       screamer:
         type: npc
         name: Screamer
@@ -530,7 +530,7 @@ npcs:
         description: |-
           The name anaconda applies to a group of snakes, but it is often used to refer to only one species, the green anaconda. The green anaconda is also known as the giant emerald anaconda, common anaconda or common water boa, and is the largest and heaviest snake in the world. There are reports of anacondas reaching over 5 meters in length and a typical adult weighs between 30 and 80 kilograms.
 
-          While the anaconda is native to the Amazon and Orinoco basins of South America they have been observed in the wild in Florida. They are slow on land but steathy in the water and as such they live in swamps and rivers in tropical rainforests and seasonally flooded savannahs. With eyes and nasal openings on the top of their heads, they can lie in wait for prey while remaining nearly completely submerged.
+          While the anaconda is native to the Amazon and Orinoco basins of South America they have been observed in the wild in Florida. They are slow on land but stealthy in the water and as such they live in swamps and rivers in tropical rainforests and seasonally flooded savannahs. With eyes and nasal openings on the top of their heads, they can lie in wait for prey while remaining nearly completely submerged.
       brown_bear:
         type: npc
         name: Brown Bear
@@ -578,7 +578,7 @@ npcs:
         description: |-
           Cougars, often called the puma, panther, or mountain lion, are large cats native to north and south America. They are solitary by nature and stand almost 1 meter tall and generally weigh up to 70 kilograms. Cougars get smaller the closer to the poles.
 
-          Unlike other big cat man-eaters, cougars do not kill humans as a result of old age, but in defense of territory. Most attacks are in late spring and summer when juvenille cougars leave their mothers and search for new territory. Such behavious has been documented in hunts, where a cougar is flushed out by dogs—which it is capable of outrunning. Then, the cougar circles around and mauls the hunter in an ambush attack.
+          Unlike other big cat man-eaters, cougars do not kill humans as a result of old age, but in defense of territory. Most attacks are in late spring and summer when juvenile cougars leave their mothers and search for new territory. Such behaviours has been documented in hunts, where a cougar is flushed out by dogs—which it is capable of outrunning. Then, the cougar circles around and mauls the hunter in an ambush attack.
       crocodile:
         type: npc
         name: Crocodile
@@ -646,7 +646,7 @@ npcs:
           - Leap and bite
           - Intimidating roar
         description: |-
-          While the lion is only native to Africa and India there are numerous zoos across the world that hold these animals as specimens. In the early days of an apocalypse, lions could be set free by their keepers who do not wish to see them starve in captivity. However, in the later days of the apocalypse their numbers will be limited where they are not native due to having a limited or non-existant breeding pool.
+          While the lion is only native to Africa and India there are numerous zoos across the world that hold these animals as specimens. In the early days of an apocalypse, lions could be set free by their keepers who do not wish to see them starve in captivity. However, in the later days of the apocalypse their numbers will be limited where they are not native due to having a limited or non-existent breeding pool.
 
           Lions generally sleep for 20 hours a day and are continuously trying to keep cool. If there is a cataclysm that causes a global temperature drop, lions would actually become more active as long as they can find food. In a region that has a deer population, this would be very easy.
 
@@ -793,7 +793,7 @@ npcs:
         description: |-
           Instead of facing the slow and lumbering hordes of the walking dead you may want a foe that has fewer numbers and facing even one foe poses the likelihood of defeat.
 
-          No other mythological creature has received as much attention as the dragon. Tales of dragons are known in many cultures and were believed to be real for centuries. It's not clear where these tales originated but, huge flying serpents with venomous breath have been described in texts as early as the ancient Greeks and Sumerians. The belief in dragons was not just founded in legend but also in physical evidence. The knowledge of dinosaurs would not come for millenia and people would attribute the huge fossilised bones to those of dragons.
+          No other mythological creature has received as much attention as the dragon. Tales of dragons are known in many cultures and were believed to be real for centuries. It's not clear where these tales originated but, huge flying serpents with venomous breath have been described in texts as early as the ancient Greeks and Sumerians. The belief in dragons was not just founded in legend but also in physical evidence. The knowledge of dinosaurs would not come for millennia and people would attribute the huge fossilised bones to those of dragons.
 
           Tales of dragons ranged from being watchful protectors to malicious hunters. When Christianity spread dragons took on a solely sinister interpretation and came to represent Satan. The mouth of a dragon was at this time first depicted to breathe fire and was a symbol of the entrance to hell itself. The church even created their own legends of righteous saints battling and vanquishing Satan in the form of dragons. Dragons are, in fact, one of the only monsters whose purpose is that of a fearsome opponent to be slain.
 

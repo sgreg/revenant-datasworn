@@ -919,7 +919,7 @@ moves:
                 - using: stat
                   stat: edge
             - method: player_choice
-              text: Travel with persistance or endurance
+              text: Travel with persistence or endurance
               roll_options:
                 - using: stat
                   stat: iron
@@ -934,7 +934,7 @@ moves:
           Then, for each segment of the expedition, envision your approach. If you travel...
 
             * at speed or with haste: Roll +edge
-            * with persistance or endurance: Roll +iron
+            * with persistence or endurance: Roll +iron
             * quietly or discreetly: Roll +dark
 
           On a __strong hit__, you reach a waypoint. Envision the location and mark progress per the rank of the expedition.

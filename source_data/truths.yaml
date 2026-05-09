@@ -48,7 +48,7 @@ truths:
       - roll: { min: 81, max: 100 }
         summary: Post-Ash
         description: |-
-          When the skies cleared the suvivors of the Ash found a changed world.
+          When the skies cleared the survivors of the Ash found a changed world.
 
           They needed to adapt, or die. Contrary to popular belief, people band together during and after disasters. It's a natural response to a threat. We are stronger in numbers. We even have a response similar to pain from a physical injury if we are excluded because we know that to be exluded from the safety of a group means to be left to die.
         quest_starter: ""

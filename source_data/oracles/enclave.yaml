@@ -929,7 +929,7 @@ oracles:
           - roll: { min: 57, max: 58 }
             text: Obtain a commodity
           - roll: { min: 59, max: 60 }
-            text: Obtain crucual information
+            text: Obtain crucial information
           - roll: { min: 61, max: 62 }
             text: Put down an internal revolt
           - roll: { min: 63, max: 64 }
