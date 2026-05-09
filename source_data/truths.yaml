@@ -59,18 +59,14 @@ truths:
       <<: *Source
       page: 177
     options:
-      - roll: { min: 1, max: 33 }
-        summary: Radiation is not a threat.
+      - roll: { min: 1, max: 50 }
+        summary: Radiation is not a threat
         description: |-
-          The environment is not exposed to significant levels of radiation outside old power plants.
-
           The __Radiation__ condition meter is not used.
         quest_starter: ""
-      - roll: { min: 34, max: 67 }
-        summary: Radiation is a localized threat.
+      - roll: { min: 51, max: 100 }
+        summary: Radiation is a threat
         description: |-
-          A large amount of power plants eventually succumbed to a meltdown and nuclear weapons degraded exposing their core. Nature is exposed to high radioactive levels in large surroundings of those facilities.
-
           The __Radiation__ condition meter is used.
         quest_starter: |-
           A nearby power plant is close to a meltdown, and only specialized [Technicians](datasworn:npc:revenant/humanity/technician) are able to prevent it.
@@ -82,109 +78,28 @@ truths:
           The __Radiation__ condition meter is used.
         quest_starter: |-
           Radiation poisoning in your enclave, save them.
-  vectors:
-    name: Vectors
-    type: truth
-    _source:
-      <<: *Source
-      page: 228
-    options:
-      - roll: { min: 1, max: 25 }
-        summary: No vectors
-        description: |-
-          No optional rule regarding vectors is in place.
-        quest_starter: ""
-      - roll: { min: 26, max: 50 }
-        summary: Just a scratch
-        description: |-
-          When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) and miss, roll your action die. You only [Face Death](datasworn:move:revenant/suffer/face_death) if the action die is a 1.
-        quest_starter: ""
-      - roll: { min: 51, max: 75 }
-        summary: Infectious
-        description: |-
-          When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten), count a weak hit as a miss.
-        quest_starter: ""
-      - roll: { min: 76, max: 100 }
-        summary: Black Fever
-        description: |-
-          When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) and miss, start a scene challenge. This scene challenge will determine how you attempt to overcome the black fever. Only [Face Death](datasworn:move:revenant/suffer/face_death) if you [Finish the Scene](datasworn:move:revenant/scene_challenge/finish_the_scene) and miss.
-        quest_starter: ""
   mutants:
     name: Mutants
     type: truth
     _source:
       <<: *Source
-      page: 230
+      page: 223
     options:
       - roll: { min: 1, max: 33 }
-        summary: There's no such things as Hulks, Screamers, or Sables.
+        summary: Humans only
         description: |-
-          [The Undead](datasworn:npc_collection:revenant/the_undead) are your garden variety of roaming, dull rotten flesh.
+          There are no undead or any of their variety.
         quest_starter: ""
       - roll: { min: 34, max: 67 }
-        summary: Rumors of mutated zombies exist and some claim to have encountered them.
+        summary: Zombies
         description: |-
-          Everyone has heard rumors or fabled stories of encounters with som super strong [Undead](datasworn:npc_collection:revenant/the_undead), but you have yet to see one for yourself.
-        quest_starter: |-
-          A scavenger returns to your enclave all shaken, swearing to have encountered a [Hulk](datasworn:npc:revenant/the_undead/hulk) nearby. See what's up with that.
-      - roll: { min: 68, max: 100 }
-        summary: Zombies exist in all varieties.
-        description: |-
-          [The Undead](datasworn:npc_collection:revenant/the_undead) come in every form and mutation imaginable.
-        quest_starter: |-
-          The warden of a partner enclave is asks you for help to look into one of their members. There is a suspicion that a sable-host infected them.
-  immunity:
-    name: Immunity
-    type: truth
-    _source:
-      <<: *Source
-      page: 230
-    options:
-      - roll: { min: 1, max: 33 }
-        summary: No one is immune
-        description: |-
-          Immunity is not something humanity is hoping for.
+          Zombies exist but they never mutated to anything further.
         quest_starter: ""
-      - roll: { min: 34, max: 67 }
-        summary: Immunity is a possibility
-        description: |-
-          There is hope, and you may hear rumors of immune people, or actually even encounter immune people.
-
-          When you encounter an NPC you may choose for them to be immune to the Revenant pathogen. However, they are hunted by a power or authority. If your encounter leads to creating a progress track involving them (plan, bond, exploration), associate a Nemesis (see page 103) with that track and [Advance a Nemesis](datasworn:move:revenant/plan/advance_a_nemesis) accordingly.
-        quest_starter: |-
-          A member of a friendly commune asks you for help to smuggle a potentially immune person into safety.
       - roll: { min: 68, max: 100 }
-        summary: You are immune
+        summary: Zombies and mutants
         description: |-
           When you create a new character you may choose for them to be immune to the Revenant pathogen. If you need to [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten), consider it an automatic strong hit.
 
           However, you are now hunted by a power or authority. Create a four segment tension clock on your character sheet. When you make a move, you may improve the result to a strong hit. If you do, fill one segment of the clock to represent hunters closing in. When the clock is filled, a notable foe or force has tracked you down. If you overcome them or escape, reset the clock and mark 1 tick on your plans legacy track.
         quest_starter: |-
           Someone witnessed you getting bit without any consequences. What are they going to do with that information?
-  carriers:
-    name: Carriers
-    type: truth
-    _source:
-      <<: *Source
-      page: 256
-    options:
-      - roll: { min: 1, max: 25 }
-        summary: No carriers
-        description: |-
-          No optional rule regarding carriers is in place.
-        quest_starter: ""
-      - roll: { min: 26, max: 50 }
-        summary: In darkness they feast
-        description: |-
-          When you [Undertake an Expedition](datasworn:move:revenant/exploration/undertake_an_expedition) or [Journey](datasworn:move:revenant/exploration/journey) and roll a 1 on your action die, start a scene challenge as you try to survive the night.
-        quest_starter: ""
-      - roll: { min: 51, max: 75 }
-        summary: Oh, Rats
-        description: |-
-          If you [Endure Harm](datasworn:move:revenant/suffer/endure_harm) from a rat, mark the __wounded__ impact.
-        quest_starter: ""
-      - roll: { min: 76, max: 100 }
-        summary: Like the plague
-        description: |-
-          Rats are capable of transmitting the Revenant pathogen. You must [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) when fighting rats.
-        quest_starter: ""
