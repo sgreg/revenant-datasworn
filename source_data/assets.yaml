@@ -103,14 +103,17 @@ assets:
           page: 258
         requirement: "Choose one option:"
         abilities:
-          - text: |-
-              *In darkness they feast*: When you [Undertake an Expedition](datasworn:move:revenant/exploration/undertake_an_expedition) or [Journey](datasworn:move:revenant/exploration/journey) and roll a 1 on your action die, start a scene challenge as you try to survive the night.
+          - name: In darkness they feast
+            text: |-
+              When you [Undertake an Expedition](datasworn:move:revenant/exploration/undertake_an_expedition) or [Journey](datasworn:move:revenant/exploration/journey) and roll a 1 on your action die, start a scene challenge as you try to survive the night.
             enabled: false
-          - text: |-
-              *Oh, Rats*: If you [Endure Harm](datasworn:move:revenant/suffer/endure_harm) from a rat, mark the __wounded__ impact.
+          - name: Oh Rats
+            text: |-
+              If you [Endure Harm](datasworn:move:revenant/suffer/endure_harm) from a rat, mark the __wounded__ impact.
             enabled: false
-          - text: |-
-              *Like the plague*: Rats are capable of transmitting the Revenant pathogen. You must [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) when fighting rats.
+          - name: Like the plague
+            text: |-
+              Rats are capable of transmitting the Revenant pathogen. You must [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) when fighting rats.
             enabled: false
       immunity:
         name: Immunity
@@ -142,12 +145,15 @@ assets:
           page: 228
         requirement: "Choose one option:"
         abilities:
-          - text: |-
-              *Just a Scratch*: When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) and miss, roll your action die. You only [Face Death](datasworn:move:revenant/suffer/face_death) if the action die is a 1.
+          - name: Just a scratch
+            text: |-
+              When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) and miss, roll your action die. You only [Face Death](datasworn:move:revenant/suffer/face_death) if the action die is a 1.
             enabled: false
-          - text: |-
-              *Infectious*: When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten), count a weak hit as a miss.
+          - name: Infectious
+            text: |-
+              When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten), count a weak hit as a miss.
             enabled: false
-          - text: |-
-              *Black Fever*: When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) and miss, start a scene challenge. This scene challenge will determine how you attempt to overcome the black fever. Only [Face Death](datasworn:move:revenant/suffer/face_death) if you [Finish the Scene](datasworn:move:revenant/scene_challenge/finish_the_scene) and miss.
+          - name: Black Fever
+            text: |-
+              When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) and miss, start a scene challenge. This scene challenge will determine how you attempt to overcome the black fever. Only [Face Death](datasworn:move:revenant/suffer/face_death) if you [Finish the Scene](datasworn:move:revenant/scene_challenge/finish_the_scene) and miss.
             enabled: false
