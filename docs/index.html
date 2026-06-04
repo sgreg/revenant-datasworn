@@ -1,0 +1,1184 @@
+<!-- Created by generate.py -->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    font-family: sans-serif;
+    font-size: 12px;
+    width: 500px;
+    margin: 20px auto;
+    background-color: #e0e0e0;
+    color: #181818;
+}
+
+th, td {
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: underline;
+    color: #181818;
+}
+a:hover {
+    color: #cc4400;
+}
+
+</style>
+</head>
+<body>
+<h1 id="revenant-moves-reference">Revenant Moves Reference</h1>
+<div class="toc">
+<ul>
+<li><a href="#session-moves">Session Moves</a><ul>
+<li><a href="#begin-a-session">Begin a Session</a></li>
+<li><a href="#set-a-flag">Set a Flag</a></li>
+<li><a href="#change-your-fate">Change Your Fate</a></li>
+<li><a href="#take-a-break">Take a Break</a></li>
+<li><a href="#end-a-session">End a Session</a></li>
+</ul>
+</li>
+<li><a href="#basic-moves">Basic Moves</a><ul>
+<li><a href="#defy-danger">Defy Danger</a></li>
+<li><a href="#secure-an-advantage">Secure an Advantage</a></li>
+<li><a href="#aid-your-ally">Aid Your Ally</a></li>
+<li><a href="#compel">Compel</a></li>
+<li><a href="#gather-information">Gather Information</a></li>
+<li><a href="#check-your-gear">Check Your Gear</a></li>
+</ul>
+</li>
+<li><a href="#plan-moves">Plan Moves</a><ul>
+<li><a href="#make-a-plan">Make a Plan</a></li>
+<li><a href="#reach-a-milestone">Reach a Milestone</a></li>
+<li><a href="#accomplish-your-plan">Accomplish Your Plan</a></li>
+<li><a href="#abandon-your-plan">Abandon Your Plan</a></li>
+<li><a href="#leverage-a-plan">Leverage a Plan</a></li>
+<li><a href="#advance-a-nemesis">Advance a Nemesis</a></li>
+<li><a href="#take-a-hiatus">Take a Hiatus</a></li>
+</ul>
+</li>
+<li><a href="#connection-moves">Connection Moves</a><ul>
+<li><a href="#make-a-connection">Make a Connection</a></li>
+<li><a href="#develop-your-relationship">Develop Your Relationship</a></li>
+<li><a href="#test-your-relationship">Test Your Relationship</a></li>
+<li><a href="#forge-a-bond">Forge a Bond</a></li>
+<li><a href="#rise-to-the-challenge">Rise to the Challenge</a></li>
+</ul>
+</li>
+<li><a href="#exploration-moves">Exploration Moves</a><ul>
+<li><a href="#journey">Journey</a></li>
+<li><a href="#out-of-fuel">Out of Fuel</a></li>
+<li><a href="#hunker-down">Hunker Down</a></li>
+<li><a href="#undertake-an-expedition">Undertake an Expedition</a></li>
+<li><a href="#explore-a-waypoint">Explore a Waypoint</a></li>
+<li><a href="#establish-a-sanctum">Establish a Sanctum</a></li>
+<li><a href="#reveal-a-danger">Reveal a Danger</a></li>
+<li><a href="#finish-an-expedition">Finish an Expedition</a></li>
+</ul>
+</li>
+<li><a href="#combat-moves">Combat Moves</a><ul>
+<li><a href="#enter-the-fray">Enter the Fray</a></li>
+<li><a href="#gain-ground">Gain Ground</a></li>
+<li><a href="#react-under-fire">React Under Fire</a></li>
+<li><a href="#strike">Strike</a></li>
+<li><a href="#clash">Clash</a></li>
+<li><a href="#reload">Reload</a></li>
+<li><a href="#avoid-being-bitten">Avoid Being Bitten</a></li>
+<li><a href="#take-decisive-action">Take Decisive Action</a></li>
+<li><a href="#face-defeat">Face Defeat</a></li>
+</ul>
+</li>
+<li><a href="#suffer-moves">Suffer Moves</a><ul>
+<li><a href="#lose-momentum">Lose Momentum</a></li>
+<li><a href="#sacrifice-resources">Sacrifice Resources</a></li>
+<li><a href="#endure-stress">Endure Stress</a></li>
+<li><a href="#endure-harm">Endure Harm</a></li>
+<li><a href="#companion-takes-a-hit">Companion Takes a Hit</a></li>
+<li><a href="#withstand-damage">Withstand Damage</a></li>
+<li><a href="#face-death">Face Death</a></li>
+<li><a href="#face-desolation">Face Desolation</a></li>
+<li><a href="#endure-radiation">Endure Radiation</a></li>
+</ul>
+</li>
+<li><a href="#recover-moves">Recover Moves</a><ul>
+<li><a href="#sojourn">Sojourn</a></li>
+<li><a href="#heal">Heal</a></li>
+<li><a href="#hearten">Hearten</a></li>
+<li><a href="#resupply">Resupply</a></li>
+<li><a href="#repair">Repair</a></li>
+</ul>
+</li>
+<li><a href="#legacy-moves">Legacy Moves</a><ul>
+<li><a href="#earn-experience">Earn Experience</a></li>
+<li><a href="#advance">Advance</a></li>
+<li><a href="#continue-a-legacy">Continue a Legacy</a></li>
+</ul>
+</li>
+<li><a href="#fate-moves">Fate Moves</a><ul>
+<li><a href="#meet-with-disaster">Meet with Disaster</a></li>
+<li><a href="#seek-guidance">Seek Guidance</a></li>
+</ul>
+</li>
+<li><a href="#scene-challenges">Scene Challenges</a><ul>
+<li><a href="#begin-the-scene">Begin the Scene</a></li>
+<li><a href="#overcome-peril">Overcome Peril</a></li>
+<li><a href="#obtain-an-opportunity">Obtain an Opportunity</a></li>
+<li><a href="#finish-the-scene">Finish the Scene</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="session-moves">Session Moves</h2>
+<h3 id="begin-a-session">Begin a Session</h3>
+<p><strong>When you begin a significant session or chapter of play</strong>, do all of the following.</p>
+<ul>
+<li>Identify or adjust flagged content and <a href="#set-a-flag">Set a Flag</a>.</li>
+<li>Review or recap what happened last session.</li>
+<li>Set the scene by envisioning all of the player character's current situation and intent.</li>
+</ul>
+<p>In addition, you may spotlight a new danger, opportunity, or insight. This can include a scene hidden from your character's perspective. If you do, envision a brief vignette (you may roll or choose on the table below for inspiration). Then, all players take +1 momentum as you return to play from the viewpoint of your characters.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1-10</td>
+<td>Flashback reveals an aspect of a character's background</td>
+</tr>
+<tr>
+<td align="center">11-20</td>
+<td>Flashback reveals an aspect of another place, or faction</td>
+</tr>
+<tr>
+<td align="center">21-30</td>
+<td>A character or faction is introduced or given new detail</td>
+</tr>
+<tr>
+<td align="center">31-40</td>
+<td>Unrelated situations are shown to be connected</td>
+</tr>
+<tr>
+<td align="center">41-50</td>
+<td>External danger, urgency, or new importance for a plan</td>
+</tr>
+<tr>
+<td align="center">51-60</td>
+<td>Important character is put in danger</td>
+</tr>
+<tr>
+<td align="center">61-70</td>
+<td>Key location is made unsafe or becomes mired in conflict</td>
+</tr>
+<tr>
+<td align="center">71-80</td>
+<td>Unexpected return of an enemy or threat</td>
+</tr>
+<tr>
+<td align="center">81-90</td>
+<td>Peril lies ahead or lurks just out of view</td>
+</tr>
+<tr>
+<td align="center">91-100</td>
+<td>Unforeseen aid is on the way or within reach</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="set-a-flag">Set a Flag</h3>
+<p><strong>When you identify situations or topics you don't want to include, don't want to envision in detail, or otherwise may need mindfulness when approaching</strong>, that content is now flagged.</p>
+<p>When you encounter content flagged as something to approach mindfully, pause to consider or discuss its role in your story. When you come across flagged content that you would rather adjust or omit, <a href="#change-your-fate">Change Your Fate</a>.</p>
+<hr />
+<h3 id="change-your-fate">Change Your Fate</h3>
+<p><strong>When you encounter flagged content, reject an oracle, resist a consequence, or otherwise need to shift your circumstances within the game for your comfort or enjoyment</strong>, pause and identify what needs to be changed. Choose as many options as appropriate.</p>
+<ul>
+<li><strong>Reframe:</strong> This didn't happen the way you first thought. Envision the moment from another perspective in a way that diminishes or changes the content.</li>
+<li><strong>Refocus:</strong> This is not the most important thing happening right now. Envision how the spotlight shifts to change the focus.</li>
+<li><strong>Replace:</strong> This happens but with a small adjustment. Switch out an element and envision how this new detail changes the scenario.</li>
+<li><strong>Redirect:</strong> Adjust the trajectory to involve a helping hand. Envision how another person or party becomes involved.</li>
+<li><strong>Reshape:</strong> The situation changes completely. Envision what happened instead.</li>
+</ul>
+<hr />
+<h3 id="take-a-break">Take a Break</h3>
+<p><strong>When you resolve a progress move or complete an intense scenario</strong>, take a few deep breaths and take some time to attend to the needs of your body. Reflect on what just happened and how it made you feel. Then, choose one.</p>
+<ul>
+<li>Move on: Continue the session. You or an ally may add +1 on the next move (not a progress move), bolstered by your reflection and past experiences.</li>
+<li>Stop for now: <a href="#end-a-session">End a Session</a>.</li>
+</ul>
+<hr />
+<h3 id="end-a-session">End a Session</h3>
+<p><strong>When you end a significant session or chapter of play</strong>, reflect on the events of the game and identify any missed opportunities to mark progress.</p>
+<ul>
+<li>If you strengthened your ties to a connection, <a href="#develop-your-relationship">Develop Your Relationship</a>.</li>
+<li>If you moved forward on a quest, <a href="#reach-a-milestone">Reach a Milestone</a>.</li>
+<li>If there is a plan, connection, or other situation you would like to give focus in your next session, make note of it and take +1 momentum.</li>
+</ul>
+<hr />
+<h2 id="basic-moves">Basic Moves</h2>
+<h3 id="defy-danger">Defy Danger</h3>
+<p><strong>When you attempt something risky or react to an imminent threat</strong>, envision your action and roll. If you act...</p>
+<ul>
+<li>With finesse, mobility, or agility: Roll +edge</li>
+<li>With resolve, command, or sociability: Roll +heart</li>
+<li>With strength, endurance, or aggression: Roll +iron</li>
+<li>With deception, stealth, or betrayal: Roll +dark</li>
+<li>With expertise, focus, or observation: Roll +wits</li>
+</ul>
+<p>On a <strong>strong hit</strong>, you are successful. Take +1 momentum.</p>
+<p>On a <strong>weak hit</strong>, you succeed, but not without a cost. Make a suffer move (-1).</p>
+<p>On a <strong>miss</strong>, you fail, or a momentary success is undermined by a dire turn of events. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="secure-an-advantage">Secure an Advantage</h3>
+<p><strong>When you assess a situation, make preparations, or attempt to gain leverage</strong>, envision your action and roll. If you act...</p>
+<ul>
+<li>With finesse, mobility, or agility: Roll +edge</li>
+<li>With resolve, command, or sociability: Roll +heart</li>
+<li>With strength, endurance, or aggression: Roll +iron</li>
+<li>With deception, stealth, or betrayal: Roll +dark</li>
+<li>With expertise, focus, or observation: Roll +wits</li>
+</ul>
+<p>On a <strong>hit</strong>, you succeed. On a <strong>strong hit</strong>, take both. On a <strong>weak hit</strong>, choose one.</p>
+<ul>
+<li>Take +2 momentum</li>
+<li>Add +1 on your next move (not a progress move)</li>
+</ul>
+<p>On a <strong>miss</strong>, you fail or your assumptions betray you. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="aid-your-ally">Aid Your Ally</h3>
+<p><strong>When you act in direct support of an ally</strong>, envision how you aid them. Then, <a href="#secure-an-advantage">Secure an Advantage</a>, <a href="#obtain-an-opportunity">Obtain an Opportunity</a>, or <a href="#gain-ground">Gain Ground</a> to take action. If you score a hit, they (instead of you) take the benefits of the move.</p>
+<p>If you <a href="#gain-ground">Gain Ground</a> and score a <strong>strong hit</strong>, you both have the upper hand. On a <strong>weak hit</strong>, your ally has the upper hand but you are in a bad spot.</p>
+<hr />
+<h3 id="compel">Compel</h3>
+<p><strong>When you try to persuade someone or make them an offer</strong>, envision your approach. If you...</p>
+<ul>
+<li>Charm, pacify, encourage, or barter: Roll +heart</li>
+<li>Threaten or incite: Roll +iron</li>
+<li>Lie or swindle: Roll +dark</li>
+</ul>
+<p>On a <strong>strong hit</strong>, they'll do what you want or agree to your conditions. Take +1 momentum.</p>
+<p>On a <strong>weak hit</strong>, as above, but their agreement comes with a demand or complication. Envision their counteroffer.</p>
+<p>On a <strong>miss</strong>, they refuse or make a demand that costs you greatly. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="gather-information">Gather Information</h3>
+<p><strong>When you conduct an investigation, ask questions, do research, or search an area for clues</strong>, roll +wits.</p>
+<p>On a <strong>strong hit</strong>, you discover something helpful and specific. The path you must follow or action you must take to make progress is made clear. Envision what you learn. Then, take +2 momentum.</p>
+<p>On a <strong>weak hit</strong>, the information provides new insight, but also complicates your quest. Envision what you discover. Then, take +1 momentum.</p>
+<p>On a <strong>miss</strong>, your investigation unearths a dire threat or reveals an unwelcome truth that undermines your quest. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="check-your-gear">Check Your Gear</h3>
+<p><strong>When you check to see if you have a specific helpful item or resource</strong>, roll +supply.</p>
+<p>On a <strong>strong hit</strong>, you have it, and are ready to act. Take +1 momentum.</p>
+<p>On a <strong>weak hit</strong>, you have it, but must choose one.</p>
+<ul>
+<li>Your supply is diminished: <a href="#sacrifice-resources">Sacrifice Resources</a> (-1)</li>
+<li>It's not quite right, and causes a complication or delay: <a href="#lose-momentum">Lose Momentum</a> (-2)</li>
+</ul>
+<p>On a <strong>miss</strong>, you don't have it and the situation becomes dire. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h2 id="plan-moves">Plan Moves</h2>
+<h3 id="make-a-plan">Make a Plan</h3>
+<p><strong>When you aim to undertake a task</strong>, give your plan a name and a rank. Then, roll +heart or +wits, whichever is higher.</p>
+<p>If you make this plan to aid a connection, add +1; if you share a bond, add +2.</p>
+<p>On a <strong>strong hit</strong>, you are emboldened and it is clear what you must do next. Take +2 momentum.</p>
+<p>On a <strong>weak hit</strong>, you are determined but begin your plan with more questions than answers. Take +1 momentum, and envision what you do to find a path forward.</p>
+<p>On a <strong>miss</strong>, you must overcome a significant obstacle before you begin your plan. Envision what stands in your way.</p>
+<hr />
+<h3 id="reach-a-milestone">Reach a Milestone</h3>
+<p><strong>When your actions benefit a plan</strong> by doing any of the following...</p>
+<ul>
+<li>overcoming a critical obstacle</li>
+<li>gaining meaningful insight</li>
+<li>completing a perilous expedition</li>
+<li>acquiring a crucial item or resource</li>
+<li>earning vital support</li>
+<li>defeating a notable foe</li>
+</ul>
+<p>...you may mark progress per the rank of the plan.</p>
+<hr />
+<h3 id="accomplish-your-plan">Accomplish Your Plan</h3>
+<p><strong>When you reach the end of your plan</strong>, roll the challenge dice and compare to your progress.</p>
+<p>On a <strong>strong hit</strong>, your plan is complete. Mark a reward on your plans legacy track per the plan's rank: troublesome=1 tick; dangerous=2 ticks; formidable=1 box; extreme=2 boxes; epic=3 boxes. Any allies who shared this plan also mark the reward.</p>
+<p>On a <strong>weak hit</strong>, as above, but there is more to be done or you realize a fault in your plan. If you <a href="#make-a-plan">Make a Plan</a> to set things right, take your full legacy reward. Otherwise, make the reward one rank lower (none for a troublesome plan).</p>
+<p>On a <strong>miss</strong>, your plan is undone through an unexpected complication or a significant flaw or resource requirement that causes hardship. Envision what happens and choose one.</p>
+<ul>
+<li><a href="#abandon-your-plan">Abandon Your Plan</a>.</li>
+<li>Recommit to the plan: Roll both challenge dice, take the lowest value, and clear that number of progress boxes. Then, raise the plan's rank by one (if not already epic).</li>
+</ul>
+<hr />
+<h3 id="abandon-your-plan">Abandon Your Plan</h3>
+<p><strong>When you fail your plans mission or the goal is lost to you</strong>, clear the plan.</p>
+<p>Then, envision the impact of this failure and choose one or more as appropriate to the nature of the plan. Any allies who shared this plan may also envision a cost.</p>
+<ul>
+<li>You are demoralized: <a href="#endure-stress">Endure Stress</a>.</li>
+<li>A connection loses faith: <a href="#test-your-relationship">Test Your Relationship</a> when you next interact.</li>
+<li>You must abandon a resource: Clear a previously completed plan.</li>
+<li>Someone else pays a price: Envision how a person, being, or community bears the cost of the failure.</li>
+<li>Someone else takes advantage: Envision how an enemy gains power and <a href="#advance-a-nemesis">Advance a Nemesis</a>.</li>
+<li>Your reputation suffers: Envision how this failure marks you.</li>
+</ul>
+<hr />
+<h3 id="leverage-a-plan">Leverage a Plan</h3>
+<p><strong>When you make use of a plan you have successfully completed</strong>, and you need to roll for a move, you may (decide before rolling) choose one.
+  * Rely on experience: Roll +the rank of the plan, instead of rolling +stat.
+  * Take command: Take +momentum equal to the rank of the plan on a strong hit.</p>
+<p>On a <strong>strong hit with a match</strong>, you may also envision how recent events or leveraging this plan has enhanced it and raise its rank by one (if not already epic).</p>
+<p>On a <strong>miss with a match</strong>, envision the impact of this failure. Until you successfully Repair it, take no benefit from this plan. Or, if you have no interest in retaining this plan, clear the plan.</p>
+<hr />
+<h3 id="advance-a-nemesis">Advance a Nemesis</h3>
+<p><strong>When you give ground to a Nemesis through inaction, failure, or delay</strong>, roll on the table below and envision how the change manifests in your world.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1-40</td>
+<td>The Nemesis works subtly to advance toward its goal, or the danger escalates. This may include scenes outside of the characters perspective. Mark menace.</td>
+</tr>
+<tr>
+<td align="center">41-70</td>
+<td>The Nemesis readies its next step, or a new danger looms. If you are in a position to prevent this development, you may attempt to do so. If you succeed, <a href="#reach-a-milestone">Reach a Milestone</a>. Otherwise, mark menace.</td>
+</tr>
+<tr>
+<td align="center">71-100</td>
+<td>The Nemesis makes a dramatic and immediate move, or a major event reveals new complications. Mark menace twice.</td>
+</tr>
+</tbody>
+</table>
+<p>On a match, this development also exposes a surprising aspect of the Nemesis' plan or nature.</p>
+<p><strong>If you fill the last circle on the Nemesis' menace track</strong>, they achieve their goal, or the final dire outcome occurs. You must <a href="#abandon-your-plan">Abandon your plan</a>.</p>
+<hr />
+<h3 id="take-a-hiatus">Take a Hiatus</h3>
+<p>When <strong>you spend an extended time recovering in a safe place while a Nemesis is active</strong>, do any of the following.</p>
+<ul>
+<li>Clear any marked impacts.</li>
+<li>Set your endurance, morale, supply, and radiation (if used) to +5.</li>
+<li>Set your companion's endurance to +5.</li>
+<li>Set your momentum to its reset value.</li>
+</ul>
+<p>Then, for each active Nemesis, <a href="#advance-a-nemesis">Advance a Nemesis</a>.</p>
+<hr />
+<h2 id="connection-moves">Connection Moves</h2>
+<h3 id="make-a-connection">Make a Connection</h3>
+<p><strong>When you search out a new relationship or give focus to an existing relationship (not an ally)</strong>, roll +heart.</p>
+<p>On a <strong>strong hit</strong>, you create a connection. Give them a role and rank. Whenever your connection aids you on a move closely associated with their role, add +1 and take +1 momentum on a hit.</p>
+<p>On a <strong>weak hit</strong>, as above, but this connection comes with a complication or cost. Envision what they reveal or demand.</p>
+<p>On a <strong>miss</strong>, you don't make a connection and the situation worsens. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="develop-your-relationship">Develop Your Relationship</h3>
+<p><strong>When you reinforce your relationship with a connection</strong> by doing any of the following...</p>
+<ul>
+<li>making a plan to undertake a plan in their service</li>
+<li>completing a plan to their benefit</li>
+<li>leveraging their help in desperate circumstances</li>
+<li>giving them something of worth</li>
+<li>sharing a profound moment</li>
+<li>standing with them against hardship</li>
+<li>overcoming a test of your relationship</li>
+</ul>
+<p>...you may mark progress per the rank of the connection.</p>
+<p>If you already share a bond with the connection, do not mark progress. Instead, roll +their rank to learn the impact on your legacy: troublesome=+1; dangerous=+2; formidable=+3; extreme=+4; epic=+5.</p>
+<p>On a <strong>strong hit</strong>, mark 2 ticks on your bonds legacy track.</p>
+<p>On a <strong>strong hit with a match</strong>, you may also envision how recent events bolstered your connection's standing and raise their rank by one (if not already epic).</p>
+<p>On a <strong>weak hit</strong>, take +2 momentum.</p>
+<p>On a <strong>miss</strong>, take no lasting benefit.</p>
+<hr />
+<h3 id="test-your-relationship">Test Your Relationship</h3>
+<p><strong>When your relationship with a connection is tested through conflict, betrayal, or circumstance</strong>, roll +heart. If you share a bond, add +1.</p>
+<p>On a <strong>strong hit</strong>, <a href="#develop-your-relationship">Develop Your Relationship</a>.</p>
+<p>On a <strong>weak hit</strong>, <a href="#develop-your-relationship">Develop Your Relationship</a>, but also envision a demand or complication as a consequence of this test.</p>
+<p>On a <strong>miss</strong>, or if you have no interest in maintaining this relationship, choose one.</p>
+<ul>
+<li>Lose the connection: Envision how this impacts you and <a href="#meet-with-disaster">Meet with Disaster</a>.</li>
+<li>Prove your loyalty: Envision what you offer or what they demand, and <a href="#make-a-plan">Make a Plan</a> (formidable or greater) to see it done. Until you complete the plan, take no benefit for this connection. If you refuse or fail, the connection is permanently undone.</li>
+</ul>
+<hr />
+<h3 id="forge-a-bond">Forge a Bond</h3>
+<p><strong>When your relationship with a connection is ready to mature</strong>, roll the challenge dice and compare to your progress.</p>
+<p>On a <strong>strong hit</strong>, you now share a bond. Mark a reward on your bonds legacy track per the connection's rank: troublesome=1 tick; dangerous=2 ticks; formidable=1 box; extreme=2 boxes; epic=3 boxes. Any allies who share this connection also mark the reward.</p>
+<p>When a connection with whom you share a bond aids you on a move closely associated with their role, add +2 instead of the usual +1.</p>
+<p>On a <strong>weak hit</strong>, as above, but they ask something more of you first. To gain the bond and the legacy reward, envision the nature of the request, and do it (or <a href="#make-a-plan">Make a Plan</a> to see it done).</p>
+<p>On a <strong>miss</strong>, they reveal something that fundamentally alters or undermines your relationship. If you recommit to this relationship, roll both challenge dice, take the lowest value, and clear that number of progress boxes. Then, raise the connection's rank by one (if not already epic).</p>
+<hr />
+<h3 id="rise-to-the-challenge">Rise to the Challenge</h3>
+<p><strong>When a connection takes up the mantle</strong> of being a player character, if you share a bond, you may create a new character and begin play as that connection.</p>
+<p>When you choose your talents, consider what skills are related to the connections role.</p>
+<p>If they are a companion, set your endurance meter to their current endurance.</p>
+<p>Then, unless you are making this move when you <a href="#continue-a-legacy">Continue a Legacy</a>, you may <a href="#make-a-connection">Make a Connection</a> with your previous character and immediately <a href="#forge-a-bond">Forge a Bond</a> and assume a strong hit.</p>
+<p>For each plan the connection was currently assisting with, <a href="#make-a-plan">Make a Plan</a> with the same rank and assume a strong hit. Then, mark progress equal to the progress already made.</p>
+<p>When you have finished, <a href="#begin-a-session">Begin a Session</a> from the perspective of your new character.</p>
+<hr />
+<h2 id="exploration-moves">Exploration Moves</h2>
+<h3 id="journey">Journey</h3>
+<p><strong>When you travel a known route through perilous lands or across hazardous terrain</strong>, roll +supply.</p>
+<p>On a <strong>strong hit</strong>, you reach your destination and the situation there favors you. Take +1 momentum.</p>
+<p>On a <strong>weak hit</strong>, you arrive, but face a cost or complication. Choose one.</p>
+<ul>
+<li>Suffer costs en route: <a href="#sacrifice-resources">Sacrifice Resources</a> (-1).</li>
+<li>Face a complication at the destination: Envision what you encounter.</li>
+</ul>
+<p>On a <strong>miss</strong>, you are waylaid by a significant threat, and must <a href="#meet-with-disaster">Meet with Disaster</a>. If you overcome this obstacle, you may <a href="#sacrifice-resources">Sacrifice Resources</a> (-1) and push on safely to your destination.</p>
+<hr />
+<h3 id="out-of-fuel">Out of Fuel</h3>
+<p><strong>If you use or travel in a vehicle</strong> and roll a 1 on your action die, and you are not unprepared, you are running low of fuel. If you are unprepared, you have instead run out of fuel. Otherwise, to refuel, roll +supply.</p>
+<p>On a <strong>strong hit</strong>, you refuel your vehicle quickly and safely.</p>
+<p>On a <strong>weak hit</strong>, you are able to refuel your vehicle, but you face a complication. Choose one.</p>
+<ul>
+<li>Your fuel is running low: <a href="#sacrifice-resources">Sacrifice Resources</a> (-1)</li>
+<li>You need to maintain your vehicle: <a href="#lose-momentum">Lose Momentum</a> (-2)</li>
+</ul>
+<p>On a <strong>miss</strong>, your vehicle has suffered damage and is not able to be used until you <a href="#repair">Repair</a> it. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="hunker-down">Hunker Down</h3>
+<p><strong>When you take shelter to rest and recover for several hours</strong>, roll +supply.</p>
+<p>On a <strong>strong hit</strong>, you and your allies may each choose two. On a <strong>weak hit</strong>,you and your allies may each choose one.</p>
+<ul>
+<li>Prepare: When you leave, add +1 if you <a href="#undertake-a-journey">Undertake a Journey</a>.</li>
+<li>Rest: <a href="#sacrifice-resources">Sacrifice Resources</a> (-1) to take +1 endurance for you and any companions.</li>
+<li>Focus: Take +1 momentum.</li>
+<li>Tinker: Add +1 if you <a href="#repair">Repair</a> or <a href="#check-your-gear">Check Your Gear</a></li>
+</ul>
+<p>In addition, on a <strong>strong hit</strong>, if you use the <strong>Radiation</strong> meter, take +1 radiation.</p>
+<p>On a <strong>miss</strong>, you take no comfort. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="undertake-an-expedition">Undertake an Expedition</h3>
+<p><strong>When you trailblaze a route through perilous lands, journey over hazardous terrain, or survey a site</strong>, give the expedition a name and rank.</p>
+<p>Then, for each segment of the expedition, envision your approach. If you travel...</p>
+<ul>
+<li>at speed or with haste: Roll +edge</li>
+<li>with persistence or endurance: Roll +iron</li>
+<li>quietly or discreetly: Roll +dark</li>
+</ul>
+<p>On a <strong>strong hit</strong>, you reach a waypoint. Envision the location and mark progress per the rank of the expedition.</p>
+<p>On a <strong>weak hit</strong>, as above, but this progress costs you. Choose one.</p>
+<ul>
+<li>Suffer costs en route: Make a suffer move (-2), or two suffer moves (-1).</li>
+<li>Face a hazard at the waypoint: Envision what you encounter.</li>
+</ul>
+<p>On a <strong>miss</strong>, you are waylaid by a crisis, or arrive at a waypoint to confront an immediate hardship or threat. Do not mark progress, and <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="explore-a-waypoint">Explore a Waypoint</h3>
+<p><strong>When you divert from an expedition to examine a notable location</strong>, roll +wits or +dark, whichever is higher.</p>
+<p>On a <strong>strong hit</strong>, choose one. On a <strong>strong hit with a match</strong>, you may instead <a href="#establish-a-sanctum">Establish a Sanctum</a>. If you do, instead of rolling you may assume a strong hit and mark two ticks on your discoveries legacy track.</p>
+<ul>
+<li>Find an opportunity: Roll or choose from the table below and envision a favourable encounter, situation, resource, or insight. Then, take +2 momentum.</li>
+<li>Gain progress: Mark progress on your expedition, per its rank.</li>
+</ul>
+<p>On a <strong>weak hit</strong>, you uncover something interesting, but it is uncertain, dangerous, or reveals an ominous aspect of this place. Roll on the table below and envision what you encounter. Then, take +1 momentum.</p>
+<p>On a <strong>miss</strong>, you encounter an immediate hardship or threat, and must <a href="#meet-with-disaster">Meet with Disaster</a>. On a <strong>miss with a match</strong>, you may instead <a href="#reveal-a-danger">Reveal a Danger</a>.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1-25</td>
+<td>The terrain favours you, or you find a hidden path.</td>
+</tr>
+<tr>
+<td align="center">26-45</td>
+<td>An aspect of the past or nature of this place is revealed.</td>
+</tr>
+<tr>
+<td align="center">46-57</td>
+<td>You locate a secure area.</td>
+</tr>
+<tr>
+<td align="center">58-68</td>
+<td>A clue offers insight or direction.</td>
+</tr>
+<tr>
+<td align="center">69-78</td>
+<td>You get the drop on a denizen.</td>
+</tr>
+<tr>
+<td align="center">79-86</td>
+<td>This area provides an opportunity to <a href="#resupply">Resupply</a>.</td>
+</tr>
+<tr>
+<td align="center">87-90</td>
+<td>You locate an interesting or helpful object.</td>
+</tr>
+<tr>
+<td align="center">91-94</td>
+<td>You are alerted to a potential threat.</td>
+</tr>
+<tr>
+<td align="center">95-98</td>
+<td>You encounter a denizen who might support you.</td>
+</tr>
+<tr>
+<td align="center">99-100</td>
+<td>You encounter a cache of forgotten resources.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="establish-a-sanctum">Establish a Sanctum</h3>
+<p><strong>When you secure a safe area while on an expedition</strong>, by doing any of the following...</p>
+<ul>
+<li>overcoming a critical obstacle</li>
+<li>gaining meaningful insight</li>
+<li>defeating a notable foe</li>
+</ul>
+<p>...envision the location and what benefit it provides, if any. Then, mark progress and roll +wits</p>
+<p>On a <strong>strong hit</strong>, you create a reliable sanctum. Instead of rolling, you may assume a strong hit when you <a href="#hunker-down">Hunker Down</a> here.</p>
+<p>On a <strong>weak hit</strong>, you find temporary relief from hardship. Envision what you find and make a recover move: <a href="#heal">Heal</a>, <a href="#hearten">Hearten</a>, <a href="#repair">Repair</a>, or <a href="#resupply">Resupply</a>. Instead of rolling, assume an automatic strong hit.</p>
+<p>On a <strong>miss</strong>, you underestimate your safety. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="reveal-a-danger">Reveal a Danger</h3>
+<p><strong>When your exploration of a waypoint uncovers something dreadful</strong>, decide the number of aspects: one, two, or three. Roll that number of times or choose that number of aspects on the table below. Then, envision how the encounter begins.</p>
+<p>For each result, when you first confront that aspect within the scope of the encounter, you and your allies may mark one tick on your discoveries legacy track.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1-22</td>
+<td>You encounter a notable hostile denizen.</td>
+</tr>
+<tr>
+<td align="center">23-42</td>
+<td>You face an environmental or architectural hazard.</td>
+</tr>
+<tr>
+<td align="center">43-58</td>
+<td>A discovery undermines or complicates your quest.</td>
+</tr>
+<tr>
+<td align="center">59-64</td>
+<td>You confront a harrowing situation or sensation.</td>
+</tr>
+<tr>
+<td align="center">65-70</td>
+<td>You face the consequences of an earlier choice or approach.</td>
+</tr>
+<tr>
+<td align="center">71-76</td>
+<td>Your way is blocked or trapped.</td>
+</tr>
+<tr>
+<td align="center">77-82</td>
+<td>You need the right equipment to move forward.</td>
+</tr>
+<tr>
+<td align="center">83-88</td>
+<td>You face a perplexing mystery or tough choice.</td>
+</tr>
+<tr>
+<td align="center">89-94</td>
+<td>You lose your way or are delayed.</td>
+</tr>
+<tr>
+<td align="center">95-100</td>
+<td>Your insights are incorrect and make matters worse.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="finish-an-expedition">Finish an Expedition</h3>
+<p><strong>When your expedition or survey comes to an end</strong>, roll the challenge dice and compare to your progress for that track.</p>
+<p>On a <strong>strong hit</strong>, you reach your destination or complete your survey. Mark a reward on your discoveries legacy track per expedition's rank: troublesome=1 tick; dangerous=2 ticks; formidable=1 box; extreme=2 boxes; epic=3 boxes. Any allies who shared this expedition also mark the reward.</p>
+<p>On a <strong>weak hit</strong>, as above, but you face an unforeseen complication at the end of your expedition. Make the legacy reward one rank lower (none for a troublesome expedition), and envision what you encounter.</p>
+<p>On a <strong>miss</strong>, your destination is lost to you, or you come to understand the true nature or cost of the expedition. Envision what happens and choose one.</p>
+<ul>
+<li>Abandon the expedition: Envision the cost of this setback and <a href="#meet-with-disaster">Meet with Disaster</a>.</li>
+<li>Return to the expedition: Roll both challenge dice, take the lowest value, and clear that number of progress boxes. Then, raise the expedition's rank by one (if not already epic).</li>
+</ul>
+<hr />
+<h2 id="combat-moves">Combat Moves</h2>
+<h3 id="enter-the-fray">Enter the Fray</h3>
+<p><strong>When you initiate combat or are forced into a fight</strong>, envision your objective and give it a rank. If the combat includes discrete challenges or phases, set an objective with a rank for each.</p>
+<p>Then, roll to determine your position. If you are...</p>
+<ul>
+<li>On the move: Roll +edge</li>
+<li>Facing off against your foe: Roll +heart</li>
+<li>In the thick of it at close quarters: Roll +iron</li>
+<li>Preparing to act against an unaware foe: Roll +dark</li>
+<li>Caught in a trap or sizing up the situation: Roll +wits</li>
+</ul>
+<p>On a <strong>strong hit</strong>, take both. On a <strong>weak hit</strong>, choose one.</p>
+<ul>
+<li>Take +2 momentum</li>
+<li>You have the upper hand</li>
+</ul>
+<p>On a <strong>miss</strong>, the fight begins with you in a bad spot.</p>
+<hr />
+<h3 id="gain-ground">Gain Ground</h3>
+<p><strong>When you have the upper hand and take action in a fight to reinforce your position or move toward an objective</strong>, envision your approach and roll. If you are...</p>
+<ul>
+<li>In pursuit, fleeing, or maneuvering: Roll +edge</li>
+<li>Coming to the aid of others, or commanding: Roll +heart</li>
+<li>Gaining leverage with force, or making a threat: Roll +iron</li>
+<li>Hiding, preparing an ambush, or misdirecting: Roll +dark</li>
+<li>Coordinating a plan, or studying a situation: Roll +wits</li>
+</ul>
+<p>On a <strong>hit</strong>, you stay in control. On a <strong>strong hit</strong>, choose two. On a <strong>weak hit</strong>, choose one.</p>
+<ul>
+<li>Mark progress</li>
+<li>Take +2 momentum</li>
+<li>Add +1 on your next move (not a progress move)</li>
+</ul>
+<p>On a <strong>miss</strong>, your foe gains control, the fight moves to a new location, or you encounter a new peril. You are in a bad spot and must <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="react-under-fire">React Under Fire</h3>
+<p><strong>When you are in a bad spot and take action in a fight to avoid danger or overcome an obstacle</strong>, envision your approach and roll. If you are...</p>
+<ul>
+<li>In pursuit, fleeing, dodging, or taking cover: Roll +edge</li>
+<li>Remaining stalwart against fear or temptation: Roll +heart</li>
+<li>Blocking or diverting with force, or taking the hit: Roll +iron</li>
+<li>Moving into hiding or creating a distraction: Roll +dark</li>
+<li>Changing the plan, or bypassing an obstacle: Roll +wits</li>
+</ul>
+<p>On a <strong>strong hit</strong>, you succeed and gain the upper hand. Take +1 momentum.</p>
+<p>On a <strong>weak hit</strong>, you avoid the worst of the danger or overcome the obstacle, but not without a cost. Make a suffer move (-1). You stay in a bad spot.</p>
+<p>On a <strong>miss</strong>, the situation worsens. You stay in a bad spot and must <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="strike">Strike</h3>
+<p><strong>When you have the upper hand and assault a foe at close quarters</strong>, roll +iron; <strong>when you attack at a distance</strong>, roll +edge.</p>
+<p>On a <strong>strong hit</strong>, mark progress twice. You dominate your foe and retain the upper hand.</p>
+<p>On a <strong>weak hit</strong>, mark progress twice, but you expose yourself to danger. You are in a bad spot.</p>
+<p>On a <strong>miss</strong>, the fight turns against you. You are in a bad spot and must <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="clash">Clash</h3>
+<p><strong>When you are in a bad spot and fight back against a foe at close quarters</strong>, roll +iron; <strong>when you return fire at a distance</strong>, roll +edge.</p>
+<p>On a <strong>strong hit</strong>, mark progress twice. You overwhelm your foe and gain the upper hand.</p>
+<p>On a <strong>weak hit</strong>, mark progress, but you are dealt a counterblow or setback. You stay in a bad spot and must <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<p>On a <strong>miss</strong>, your foe dominates this exchange. You stay in a bad spot and must <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="reload">Reload</h3>
+<p><strong>If you shoot a firearm</strong> and roll a 1 on your action die, you have used your last round. If you have the unprepared impact marked, you have run out of ammunition. Otherwise, to reload, roll +supply.</p>
+<p>On a <strong>strong hit</strong>, you are well stocked and reload your weapon easily. If you are in combat, you have the upper hand.</p>
+<p>On a <strong>weak hit</strong>, you reload your empty weapon, but your supply is running low. <a href="#sacrifice-resources">Sacrifice Resources</a> (-1). If you are in combat, you are in a bad spot.</p>
+<p>On a <strong>miss</strong>, you have no more ammunition for this weapon. If you are in combat, you are in a bad spot. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="avoid-being-bitten">Avoid Being Bitten</h3>
+<p><strong>When you are in close quarters combat with a creature capable of transmitting the Revenant pathogen</strong> and roll a 1 on your action die when you make a suffer move, roll your challenge dice and compare to your momentum.</p>
+<p>If you have the upper hand, check the result as normal. If you are in a bad spot, count a strong hit without a match as a weak hit, and a weak hit as a miss.</p>
+<p>On a <strong>strong hit</strong>, you prevail. Take +1 momentum. You gain the upper hand and may immediately <a href="#take-decisive-action">Take Decisive Action</a>. If you do you may reroll your challenge dice.</p>
+<p>On a <strong>weak hit</strong>, you avoid begin bitten, but it is stressful. <a href="#endure-stress">Endure Stress</a> (-2) and you are in a bad spot.</p>
+<p>On a <strong>miss</strong>, you get bitten and must immediately <a href="#face-death">Face Death</a>.</p>
+<hr />
+<h3 id="take-decisive-action">Take Decisive Action</h3>
+<p><strong>When you seize an objective in a fight</strong>, envision how you take decisive action. Then, roll the challenge dice and compare to your progress.</p>
+<p>If you have the upper hand, check the result as normal. If you are in a bad spot, count a strong hit without a match as a weak hit, and a weak hit as a miss.</p>
+<p>On a <strong>strong hit</strong>, you prevail. Take +1 momentum. If any objectives remain and the fight continues, you gain or retain the upper hand.</p>
+<p>On a <strong>weak hit</strong>, you achieve your objective, but not without cost. Roll on the table below or choose one. If the fight continues, you are in a bad spot.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1-40</td>
+<td>It's worse than you thought: Make a suffer move (-2)</td>
+</tr>
+<tr>
+<td align="center">41-52</td>
+<td>Victory is short-lived: A new hazard or foe appears</td>
+</tr>
+<tr>
+<td align="center">53-64</td>
+<td>You face collateral damage: Something of value is lost</td>
+</tr>
+<tr>
+<td align="center">65-76</td>
+<td>Others pay the price: Someone else meets with disaster</td>
+</tr>
+<tr>
+<td align="center">77-88</td>
+<td>Others won't forget: You are marked for vengeance</td>
+</tr>
+<tr>
+<td align="center">89-100</td>
+<td>It gets complicated: The nature of a foe or goal is revealed</td>
+</tr>
+</tbody>
+</table>
+<p>On a <strong>miss</strong>, you are defeated or fail your objective. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="face-defeat">Face Defeat</h3>
+<p><strong>When you abandon or are deprived of an objective</strong>, envision the consequence of this failure, clear the objective, and <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<p>If the fight continues, you may create a new objective and give it a rank to represent the changing situation. If any objectives remain, the fight continues and you are in a bad spot.</p>
+<hr />
+<h2 id="suffer-moves">Suffer Moves</h2>
+<h3 id="lose-momentum">Lose Momentum</h3>
+<p><strong>When you are delayed or disadvantaged</strong>, suffer -1 momentum for a minor setback, -2 for a serious setback, or -3 for a terrible setback.</p>
+<p>When your momentum is at its minimum (-6) and you must suffer -momentum, choose one.</p>
+<ul>
+<li>Envision how complicated affects you in a different way and make a different suffer move.</li>
+<li>Envision how this undermines your progress on a plan, expedition, connection, or combat. Then, clear 1 unit of progress on that track per its rank: troublesome=3 boxes; dangerous=2 boxes; formidable=1 box; extreme=2 ticks; epic=1 tick.</li>
+</ul>
+<hr />
+<h3 id="sacrifice-resources">Sacrifice Resources</h3>
+<p><strong>When you lose or consume resources</strong>, suffer -1 supply for a minor loss, -2 for a serious loss, or -3 for a terrible loss. If your supply is reduced to 0, <a href="#lose-momentum">Lose Momentum</a> equal to any remaining loss.</p>
+<p>If your supply is at 0, mark <strong>unprepared</strong>. When you suffer a loss of resources while unprepared, envision how this causes you hardship and apply the cost to a different suffer move.</p>
+<hr />
+<h3 id="endure-stress">Endure Stress</h3>
+<p><strong>When you face mental strain, shock, or despair</strong>, suffer -1 morale for minor stress, -2 for serious stress, or -3 for terrible stress. If your morale is 0, <a href="#lose-momentum">Lose Momentum</a> equal to any remaining stress.</p>
+<p>Then, if your morale is at 0 or you choose to resist the stress, roll +morale or +heart, whichever is higher.</p>
+<p>On a <strong>strong hit</strong>, choose one.</p>
+<ul>
+<li>Shake it off: If you are not shaken, take +1 morale</li>
+<li>Embrace the darkness: Take +1 momentum</li>
+</ul>
+<p>On a <strong>weak hit</strong>, if you are not shaken, you may <a href="#lose-momentum">Lose Momentum</a> (-1) in exchange for +1 morale. Otherwise, press on.</p>
+<p>On a <strong>miss</strong>, it's worse than you thought. Suffer an additional -1 morale or <a href="#lose-momentum">Lose Momentum</a> (-2). If your morale is 0, you must also mark <strong>shaken</strong> or <strong>traumatized</strong>, or roll on the table below.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1-10</td>
+<td>You are overwhelmed. <a href="#face-desolation">Face Desolation</a>.</td>
+</tr>
+<tr>
+<td align="center">11-25</td>
+<td>You give up. <a href="#abandon-your-plan">Abandon Your Plan</a>.</td>
+</tr>
+<tr>
+<td align="center">26-50</td>
+<td>You crack under pressure and act uncharacteristically.</td>
+</tr>
+<tr>
+<td align="center">51-100</td>
+<td>You persevere.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="endure-harm">Endure Harm</h3>
+<p><strong>When you face physical injury, fatigue, or illness</strong>, suffer -1 endurance for minor harm, -2 for serious harm, or -3 for terrible harm. If your endurance is 0, <a href="#lose-momentum">Lose Momentum</a> equal to any remaining harm.</p>
+<p>Then, if your endurance is 0 or you choose to resist the harm, roll +endurance or +iron, whichever is higher.</p>
+<p>On a <strong>strong hit</strong>, choose one.</p>
+<ul>
+<li>Shake it off: If you are not wounded, take +1 endurance</li>
+<li>Embrace the pain: Take +1 momentum</li>
+</ul>
+<p>On a <strong>weak hit</strong>, if you are not wounded, you may <a href="#lose-momentum">Lose Momentum</a> (-1) in exchange for +1 endurance. Otherwise, press on.</p>
+<p>On a <strong>miss</strong>, it's worse than you thought. Suffer an additional -1 endurance or <a href="#lose-momentum">Lose Momentum</a> (-2). If your endurance is 0, you must also mark <strong>wounded __or __permanently</strong> harmed, or roll on the table below.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1-10</td>
+<td>You suffer mortal harm. <a href="#face-death">Face Death</a>.</td>
+</tr>
+<tr>
+<td align="center">11-20</td>
+<td>You are dying. Within an hour or two, you must <a href="#heal">Heal</a> and raise your endurance above 0, or <a href="#face-death">Face Death</a>.</td>
+</tr>
+<tr>
+<td align="center">21-35</td>
+<td>You are unconscious and out of action. If left alone, you come back to your senses in an hour or two. If you are vulnerable to ongoing harm, <a href="#face-death">Face Death</a>.</td>
+</tr>
+<tr>
+<td align="center">36-50</td>
+<td>You are reeling. If you engage in any vigorous activity before taking a breather for a few minutes, roll on this table again (before resolving the other move).</td>
+</tr>
+<tr>
+<td align="center">51-100</td>
+<td>You are still standing.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="companion-takes-a-hit">Companion Takes a Hit</h3>
+<p><strong>When your companion faces physical hardship</strong>, they suffer -1 endurance for minor harm, -2 for serious harm, or -3 for terrible harm. If your companion's endurance is 0, <a href="#lose-momentum">Lose Momentum</a> equal to any remaining harm.</p>
+<p>Then, if their endurance is 0 or you choose to test their resilience, roll +your companion's endurance.</p>
+<p>On a <strong>strong hit</strong>, your companion rallies. Give them +1 endurance.</p>
+<p>On a <strong>weak hit</strong>, if your companion's endurance is not 0, you may <a href="#lose-momentum">Lose Momentum</a> (-1) and give them +1 endurance. Otherwise, they press on.</p>
+<p>On a <strong>miss</strong>, it's worse than you thought. They suffer an additional -1 endurance or you <a href="#lose-momentum">Lose Momentum</a> (-1). If your companion's endurance is 0, they are out of action until given aid. If their endurance is 0 and you rolled a miss with a match on this move, they are dead; clear the connection.</p>
+<hr />
+<h3 id="withstand-damage">Withstand Damage</h3>
+<p><strong>When your vehicle faces a damaging situation or environment</strong>, suffer -1 integrity for minor damage, -2 for serious damage, or -3 for terrible damage. If your vehicle integrity is 0, <a href="#lose-momentum">Lose Momentum</a> equal to any remaining damage.</p>
+<p>Then, if your vehicle integrity is 0 or you choose to resist the damage, roll +integrity.</p>
+<p>On a <strong>strong hit</strong>, choose one.</p>
+<ul>
+<li>Bypass: If your vehicle is not battered, take +1 integrity</li>
+<li>Ride it out: Take +1 momentum</li>
+</ul>
+<p>On a <strong>weak hit</strong>, if your vehicle is not battered, you may <a href="#lose-momentum">Lose Momentum</a> (-1) in exchange for +1 integrity. Otherwise, press on.</p>
+<p>On a <strong>miss</strong>, it's worse than you thought. Suffer an additional -1 integrity or <a href="#lose-momentum">Lose Momentum</a> (-2). If your integrity is 0, mark the vehicle as battered or roll on the table below.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1-10</td>
+<td>Immediate catastrophic destruction. All aboard must <a href="#endure-harm">Endure Harm</a> or <a href="#face-death">Face Death</a>, as appropriate.</td>
+</tr>
+<tr>
+<td align="center">11-25</td>
+<td>Destruction is imminent and unavoidable. If you do not have the means or intention to get clear, <a href="#endure-harm">Endure Harm</a> or <a href="#face-death">Face Death</a> as appropriate.</td>
+</tr>
+<tr>
+<td align="center">26-40</td>
+<td>Destruction is imminent, but can be averted if you <a href="#repair">Repair</a> your vehicle and raise its integrity above 0. If you fail, see 11-25.</td>
+</tr>
+<tr>
+<td align="center">41-55</td>
+<td>You cannot <a href="#repair">Repair</a> this vehicle until you <a href="#check-your-gear">Check Your Gear</a> or <a href="#resupply">Resupply</a> and obtain a crucial replacement part. If you roll this result again prior to that, see 11-25.</td>
+</tr>
+<tr>
+<td align="center">56-70</td>
+<td>The vehicle is crippled or out of your control. To get it back in action, you must <a href="#repair">Repair</a> and raise its integrity above 0.</td>
+</tr>
+<tr>
+<td align="center">71-85</td>
+<td>It's a rough ride. All aboard must make the <a href="#endure-harm">Endure Harm</a>, <a href="#endure-stress">Endure Stress</a>, or <a href="#companion-takes-a-hit">Companion Takes a Hit</a> move, suffering a serious (-2) cost.</td>
+</tr>
+<tr>
+<td align="center">86-95</td>
+<td>You've lost fuel, energy, or cargo. <a href="#sacrifice-resources">Sacrifice Resources</a> (-2).</td>
+</tr>
+<tr>
+<td align="center">96-100</td>
+<td>Against all odds, the vehicle holds together.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="face-death">Face Death</h3>
+<p><strong>When you encounter a situation where death is an immediate and unavoidable outcome</strong>, you are dead. <strong>When you are instead brought to the brink of death with a chance for recovery or redemption</strong>, roll +heart.</p>
+<p>On a <strong>strong hit</strong>, you are cast back into the mortal world.</p>
+<p>On a <strong>weak hit</strong>, you die, but not before making a noble sacrifice. Envision your final moments. Then, if you <a href="#continue-a-legacy">Continue a Legacy</a>, you may mark four ticks across your legacy tracks as you see fit.</p>
+<p>On a <strong>miss</strong>, you are dead.</p>
+<hr />
+<h3 id="face-desolation">Face Desolation</h3>
+<p><strong>When you are brought to the brink of desolation</strong>, roll +heart.</p>
+<p>On a <strong>weak hit</strong>, your spirit breaks, but not before making a noble sacrifice. Envision your final moments. Then, if you <a href="#continue-a-legacy">Continue a Legacy</a>, you may mark four ticks across your legacy tracks as you see fit.</p>
+<p>On a <strong>miss</strong>, you succumb to despair and are lost.</p>
+<hr />
+<h3 id="endure-radiation">Endure Radiation</h3>
+<p><strong>When you are exposed to unsafe levels of radiation</strong>, suffer -1 radiation for minor contamination, -2 for serious contamination, or -3 for terrible contamination. If your radiation is 0, <a href="#lose-momentum">Lose Momentum</a> equal to any remaining contamination.</p>
+<p>Then, if your radiation is at 0 or you choose to resist the contamination, roll +radiation.</p>
+<p>On a <strong>strong hit</strong>, if you are not irradiated, you may <a href="#lose-momentum">Lose Momentum</a> (-2) in exchange for +1 radiation. Otherwise, press on.</p>
+<p>On a <strong>weak hit</strong>, you press on.</p>
+<p>On a <strong>miss</strong>, it's worse than you thought. Suffer an additional -1 radiation or <a href="#lose-momentum">Lose Momentum</a> (-2). If your radiation is 0, you must also mark the <strong>irradiated</strong> impact.</p>
+<hr />
+<h2 id="recover-moves">Recover Moves</h2>
+<h3 id="sojourn">Sojourn</h3>
+<p><strong>When you spend time recovering within a community</strong>, roll +heart.</p>
+<p>On a <strong>strong hit</strong>, this is a safe refuge. You and your allies may each choose two recover moves: <a href="#heal">Heal</a>, <a href="#hearten">Hearten</a>, <a href="#repair">Repair</a>, or <a href="#resupply">Resupply</a>. Instead of rolling, assume an automatic strong hit for each. An individual move can be taken more than once. If you use the <strong>Radiation</strong> meter, take +1 radiation additionally.</p>
+<p>On a <strong>weak hit</strong>, as above, but time is short or resources are strained. You and your allies each make one recover move instead of two, with no more than three moves total among the group.</p>
+<p>On a <strong>miss</strong>, choose one.</p>
+<ul>
+<li>The community needs your help, or makes a costly demand in exchange for your safety. Envision what they ask of you. If you do it, or <a href="#make-a-plan">Make a Plan</a> to see it done, resolve this move as a strong hit.</li>
+<li>You find no relief, and the situation grows worse. <a href="#meet-with-disaster">Meet with Disaster</a>.</li>
+</ul>
+<hr />
+<h3 id="heal">Heal</h3>
+<p><strong>When you receive medical care or provide treatment</strong>, envision the situation and roll. If you...</p>
+<ul>
+<li>Receive treatment from someone (not an ally): Roll +iron</li>
+<li>Care for yourself: Roll +iron or +supply, whichever is lower</li>
+<li>Provide care: Roll +wits or +supply, whichever is lower</li>
+<li>Obtain treatment for a companion: Roll +heart</li>
+</ul>
+<p>On a <strong>strong hit</strong>, the care is helpful. If you (or the ally under your care) are wounded, clear the impact and take or give +2 endurance. Otherwise, take or give +3 endurance.</p>
+<p>On a <strong>weak hit</strong>, as above, but the recovery expends medicine or medical treatment. <a href="#sacrifice-resources">Sacrifice Resources</a> (-1).</p>
+<p>On a <strong>miss</strong>, the aid is ineffective and the situation worsens. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="hearten">Hearten</h3>
+<p><strong>When you socialize, share intimacy, or find a moment of peace</strong>, roll +heart. If you do so in the presence of a connection, add +1. If you share a bond, add +2 instead.</p>
+<p>On a <strong>strong hit</strong>, you find companionship or comfort and your spirit is strengthened. If you are shaken, clear the impact and take +1 morale. Otherwise, take +2 morale. If you make this move as you <a href="#sojourn">Sojourn</a>, take +1 more.</p>
+<p>On a <strong>weak hit</strong>, as above, but this respite is fleeting. Envision an interruption, complication, or inner conflict. Then, <a href="#lose-momentum">Lose Momentum</a> (-1).</p>
+<p>On a <strong>miss</strong>, you take no comfort and the situation worsens. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="resupply">Resupply</h3>
+<p><strong>When you attempt to bolster your readiness</strong>, envision the opportunity and your approach. If you...</p>
+<ul>
+<li>Barter or make an appeal: Roll +heart</li>
+<li>Scavenge or craft: Roll +wits</li>
+<li>Threaten or seize: Roll +iron</li>
+<li>Steal or swindle: Roll +dark</li>
+</ul>
+<p>On a <strong>strong hit</strong>, choose one.</p>
+<ul>
+<li>If you are unprepared, clear the impact and take +1 supply. Otherwise, take +2 supply.</li>
+<li>If you are in need of a specific item or resource that can reasonably be obtained, you acquire it. Take +1 momentum.</li>
+</ul>
+<p>On a <strong>weak hit</strong>, as above, but you must first deal with a cost, complication, or demand. Envision the nature of this obstacle.</p>
+<p>On a <strong>miss</strong>, you encounter an unexpected peril. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h3 id="repair">Repair</h3>
+<p><strong>When you make repairs to your vehicles or other mechanical devices</strong>, envision the situation and roll. If you...</p>
+<ul>
+<li>Make your own repairs, or aid a connection to make repairs: Roll +supply or +wits, whichever is higher.</li>
+<li>Obtain repairs from someone (not an ally): Roll +supply</li>
+</ul>
+<p>On a <strong>hit</strong>, you gain repair points as appropriate to the situation, per the table below. Additionally, you may <a href="#sacrifice-resources">Sacrifice Resources</a> and exchange each -1 of your supply for 1 extra repair point (up to 3 points).</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Strong Hit</th>
+<th>Weak Hit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>At a facility</td>
+<td>5 points</td>
+<td>3 points</td>
+</tr>
+<tr>
+<td>In the field</td>
+<td>3 points</td>
+<td>1 points</td>
+</tr>
+<tr>
+<td>Under fire</td>
+<td>2 points</td>
+<td>0 points</td>
+</tr>
+</tbody>
+</table>
+<p>Spend repair points as follows. Unused points are discarded.</p>
+<ul>
+<li>Clear the battered impact on a vehicle: 2 points</li>
+<li>Take +1 integrity on a vehicle: 1 point</li>
+<li>Install or repair a vehicle upgrade: 3 points</li>
+<li>Repair any other device: 3 points</li>
+<li>Repair any other device, but with a complication or malfunction: 2 points</li>
+</ul>
+<p>On a <strong>miss</strong>, the repairs are not made and the situation worsens. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+<h2 id="legacy-moves">Legacy Moves</h2>
+<h3 id="earn-experience">Earn Experience</h3>
+<p><strong>When you fill a box (four ticks) on any legacy track</strong>, take 2 experience. This experience may be spent when you <a href="#advance">Advance</a>.</p>
+<p>Once you completely fill the tenth box on any legacy track, clear that track. You may start again marking progress on the cleared track, but earn experience at a reduced rate of 1 experience (instead of 2) for each filled progress box. If you make a progress roll against this track, resolve the outcome as if at 10 progress.</p>
+<hr />
+<h3 id="advance">Advance</h3>
+<p><strong>When you develop your abilities</strong>, you may bolster your personal capabilities as appropriate to your focus and opportunities.</p>
+<p>If you bolster your personal capabilities, spend 3 experience. Then, add a new talent.</p>
+<p>If you have completely filled the tenth box of any legacy track, you may instead spend 6 experience and increase one stat by +1, to a maximum of +4.</p>
+<hr />
+<h3 id="continue-a-legacy">Continue a Legacy</h3>
+<p><strong>When you retire or succumb to death or desolation</strong>, you may create a new character in your established setting or have a connection <a href="#rise-to-the-challenge">Rise to the Challenge</a>. If you do, roll the challenge dice and compare to each of the former character's legacy tracks: quests, bonds, and discoveries (one roll per track).</p>
+<p>For each <strong>strong hit</strong>, choose one from below, or one from the weak hit or miss options.</p>
+<ul>
+<li>Follow their path: Gain one talent from the former character (at no cost).</li>
+<li>Share a connection: Take one connection from the former character, including any accrued progress or bond benefits.</li>
+<li>Take the wheel: Gain one vehicle from the former character.</li>
+</ul>
+<p>For each <strong>weak hit</strong>, choose one from below, or one from the miss options.</p>
+<ul>
+<li>See it through: Choose one of the former character's unfinished plans that is not a shared plan. Then, <a href="#make-a-plan">Make a Plan</a> to see it done and assume an automatic strong hit. You may immediately mark up to half their earned progress (round down) on this plan.</li>
+<li>Make an acquaintance: Name one of the former character's connections that is not a shared connection. Envision how time or circumstances have changed them in a dramatic way. When you <a href="#make-a-connection">Make a Connection</a> with them, take an automatic strong hit and mark two ticks on your bonds legacy track.</li>
+<li>Explore familiar ground: Name a location that was meaningful to the former character. When you first visit that place, envision how it has changed or is endangered. Then, mark two ticks on your discoveries legacy track.</li>
+</ul>
+<p>For each <strong>miss</strong>, choose one.</p>
+<ul>
+<li>Deal with the aftermath: Envision how one of your former character's foes has gained power or influence and <a href="#advance-a-nemesis">Advance a Nemesis</a>.</li>
+<li>Switch loyalties: Envision how you begin in opposition to your former character's beliefs, goals, or allegiances.</li>
+<li>Chaos: Envision how a discovery has unleashed unexpected consequences.</li>
+</ul>
+<hr />
+<h2 id="fate-moves">Fate Moves</h2>
+<h3 id="meet-with-disaster">Meet with Disaster</h3>
+<p><strong>When you suffer the outcome of an action</strong>, choose one.</p>
+<ul>
+<li>Make the most obvious negative outcome happen.</li>
+<li>Make a suffer move. Or, if the failure was more dramatic, <a href="#advance-a-nemesis">Advance a Nemesis</a>.</li>
+<li><a href="#seek-guidance">Seek Guidance</a> for inspiration. Interpret the answer as a hardship or complication appropriate to the situation.</li>
+<li>Roll on the table below. If the result doesn't fit the situation, roll again.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1-2</td>
+<td>A trusted individual or community acts against you</td>
+</tr>
+<tr>
+<td align="center">3-4</td>
+<td>An individual or community close to you is put in danger</td>
+</tr>
+<tr>
+<td align="center">5-7</td>
+<td>You encounter signs of a looming threat</td>
+</tr>
+<tr>
+<td align="center">8-10</td>
+<td>You create an opportunity for an enemy</td>
+</tr>
+<tr>
+<td align="center">11-14</td>
+<td>You face a tough choice</td>
+</tr>
+<tr>
+<td align="center">15-18</td>
+<td>You face the consequences of an earlier choice</td>
+</tr>
+<tr>
+<td align="center">19-22</td>
+<td>A surprising development complicates your plan</td>
+</tr>
+<tr>
+<td align="center">23-26</td>
+<td>You are separated from something or someone</td>
+</tr>
+<tr>
+<td align="center">27-30</td>
+<td>A complication with a plan arises</td>
+</tr>
+<tr>
+<td align="center">31-33</td>
+<td>You cause collateral damage or an unintended effect</td>
+</tr>
+<tr>
+<td align="center">34-38</td>
+<td>Something of value is lost or destroyed</td>
+</tr>
+<tr>
+<td align="center">39-44</td>
+<td>The environment or terrain introduces a new hazard</td>
+</tr>
+<tr>
+<td align="center">45-50</td>
+<td>A new enemy is revealed</td>
+</tr>
+<tr>
+<td align="center">51-56</td>
+<td>A companion or ally is in danger (or you are, if alone)</td>
+</tr>
+<tr>
+<td align="center">57-62</td>
+<td>Your equipment or vehicle malfunctions</td>
+</tr>
+<tr>
+<td align="center">63-68</td>
+<td>Your vehicle suffers damage</td>
+</tr>
+<tr>
+<td align="center">69-74</td>
+<td>You waste resources</td>
+</tr>
+<tr>
+<td align="center">75-81</td>
+<td>You are harmed</td>
+</tr>
+<tr>
+<td align="center">82-88</td>
+<td>You are stressed</td>
+</tr>
+<tr>
+<td align="center">89-95</td>
+<td>You are delayed or put at a disadvantage</td>
+</tr>
+<tr>
+<td align="center">96-100</td>
+<td>Roll twice</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="seek-guidance">Seek Guidance</h3>
+<p><strong>When you seek to resolve questions or reveal details</strong>, you may...</p>
+<ul>
+<li>Draw a conclusion based on the most interesting, dramatic, or obvious result.</li>
+<li>Spark an idea and decide the answer through using an Oracle table or other prompt.</li>
+<li>
+<p>Ask a yes/no question. Then, take your challenge dice and roll each die in turn. If the second die is higher than the first, the answer is 'yes'. If the first die is the greater, the answer is 'no'.</p>
+<p>Additionally, you may continue and receive a more nuanced answer. If both the numbers are high (6 or above) add the word 'and'. If the numbers are both low (5 or below), add the word 'but'.</p>
+<p>If you roll a match, make a choice. Either the question has taken something for granted that makes it impossible to answer 'yes' or 'no', or reroll both your dice then envision an extreme result.</p>
+</li>
+</ul>
+<hr />
+<h2 id="scene-challenges">Scene Challenges</h2>
+<h3 id="begin-the-scene">Begin the Scene</h3>
+<p><strong>When you face an extended or complex challenge</strong>, name your objective and choose a rank as appropriate to the situation.</p>
+<ul>
+<li>You have a clear advantage: Troublesome</li>
+<li>You are ready to act: Dangerous</li>
+<li>You are unprepared or outmatched: Formidable</li>
+</ul>
+<p>Then, activate a tension clock.</p>
+<hr />
+<h3 id="overcome-peril">Overcome Peril</h3>
+<p><strong>When you attempt something risky or react to an imminent threat within a scene challenge</strong>, envision your action and roll. If you act...</p>
+<ul>
+<li>With finesse, mobility, or agility: Roll +edge</li>
+<li>With resolve, command, or sociability: Roll +heart</li>
+<li>With strength, endurance, or aggression: Roll +iron</li>
+<li>With deception, stealth, or betrayal: Roll +dark</li>
+<li>With expertise, focus, or observation: Roll +wits</li>
+</ul>
+<p>On a <strong>strong hit</strong>, you are successful and mark progress. On a <strong>strong hit with a match</strong>, mark progress twice.</p>
+<p>On a <strong>weak hit</strong>, you are successful and mark progress, but also encounter a complication or setback. Envision what occurs and fill a clock segment.</p>
+<p>On a <strong>miss</strong>, you fail, or a momentary success is undermined by a dramatic turn of events. <a href="#meet-with-disaster">Meet with Disaster</a> and fill a clock segment. On a <strong>miss with a match</strong>, fill two segments instead.</p>
+<hr />
+<h3 id="obtain-an-opportunity">Obtain an Opportunity</h3>
+<p><strong>When you assess a situation, make preparations, or attempt to gain leverage within a scene challenge</strong>, envision your action and roll. If you act...</p>
+<ul>
+<li>With finesse, mobility, or agility: Roll +edge</li>
+<li>With resolve, command, or sociability: Roll +heart</li>
+<li>With strength, endurance, or aggression: Roll +iron</li>
+<li>With deception, stealth, or betrayal: Roll +dark</li>
+<li>With expertise, focus, or observation: Roll +wits</li>
+</ul>
+<p>On a <strong>hit</strong>, you are successful. On a <strong>strong hit</strong>, take both. On a <strong>strong hit with a match</strong>, take both and mark progress. On a <strong>weak hit</strong>, choose one.</p>
+<ul>
+<li>Take +2 momentum</li>
+<li>Add +1 on your next move (not a progress move)</li>
+</ul>
+<p>On a <strong>miss</strong>, you fail, or a momentary success is undermined by a dramatic turn of events. <a href="#meet-with-disaster">Meet with Disaster</a> and fill a clock segment. On a <strong>miss with a match</strong>, fill two segments instead.</p>
+<hr />
+<h3 id="finish-the-scene">Finish the Scene</h3>
+<p><strong>When the scene challenge tension clock or progress track is filled, or when events lead to the scene's conclusion</strong>, roll the challenge dice and compare to your progress.</p>
+<p>On a <strong>strong hit</strong>, you achieve your objective unconditionally.</p>
+<p>On a <strong>weak hit</strong>, you succeed, but not without cost. You must <a href="#meet-with-disaster">Meet with Disaster</a> but, you can make this a minor cost relative to the scope of the scene.</p>
+<p>On a <strong>miss</strong>, you fail or are undermined by a dire and costly turn of events. <a href="#meet-with-disaster">Meet with Disaster</a>.</p>
+<hr />
+</body>
+</html>
