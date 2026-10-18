@@ -1,3 +1,8 @@
+> [!NOTE]
+> The Revenant ruleset is now part of the [Datasworn community content repository](https://github.com/datasworn-community/community-content) and this repository is no longer active.
+
+---
+
 # Revenant Datasworn
 
 [Datasworn](https://github.com/rsek/datasworn/tree/v0.1.0) source data for [Revenant](https://www.drivethrurpg.com/en/product/457762/revenant), a [Starforged](https://tomkinpress.com/pages/ironsworn-starforged)-based post-apocalyptic solo TTRPG created by Killian Gillespie.
